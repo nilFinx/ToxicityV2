@@ -10,57 +10,53 @@
 	<string>Toxicity</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0A9C02F5-227A-4D25-B2DE-0680F3C044F7</key>
-		<string>https://github.com/Jman012/Toxicity.git</string>
-		<key>0F6F5B16-BE7F-4D48-BABE-8C15AF994484</key>
-		<string>https://github.com/mochtu/libsodium-ios.git</string>
-		<key>1527899F-5E8A-4F12-B102-4E879C5354DE</key>
-		<string>https://github.com/wiruzx/MessagesTableViewController.git</string>
-		<key>46095C55-0048-4A45-82AB-54E9D8A87678</key>
-		<string>https://github.com/irungentoo/ProjectTox-Core.git</string>
-		<key>8B819254-C7B8-47BF-9288-8C5B6931809A</key>
-		<string>https://github.com/terryworona/TWMessageBarManager.git</string>
-		<key>C6A880A6-B0AE-4E45-8853-87995F34F754</key>
-		<string>https://github.com/jessesquires/JSQSystemSoundPlayer.git</string>
-		<key>D5B2F9B1-7B71-4A18-9C18-7A63C5CDBC93</key>
+		<key>18E999A3C343AFB4A258FC5AE54EEC2B234462B3</key>
+		<string>https://github.com/jamamp/Toxicity.git</string>
+		<key>3295696B2ABB63B244A5608CBC7B986155E10CBC</key>
+		<string>https://github.com/jessesquires/JSQSystemSoundPlayer</string>
+		<key>3605186D57A54EF3EC8A6C5E847BA4D3BBB4F532</key>
 		<string>https://github.com/wiruzx/ObjQREncoder.git</string>
-		<key>D7827680-ECF8-4614-A0DA-34ECCD0DAF1C</key>
-		<string>https://github.com/wiruzx/zbarSDK.git</string>
+		<key>5122860C890D837613E9E7BCEA08B6F3ABE10512</key>
+		<string>https://github.com/terryworona/TWMessageBarManager.git</string>
+		<key>864AD83DC80A08A0327EA6100E60BA0C7D02C7F8</key>
+		<string>https://github.com/bobftw/zbarSDK</string>
+		<key>90530B99EB0008E7A50951FDFBE02169118FA649</key>
+		<string>https://github.com/jessesquires/JSQMessagesViewController.git</string>
+		<key>9E57F0987DAD04C4DEDF2958D8A18017BD14B322</key>
+		<string>https://github.com/irungentoo/toxcore</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Toxicity.xcodeproj/project.xcworkspace</string>
+	<string>Toxicity.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0A9C02F5-227A-4D25-B2DE-0680F3C044F7</key>
+		<key>18E999A3C343AFB4A258FC5AE54EEC2B234462B3</key>
 		<string>../..</string>
-		<key>0F6F5B16-BE7F-4D48-BABE-8C15AF994484</key>
-		<string>../../Submodules/ProjectTox-Core/sodium/libsodium-ios</string>
-		<key>1527899F-5E8A-4F12-B102-4E879C5354DE</key>
-		<string>../../Submodules/MessagesTableViewController</string>
-		<key>46095C55-0048-4A45-82AB-54E9D8A87678</key>
-		<string>../../Submodules/ProjectTox-Core/ProjectTox-Core</string>
-		<key>8B819254-C7B8-47BF-9288-8C5B6931809A</key>
-		<string>../../Submodules/TWMessageBarManager</string>
-		<key>C6A880A6-B0AE-4E45-8853-87995F34F754</key>
-		<string>../../Submodules/JSQSystemSoundPlayer-submodule</string>
-		<key>D5B2F9B1-7B71-4A18-9C18-7A63C5CDBC93</key>
-		<string>../../Submodules/ObjQREncoder</string>
-		<key>D7827680-ECF8-4614-A0DA-34ECCD0DAF1C</key>
-		<string>../../Submodules/ZBarSDK</string>
+		<key>3295696B2ABB63B244A5608CBC7B986155E10CBC</key>
+		<string>../..Submodules/JSQSystemSoundPlayer-submodule/</string>
+		<key>3605186D57A54EF3EC8A6C5E847BA4D3BBB4F532</key>
+		<string>../..Submodules/ObjQREncoder/</string>
+		<key>5122860C890D837613E9E7BCEA08B6F3ABE10512</key>
+		<string>../..Submodules/TWMessageBarManager/</string>
+		<key>864AD83DC80A08A0327EA6100E60BA0C7D02C7F8</key>
+		<string>../..Submodules/zbarSDK/</string>
+		<key>90530B99EB0008E7A50951FDFBE02169118FA649</key>
+		<string>../..Submodules/MessagesTableViewController/</string>
+		<key>9E57F0987DAD04C4DEDF2958D8A18017BD14B322</key>
+		<string>../..Submodules/ProjectTox-Core/ProjectTox-Core/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Jman012/Toxicity.git</string>
+	<string>https://github.com/jamamp/Toxicity.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0A9C02F5-227A-4D25-B2DE-0680F3C044F7</string>
+	<string>18E999A3C343AFB4A258FC5AE54EEC2B234462B3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C6A880A6-B0AE-4E45-8853-87995F34F754</string>
+			<string>3295696B2ABB63B244A5608CBC7B986155E10CBC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>JSQSystemSoundPlayer-submodule</string>
 		</dict>
@@ -68,15 +64,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0F6F5B16-BE7F-4D48-BABE-8C15AF994484</string>
-			<key>IDESourceControlWCCName</key>
-			<string>libsodium-ios</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1527899F-5E8A-4F12-B102-4E879C5354DE</string>
+			<string>90530B99EB0008E7A50951FDFBE02169118FA649</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MessagesTableViewController</string>
 		</dict>
@@ -84,7 +72,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D5B2F9B1-7B71-4A18-9C18-7A63C5CDBC93</string>
+			<string>3605186D57A54EF3EC8A6C5E847BA4D3BBB4F532</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ObjQREncoder</string>
 		</dict>
@@ -92,7 +80,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>46095C55-0048-4A45-82AB-54E9D8A87678</string>
+			<string>9E57F0987DAD04C4DEDF2958D8A18017BD14B322</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ProjectTox-Core</string>
 		</dict>
@@ -100,7 +88,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0A9C02F5-227A-4D25-B2DE-0680F3C044F7</string>
+			<string>18E999A3C343AFB4A258FC5AE54EEC2B234462B3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Toxicity</string>
 		</dict>
@@ -108,7 +96,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>8B819254-C7B8-47BF-9288-8C5B6931809A</string>
+			<string>5122860C890D837613E9E7BCEA08B6F3ABE10512</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TWMessageBarManager</string>
 		</dict>
@@ -116,9 +104,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D7827680-ECF8-4614-A0DA-34ECCD0DAF1C</string>
+			<string>864AD83DC80A08A0327EA6100E60BA0C7D02C7F8</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ZBarSDK</string>
+			<string>zbarSDK</string>
 		</dict>
 	</array>
 </dict>
