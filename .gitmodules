@@ -1,6 +1,6 @@
 [submodule "Submodules/MessagesTableViewController"]
 	path = Submodules/MessagesTableViewController
-	url = https://github.com/wiruzx/MessagesTableViewController.git
+	url = https://github.com/jessesquires/JSQMessagesViewController.git
 [submodule "Submodules/JSQSystemSoundPlayer-submodule"]
 	path = Submodules/JSQSystemSoundPlayer-submodule
 	url = https://github.com/jessesquires/JSQSystemSoundPlayer.git
@@ -12,7 +12,7 @@
 	url = https://github.com/terryworona/TWMessageBarManager.git
 [submodule "Submodules/ZBarSDK"]
 	path = Submodules/ZBarSDK
-	url = https://github.com/wiruzx/zbarSDK.git
+	url = https://github.com/bobftw/zbarSDK.git
 [submodule "Submodules/ProjectTox-Core/ProjectTox-Core"]
 	path = Submodules/ProjectTox-Core/ProjectTox-Core
 	url = https://github.com/irungentoo/ProjectTox-Core.git
