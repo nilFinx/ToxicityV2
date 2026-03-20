@@ -18,6 +18,8 @@
 		<string>https://github.com/wiruzx/ObjQREncoder.git</string>
 		<key>5122860C890D837613E9E7BCEA08B6F3ABE10512</key>
 		<string>https://github.com/terryworona/TWMessageBarManager.git</string>
+		<key>6CF1BB6B298BB35E23A1E12E3C648F8ACA35D780</key>
+		<string>https://github.com/mochtu/libsodium-ios.git</string>
 		<key>864AD83DC80A08A0327EA6100E60BA0C7D02C7F8</key>
 		<string>https://github.com/bobftw/zbarSDK</string>
 		<key>90530B99EB0008E7A50951FDFBE02169118FA649</key>
@@ -32,17 +34,19 @@
 		<key>18E999A3C343AFB4A258FC5AE54EEC2B234462B3</key>
 		<string>../..</string>
 		<key>3295696B2ABB63B244A5608CBC7B986155E10CBC</key>
-		<string>../..Submodules/JSQSystemSoundPlayer-submodule/</string>
+		<string>../..Submodules/JSQSystemSoundPlayer-submodule</string>
 		<key>3605186D57A54EF3EC8A6C5E847BA4D3BBB4F532</key>
-		<string>../..Submodules/ObjQREncoder/</string>
+		<string>../..Submodules/ObjQREncoder</string>
 		<key>5122860C890D837613E9E7BCEA08B6F3ABE10512</key>
-		<string>../..Submodules/TWMessageBarManager/</string>
+		<string>../..Submodules/TWMessageBarManager</string>
+		<key>6CF1BB6B298BB35E23A1E12E3C648F8ACA35D780</key>
+		<string>../../../toxicity-backup/Submodules/ProjectTox-Core/sodium/libsodium-ios</string>
 		<key>864AD83DC80A08A0327EA6100E60BA0C7D02C7F8</key>
-		<string>../..Submodules/zbarSDK/</string>
+		<string>../..Submodules/zbarSDK</string>
 		<key>90530B99EB0008E7A50951FDFBE02169118FA649</key>
-		<string>../..Submodules/MessagesTableViewController/</string>
+		<string>../..Submodules/MessagesTableViewController</string>
 		<key>9E57F0987DAD04C4DEDF2958D8A18017BD14B322</key>
-		<string>../..Submodules/ProjectTox-Core/ProjectTox-Core/</string>
+		<string>../..Submodules/ProjectTox-Core/ProjectTox-Core</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jamamp/Toxicity.git</string>
@@ -59,6 +63,14 @@
 			<string>3295696B2ABB63B244A5608CBC7B986155E10CBC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>JSQSystemSoundPlayer-submodule</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6CF1BB6B298BB35E23A1E12E3C648F8ACA35D780</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libsodium-ios</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
