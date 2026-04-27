@@ -45,7 +45,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-#warning
+#warning TODO: Figure what this warning is for
     [self.tableView reloadData];
     self.mainFriendList = [[TXCSingleton sharedSingleton] mainFriendList];
     //

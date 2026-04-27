@@ -96,9 +96,9 @@ extern NSString *const TXCToxAppDelegateUserDefaultsToxData;
 
 + (void)saveToxDataInUserDefaults {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    uint32_t toxLength = tox_size([[TXCSingleton sharedSingleton] toxCoreInstance]);
+    uint32_t toxLength = tox_get_savedata_size([[TXCSingleton sharedSingleton] toxCoreInstance]);
     uint8_t *toxBuffer = malloc(toxLength);
-    tox_save([[TXCSingleton sharedSingleton] toxCoreInstance], toxBuffer);
+    tox_get_savedata([[TXCSingleton sharedSingleton] toxCoreInstance], toxBuffer);
     NSData *toxData = [[NSData alloc] initWithBytes:toxBuffer length:toxLength];
     [prefs setObject:toxData forKey:TXCToxAppDelegateUserDefaultsToxData];
     [prefs synchronize];

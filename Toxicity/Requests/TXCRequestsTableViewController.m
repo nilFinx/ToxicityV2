@@ -236,7 +236,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
 - (void)addFriendFromInput
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Add Friend"
-                                                        message:@"Please input their public key."
+                                                        message:@"Please input their Tox ID."
                                                        delegate:self
                                               cancelButtonTitle:@"Okay"
                                               otherButtonTitles:@"Cancel", nil];

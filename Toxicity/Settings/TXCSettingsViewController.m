@@ -52,11 +52,11 @@ extern NSString *const ToxAppDelegateNotificationDHTDisconnected ;
 #pragma mark - Private methods
 
 - (NSString *)clientID {
-    char convertedKey[(TOX_FRIEND_ADDRESS_SIZE * 2) + 1];
+    char convertedKey[(TOX_ADDRESS_SIZE * 2) + 1];
     int pos = 0;
-    uint8_t ourAddress[TOX_FRIEND_ADDRESS_SIZE];
-    tox_get_address([[TXCSingleton sharedSingleton] toxCoreInstance], ourAddress);
-    for (int i = 0; i < TOX_FRIEND_ADDRESS_SIZE; ++i, pos += 2) {
+    uint8_t ourAddress[TOX_ADDRESS_SIZE];
+    tox_self_get_address([[TXCSingleton sharedSingleton] toxCoreInstance], ourAddress);
+    for (int i = 0; i < TOX_ADDRESS_SIZE; ++i, pos += 2) {
         sprintf(&convertedKey[pos] ,"%02X", ourAddress[i] & 0xff);
     }
     return [NSString stringWithUTF8String:convertedKey];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEF9D86B2F9F2C1800113704 /* sodium.h in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8692F9F2C1200113704 /* sodium.h */; };
 		B9DABE0B18E53BC900B2A6B2 /* crypto_auth.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABC8818E53BC800B2A6B2 /* crypto_auth.c */; };
 		B9DABE0C18E53BC900B2A6B2 /* auth_hmacsha256_api.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABC8B18E53BC800B2A6B2 /* auth_hmacsha256_api.c */; };
 		B9DABE0D18E53BC900B2A6B2 /* hmac_hmacsha256.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABC8F18E53BC800B2A6B2 /* hmac_hmacsha256.c */; };
@@ -260,6 +261,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AEF9D8692F9F2C1200113704 /* sodium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sodium.h; path = include/sodium.h; sourceTree = "<group>"; };
 		B9DABC1B18E53B7300B2A6B2 /* libsodium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsodium.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DABC1E18E53B7300B2A6B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9DABC2218E53B7300B2A6B2 /* sodium-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sodium-Prefix.pch"; sourceTree = "<group>"; };
@@ -592,6 +594,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEF9D8682F9F2C0900113704 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AEF9D8692F9F2C1200113704 /* sodium.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
 		B9DABC1218E53B7300B2A6B2 = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +665,7 @@
 		B9DABC8518E53BC800B2A6B2 /* libsodium */ = {
 			isa = PBXGroup;
 			children = (
+				AEF9D8682F9F2C0900113704 /* include */,
 				B9DABC8618E53BC800B2A6B2 /* crypto_auth */,
 				B9DABC9918E53BC800B2A6B2 /* crypto_box */,
 				B9DABCA618E53BC800B2A6B2 /* crypto_core */,
@@ -1603,7 +1614,7 @@
 		B9DABC1318E53B7300B2A6B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = james;
 			};
 			buildConfigurationList = B9DABC1618E53B7300B2A6B2 /* Build configuration list for PBXProject "sodium" */;
@@ -1763,6 +1774,7 @@
 				B9DABE1218E53BC900B2A6B2 /* crypto_box.c in Sources */,
 				B9DABE2818E53BC900B2A6B2 /* hash_sha512.c in Sources */,
 				B9DABE4B18E53BC900B2A6B2 /* fe_mul.c in Sources */,
+				AEF9D86B2F9F2C1800113704 /* sodium.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

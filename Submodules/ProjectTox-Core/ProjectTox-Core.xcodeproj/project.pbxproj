@@ -7,36 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEF9D8D42F9F3F6A00113704 /* assoc.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8A42F9F3F6A00113704 /* assoc.c */; };
+		AEF9D8D52F9F3F6A00113704 /* assoc.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8A52F9F3F6A00113704 /* assoc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8D62F9F3F6A00113704 /* crypto_core.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8A62F9F3F6A00113704 /* crypto_core.c */; };
+		AEF9D8D72F9F3F6A00113704 /* crypto_core.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8A72F9F3F6A00113704 /* crypto_core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8D82F9F3F6A00113704 /* DHT.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8A82F9F3F6A00113704 /* DHT.c */; };
+		AEF9D8D92F9F3F6A00113704 /* DHT.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8A92F9F3F6A00113704 /* DHT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8DA2F9F3F6A00113704 /* friend_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8AA2F9F3F6A00113704 /* friend_connection.c */; };
+		AEF9D8DB2F9F3F6A00113704 /* friend_connection.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8AB2F9F3F6A00113704 /* friend_connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8DC2F9F3F6A00113704 /* friend_requests.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8AC2F9F3F6A00113704 /* friend_requests.c */; };
+		AEF9D8DD2F9F3F6A00113704 /* friend_requests.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8AD2F9F3F6A00113704 /* friend_requests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8DE2F9F3F6A00113704 /* group.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8AE2F9F3F6A00113704 /* group.c */; };
+		AEF9D8DF2F9F3F6A00113704 /* group.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8AF2F9F3F6A00113704 /* group.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8E02F9F3F6A00113704 /* LAN_discovery.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8B02F9F3F6A00113704 /* LAN_discovery.c */; };
+		AEF9D8E12F9F3F6A00113704 /* LAN_discovery.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8B12F9F3F6A00113704 /* LAN_discovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8E22F9F3F6A00113704 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8B22F9F3F6A00113704 /* list.c */; };
+		AEF9D8E32F9F3F6A00113704 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8B32F9F3F6A00113704 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8E42F9F3F6A00113704 /* logger.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8B42F9F3F6A00113704 /* logger.c */; };
+		AEF9D8E52F9F3F6A00113704 /* logger.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8B52F9F3F6A00113704 /* logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8E72F9F3F6A00113704 /* Messenger.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8B72F9F3F6A00113704 /* Messenger.c */; };
+		AEF9D8E82F9F3F6A00113704 /* Messenger.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8B82F9F3F6A00113704 /* Messenger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8E92F9F3F6A00113704 /* misc_tools.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8B92F9F3F6A00113704 /* misc_tools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8EA2F9F3F6A00113704 /* net_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8BA2F9F3F6A00113704 /* net_crypto.c */; };
+		AEF9D8EB2F9F3F6A00113704 /* net_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8BB2F9F3F6A00113704 /* net_crypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8EC2F9F3F6A00113704 /* network.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8BC2F9F3F6A00113704 /* network.c */; };
+		AEF9D8ED2F9F3F6A00113704 /* network.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8BD2F9F3F6A00113704 /* network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8EE2F9F3F6A00113704 /* onion_announce.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8BE2F9F3F6A00113704 /* onion_announce.c */; };
+		AEF9D8EF2F9F3F6A00113704 /* onion_announce.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8BF2F9F3F6A00113704 /* onion_announce.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8F02F9F3F6A00113704 /* onion_client.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8C02F9F3F6A00113704 /* onion_client.c */; };
+		AEF9D8F12F9F3F6A00113704 /* onion_client.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8C12F9F3F6A00113704 /* onion_client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8F22F9F3F6A00113704 /* onion.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8C22F9F3F6A00113704 /* onion.c */; };
+		AEF9D8F32F9F3F6A00113704 /* onion.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8C32F9F3F6A00113704 /* onion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8F42F9F3F6A00113704 /* ping_array.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8C42F9F3F6A00113704 /* ping_array.c */; };
+		AEF9D8F52F9F3F6A00113704 /* ping_array.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8C52F9F3F6A00113704 /* ping_array.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8F62F9F3F6A00113704 /* ping.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8C62F9F3F6A00113704 /* ping.c */; };
+		AEF9D8F72F9F3F6A00113704 /* ping.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8C72F9F3F6A00113704 /* ping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8F82F9F3F6A00113704 /* TCP_client.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8C82F9F3F6A00113704 /* TCP_client.c */; };
+		AEF9D8F92F9F3F6A00113704 /* TCP_client.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8C92F9F3F6A00113704 /* TCP_client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8FA2F9F3F6A00113704 /* TCP_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8CA2F9F3F6A00113704 /* TCP_connection.c */; };
+		AEF9D8FB2F9F3F6A00113704 /* TCP_connection.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8CB2F9F3F6A00113704 /* TCP_connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8FC2F9F3F6A00113704 /* TCP_server.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8CC2F9F3F6A00113704 /* TCP_server.c */; };
+		AEF9D8FD2F9F3F6A00113704 /* TCP_server.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8CD2F9F3F6A00113704 /* TCP_server.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8FE2F9F3F6A00113704 /* tox_old_code.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8CE2F9F3F6A00113704 /* tox_old_code.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D8FF2F9F3F6A00113704 /* tox_old.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8CF2F9F3F6A00113704 /* tox_old.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D9002F9F3F6A00113704 /* tox.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8D02F9F3F6A00113704 /* tox.c */; };
+		AEF9D9012F9F3F6A00113704 /* tox.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8D12F9F3F6A00113704 /* tox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF9D9022F9F3F6A00113704 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF9D8D22F9F3F6A00113704 /* util.c */; };
+		AEF9D9032F9F3F6A00113704 /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF9D8D32F9F3F6A00113704 /* util.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9DABB3818E539A100B2A6B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DABB3718E539A100B2A6B2 /* Foundation.framework */; };
-		B9DABC0118E53B3600B2A6B2 /* assoc.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBBE18E53B3600B2A6B2 /* assoc.c */; };
-		B9DABC0218E53B3600B2A6B2 /* DHT.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBC018E53B3600B2A6B2 /* DHT.c */; };
-		B9DABC0318E53B3600B2A6B2 /* friend_requests.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBC218E53B3600B2A6B2 /* friend_requests.c */; };
-		B9DABC0418E53B3600B2A6B2 /* group_chats.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBC418E53B3600B2A6B2 /* group_chats.c */; };
-		B9DABC0518E53B3600B2A6B2 /* LAN_discovery.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBC618E53B3600B2A6B2 /* LAN_discovery.c */; };
-		B9DABC0618E53B3600B2A6B2 /* Lossless_UDP.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBC818E53B3600B2A6B2 /* Lossless_UDP.c */; };
-		B9DABC0818E53B3600B2A6B2 /* Messenger.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBCB18E53B3600B2A6B2 /* Messenger.c */; };
-		B9DABC0918E53B3600B2A6B2 /* net_crypto.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBCE18E53B3600B2A6B2 /* net_crypto.c */; };
-		B9DABC0A18E53B3600B2A6B2 /* network.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBD018E53B3600B2A6B2 /* network.c */; };
-		B9DABC0B18E53B3600B2A6B2 /* onion.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBD218E53B3600B2A6B2 /* onion.c */; };
-		B9DABC0C18E53B3600B2A6B2 /* onion_announce.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBD418E53B3600B2A6B2 /* onion_announce.c */; };
-		B9DABC0D18E53B3600B2A6B2 /* onion_client.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBD618E53B3600B2A6B2 /* onion_client.c */; };
-		B9DABC0E18E53B3600B2A6B2 /* ping.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBD818E53B3600B2A6B2 /* ping.c */; };
-		B9DABC1018E53B3600B2A6B2 /* tox.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBDC18E53B3600B2A6B2 /* tox.c */; };
-		B9DABC1118E53B3600B2A6B2 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DABBDE18E53B3600B2A6B2 /* util.c */; };
 		B9DABE9D18E53EDA00B2A6B2 /* libsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DABE9918E53D1D00B2A6B2 /* libsodium.a */; };
-		B9DABF4E18E543B200B2A6B2 /* tox.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBDD18E53B3600B2A6B2 /* tox.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5418E544CF00B2A6B2 /* Messenger.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBCC18E53B3600B2A6B2 /* Messenger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5518E544D700B2A6B2 /* net_crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBCF18E53B3600B2A6B2 /* net_crypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5618E544DD00B2A6B2 /* Lossless_UDP.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBC918E53B3600B2A6B2 /* Lossless_UDP.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5718E544E400B2A6B2 /* network.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBD118E53B3600B2A6B2 /* network.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5818E544EB00B2A6B2 /* misc_tools.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBCD18E53B3600B2A6B2 /* misc_tools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5918E544F100B2A6B2 /* DHT.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBC118E53B3600B2A6B2 /* DHT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5A18E544F700B2A6B2 /* friend_requests.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBC318E53B3600B2A6B2 /* friend_requests.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5B18E544FC00B2A6B2 /* onion_client.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBD718E53B3600B2A6B2 /* onion_client.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5C18E5450100B2A6B2 /* onion_announce.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBD518E53B3600B2A6B2 /* onion_announce.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5D18E5450500B2A6B2 /* onion.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBD318E53B3600B2A6B2 /* onion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5E18E5450A00B2A6B2 /* LAN_discovery.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBC718E53B3600B2A6B2 /* LAN_discovery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9DABF5F18E5451200B2A6B2 /* group_chats.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DABBC518E53B3600B2A6B2 /* group_chats.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,42 +88,59 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AEF9D8A42F9F3F6A00113704 /* assoc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = assoc.c; sourceTree = "<group>"; };
+		AEF9D8A52F9F3F6A00113704 /* assoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assoc.h; sourceTree = "<group>"; };
+		AEF9D8A62F9F3F6A00113704 /* crypto_core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crypto_core.c; sourceTree = "<group>"; };
+		AEF9D8A72F9F3F6A00113704 /* crypto_core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core.h; sourceTree = "<group>"; };
+		AEF9D8A82F9F3F6A00113704 /* DHT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DHT.c; sourceTree = "<group>"; };
+		AEF9D8A92F9F3F6A00113704 /* DHT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHT.h; sourceTree = "<group>"; };
+		AEF9D8AA2F9F3F6A00113704 /* friend_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = friend_connection.c; sourceTree = "<group>"; };
+		AEF9D8AB2F9F3F6A00113704 /* friend_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friend_connection.h; sourceTree = "<group>"; };
+		AEF9D8AC2F9F3F6A00113704 /* friend_requests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = friend_requests.c; sourceTree = "<group>"; };
+		AEF9D8AD2F9F3F6A00113704 /* friend_requests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friend_requests.h; sourceTree = "<group>"; };
+		AEF9D8AE2F9F3F6A00113704 /* group.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = group.c; sourceTree = "<group>"; };
+		AEF9D8AF2F9F3F6A00113704 /* group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = group.h; sourceTree = "<group>"; };
+		AEF9D8B02F9F3F6A00113704 /* LAN_discovery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LAN_discovery.c; sourceTree = "<group>"; };
+		AEF9D8B12F9F3F6A00113704 /* LAN_discovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAN_discovery.h; sourceTree = "<group>"; };
+		AEF9D8B22F9F3F6A00113704 /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
+		AEF9D8B32F9F3F6A00113704 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		AEF9D8B42F9F3F6A00113704 /* logger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logger.c; sourceTree = "<group>"; };
+		AEF9D8B52F9F3F6A00113704 /* logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logger.h; sourceTree = "<group>"; };
+		AEF9D8B62F9F3F6A00113704 /* Makefile.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = Makefile.inc; sourceTree = "<group>"; };
+		AEF9D8B72F9F3F6A00113704 /* Messenger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Messenger.c; sourceTree = "<group>"; };
+		AEF9D8B82F9F3F6A00113704 /* Messenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenger.h; sourceTree = "<group>"; };
+		AEF9D8B92F9F3F6A00113704 /* misc_tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc_tools.h; sourceTree = "<group>"; };
+		AEF9D8BA2F9F3F6A00113704 /* net_crypto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_crypto.c; sourceTree = "<group>"; };
+		AEF9D8BB2F9F3F6A00113704 /* net_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_crypto.h; sourceTree = "<group>"; };
+		AEF9D8BC2F9F3F6A00113704 /* network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = network.c; sourceTree = "<group>"; };
+		AEF9D8BD2F9F3F6A00113704 /* network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = network.h; sourceTree = "<group>"; };
+		AEF9D8BE2F9F3F6A00113704 /* onion_announce.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = onion_announce.c; sourceTree = "<group>"; };
+		AEF9D8BF2F9F3F6A00113704 /* onion_announce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onion_announce.h; sourceTree = "<group>"; };
+		AEF9D8C02F9F3F6A00113704 /* onion_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = onion_client.c; sourceTree = "<group>"; };
+		AEF9D8C12F9F3F6A00113704 /* onion_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onion_client.h; sourceTree = "<group>"; };
+		AEF9D8C22F9F3F6A00113704 /* onion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = onion.c; sourceTree = "<group>"; };
+		AEF9D8C32F9F3F6A00113704 /* onion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onion.h; sourceTree = "<group>"; };
+		AEF9D8C42F9F3F6A00113704 /* ping_array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ping_array.c; sourceTree = "<group>"; };
+		AEF9D8C52F9F3F6A00113704 /* ping_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ping_array.h; sourceTree = "<group>"; };
+		AEF9D8C62F9F3F6A00113704 /* ping.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ping.c; sourceTree = "<group>"; };
+		AEF9D8C72F9F3F6A00113704 /* ping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ping.h; sourceTree = "<group>"; };
+		AEF9D8C82F9F3F6A00113704 /* TCP_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCP_client.c; sourceTree = "<group>"; };
+		AEF9D8C92F9F3F6A00113704 /* TCP_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCP_client.h; sourceTree = "<group>"; };
+		AEF9D8CA2F9F3F6A00113704 /* TCP_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCP_connection.c; sourceTree = "<group>"; };
+		AEF9D8CB2F9F3F6A00113704 /* TCP_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCP_connection.h; sourceTree = "<group>"; };
+		AEF9D8CC2F9F3F6A00113704 /* TCP_server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TCP_server.c; sourceTree = "<group>"; };
+		AEF9D8CD2F9F3F6A00113704 /* TCP_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCP_server.h; sourceTree = "<group>"; };
+		AEF9D8CE2F9F3F6A00113704 /* tox_old_code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tox_old_code.h; sourceTree = "<group>"; };
+		AEF9D8CF2F9F3F6A00113704 /* tox_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tox_old.h; sourceTree = "<group>"; };
+		AEF9D8D02F9F3F6A00113704 /* tox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tox.c; sourceTree = "<group>"; };
+		AEF9D8D12F9F3F6A00113704 /* tox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tox.h; sourceTree = "<group>"; };
+		AEF9D8D22F9F3F6A00113704 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
+		AEF9D8D32F9F3F6A00113704 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		B9DABB3418E539A100B2A6B2 /* libProjectTox-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libProjectTox-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DABB3718E539A100B2A6B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9DABB4518E539A100B2A6B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B9DABB4818E539A100B2A6B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B9DABB5D18E53A0B00B2A6B2 /* ProjectTox-Core-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProjectTox-Core-Prefix.pch"; sourceTree = "<group>"; };
-		B9DABBBE18E53B3600B2A6B2 /* assoc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = assoc.c; sourceTree = "<group>"; };
-		B9DABBBF18E53B3600B2A6B2 /* assoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = assoc.h; sourceTree = "<group>"; };
-		B9DABBC018E53B3600B2A6B2 /* DHT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DHT.c; sourceTree = "<group>"; };
-		B9DABBC118E53B3600B2A6B2 /* DHT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHT.h; sourceTree = "<group>"; };
-		B9DABBC218E53B3600B2A6B2 /* friend_requests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = friend_requests.c; sourceTree = "<group>"; };
-		B9DABBC318E53B3600B2A6B2 /* friend_requests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = friend_requests.h; sourceTree = "<group>"; };
-		B9DABBC418E53B3600B2A6B2 /* group_chats.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = group_chats.c; sourceTree = "<group>"; };
-		B9DABBC518E53B3600B2A6B2 /* group_chats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = group_chats.h; sourceTree = "<group>"; };
-		B9DABBC618E53B3600B2A6B2 /* LAN_discovery.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LAN_discovery.c; sourceTree = "<group>"; };
-		B9DABBC718E53B3600B2A6B2 /* LAN_discovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LAN_discovery.h; sourceTree = "<group>"; };
-		B9DABBC818E53B3600B2A6B2 /* Lossless_UDP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Lossless_UDP.c; sourceTree = "<group>"; };
-		B9DABBC918E53B3600B2A6B2 /* Lossless_UDP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lossless_UDP.h; sourceTree = "<group>"; };
-		B9DABBCB18E53B3600B2A6B2 /* Messenger.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Messenger.c; sourceTree = "<group>"; };
-		B9DABBCC18E53B3600B2A6B2 /* Messenger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenger.h; sourceTree = "<group>"; };
-		B9DABBCD18E53B3600B2A6B2 /* misc_tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc_tools.h; sourceTree = "<group>"; };
-		B9DABBCE18E53B3600B2A6B2 /* net_crypto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_crypto.c; sourceTree = "<group>"; };
-		B9DABBCF18E53B3600B2A6B2 /* net_crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_crypto.h; sourceTree = "<group>"; };
-		B9DABBD018E53B3600B2A6B2 /* network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = network.c; sourceTree = "<group>"; };
-		B9DABBD118E53B3600B2A6B2 /* network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = network.h; sourceTree = "<group>"; };
-		B9DABBD218E53B3600B2A6B2 /* onion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = onion.c; sourceTree = "<group>"; };
-		B9DABBD318E53B3600B2A6B2 /* onion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onion.h; sourceTree = "<group>"; };
-		B9DABBD418E53B3600B2A6B2 /* onion_announce.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = onion_announce.c; sourceTree = "<group>"; };
-		B9DABBD518E53B3600B2A6B2 /* onion_announce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onion_announce.h; sourceTree = "<group>"; };
-		B9DABBD618E53B3600B2A6B2 /* onion_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = onion_client.c; sourceTree = "<group>"; };
-		B9DABBD718E53B3600B2A6B2 /* onion_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = onion_client.h; sourceTree = "<group>"; };
-		B9DABBD818E53B3600B2A6B2 /* ping.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ping.c; sourceTree = "<group>"; };
-		B9DABBD918E53B3600B2A6B2 /* ping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ping.h; sourceTree = "<group>"; };
-		B9DABBDC18E53B3600B2A6B2 /* tox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tox.c; sourceTree = "<group>"; };
-		B9DABBDD18E53B3600B2A6B2 /* tox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tox.h; sourceTree = "<group>"; };
-		B9DABBDE18E53B3600B2A6B2 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
-		B9DABBDF18E53B3600B2A6B2 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		B9DABE9418E53D1D00B2A6B2 /* sodium.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sodium.xcodeproj; path = sodium/sodium.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,37 +197,54 @@
 		B9DABBBD18E53B3600B2A6B2 /* toxcore */ = {
 			isa = PBXGroup;
 			children = (
-				B9DABBBE18E53B3600B2A6B2 /* assoc.c */,
-				B9DABBBF18E53B3600B2A6B2 /* assoc.h */,
-				B9DABBC018E53B3600B2A6B2 /* DHT.c */,
-				B9DABBC118E53B3600B2A6B2 /* DHT.h */,
-				B9DABBC218E53B3600B2A6B2 /* friend_requests.c */,
-				B9DABBC318E53B3600B2A6B2 /* friend_requests.h */,
-				B9DABBC418E53B3600B2A6B2 /* group_chats.c */,
-				B9DABBC518E53B3600B2A6B2 /* group_chats.h */,
-				B9DABBC618E53B3600B2A6B2 /* LAN_discovery.c */,
-				B9DABBC718E53B3600B2A6B2 /* LAN_discovery.h */,
-				B9DABBC818E53B3600B2A6B2 /* Lossless_UDP.c */,
-				B9DABBC918E53B3600B2A6B2 /* Lossless_UDP.h */,
-				B9DABBCB18E53B3600B2A6B2 /* Messenger.c */,
-				B9DABBCC18E53B3600B2A6B2 /* Messenger.h */,
-				B9DABBCD18E53B3600B2A6B2 /* misc_tools.h */,
-				B9DABBCE18E53B3600B2A6B2 /* net_crypto.c */,
-				B9DABBCF18E53B3600B2A6B2 /* net_crypto.h */,
-				B9DABBD018E53B3600B2A6B2 /* network.c */,
-				B9DABBD118E53B3600B2A6B2 /* network.h */,
-				B9DABBD218E53B3600B2A6B2 /* onion.c */,
-				B9DABBD318E53B3600B2A6B2 /* onion.h */,
-				B9DABBD418E53B3600B2A6B2 /* onion_announce.c */,
-				B9DABBD518E53B3600B2A6B2 /* onion_announce.h */,
-				B9DABBD618E53B3600B2A6B2 /* onion_client.c */,
-				B9DABBD718E53B3600B2A6B2 /* onion_client.h */,
-				B9DABBD818E53B3600B2A6B2 /* ping.c */,
-				B9DABBD918E53B3600B2A6B2 /* ping.h */,
-				B9DABBDC18E53B3600B2A6B2 /* tox.c */,
-				B9DABBDD18E53B3600B2A6B2 /* tox.h */,
-				B9DABBDE18E53B3600B2A6B2 /* util.c */,
-				B9DABBDF18E53B3600B2A6B2 /* util.h */,
+				AEF9D8A42F9F3F6A00113704 /* assoc.c */,
+				AEF9D8A52F9F3F6A00113704 /* assoc.h */,
+				AEF9D8A62F9F3F6A00113704 /* crypto_core.c */,
+				AEF9D8A72F9F3F6A00113704 /* crypto_core.h */,
+				AEF9D8A82F9F3F6A00113704 /* DHT.c */,
+				AEF9D8A92F9F3F6A00113704 /* DHT.h */,
+				AEF9D8AA2F9F3F6A00113704 /* friend_connection.c */,
+				AEF9D8AB2F9F3F6A00113704 /* friend_connection.h */,
+				AEF9D8AC2F9F3F6A00113704 /* friend_requests.c */,
+				AEF9D8AD2F9F3F6A00113704 /* friend_requests.h */,
+				AEF9D8AE2F9F3F6A00113704 /* group.c */,
+				AEF9D8AF2F9F3F6A00113704 /* group.h */,
+				AEF9D8B02F9F3F6A00113704 /* LAN_discovery.c */,
+				AEF9D8B12F9F3F6A00113704 /* LAN_discovery.h */,
+				AEF9D8B22F9F3F6A00113704 /* list.c */,
+				AEF9D8B32F9F3F6A00113704 /* list.h */,
+				AEF9D8B42F9F3F6A00113704 /* logger.c */,
+				AEF9D8B52F9F3F6A00113704 /* logger.h */,
+				AEF9D8B62F9F3F6A00113704 /* Makefile.inc */,
+				AEF9D8B72F9F3F6A00113704 /* Messenger.c */,
+				AEF9D8B82F9F3F6A00113704 /* Messenger.h */,
+				AEF9D8B92F9F3F6A00113704 /* misc_tools.h */,
+				AEF9D8BA2F9F3F6A00113704 /* net_crypto.c */,
+				AEF9D8BB2F9F3F6A00113704 /* net_crypto.h */,
+				AEF9D8BC2F9F3F6A00113704 /* network.c */,
+				AEF9D8BD2F9F3F6A00113704 /* network.h */,
+				AEF9D8BE2F9F3F6A00113704 /* onion_announce.c */,
+				AEF9D8BF2F9F3F6A00113704 /* onion_announce.h */,
+				AEF9D8C02F9F3F6A00113704 /* onion_client.c */,
+				AEF9D8C12F9F3F6A00113704 /* onion_client.h */,
+				AEF9D8C22F9F3F6A00113704 /* onion.c */,
+				AEF9D8C32F9F3F6A00113704 /* onion.h */,
+				AEF9D8C42F9F3F6A00113704 /* ping_array.c */,
+				AEF9D8C52F9F3F6A00113704 /* ping_array.h */,
+				AEF9D8C62F9F3F6A00113704 /* ping.c */,
+				AEF9D8C72F9F3F6A00113704 /* ping.h */,
+				AEF9D8C82F9F3F6A00113704 /* TCP_client.c */,
+				AEF9D8C92F9F3F6A00113704 /* TCP_client.h */,
+				AEF9D8CA2F9F3F6A00113704 /* TCP_connection.c */,
+				AEF9D8CB2F9F3F6A00113704 /* TCP_connection.h */,
+				AEF9D8CC2F9F3F6A00113704 /* TCP_server.c */,
+				AEF9D8CD2F9F3F6A00113704 /* TCP_server.h */,
+				AEF9D8CE2F9F3F6A00113704 /* tox_old_code.h */,
+				AEF9D8CF2F9F3F6A00113704 /* tox_old.h */,
+				AEF9D8D02F9F3F6A00113704 /* tox.c */,
+				AEF9D8D12F9F3F6A00113704 /* tox.h */,
+				AEF9D8D22F9F3F6A00113704 /* util.c */,
+				AEF9D8D32F9F3F6A00113704 /* util.h */,
 			);
 			path = toxcore;
 			sourceTree = "<group>";
@@ -211,19 +264,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9DABF4E18E543B200B2A6B2 /* tox.h in Headers */,
-				B9DABF5418E544CF00B2A6B2 /* Messenger.h in Headers */,
-				B9DABF5618E544DD00B2A6B2 /* Lossless_UDP.h in Headers */,
-				B9DABF5518E544D700B2A6B2 /* net_crypto.h in Headers */,
-				B9DABF5718E544E400B2A6B2 /* network.h in Headers */,
-				B9DABF5A18E544F700B2A6B2 /* friend_requests.h in Headers */,
-				B9DABF5E18E5450A00B2A6B2 /* LAN_discovery.h in Headers */,
-				B9DABF5918E544F100B2A6B2 /* DHT.h in Headers */,
-				B9DABF5B18E544FC00B2A6B2 /* onion_client.h in Headers */,
-				B9DABF5F18E5451200B2A6B2 /* group_chats.h in Headers */,
-				B9DABF5D18E5450500B2A6B2 /* onion.h in Headers */,
-				B9DABF5C18E5450100B2A6B2 /* onion_announce.h in Headers */,
-				B9DABF5818E544EB00B2A6B2 /* misc_tools.h in Headers */,
+				AEF9D8F32F9F3F6A00113704 /* onion.h in Headers */,
+				AEF9D8FF2F9F3F6A00113704 /* tox_old.h in Headers */,
+				AEF9D8E32F9F3F6A00113704 /* list.h in Headers */,
+				AEF9D8E12F9F3F6A00113704 /* LAN_discovery.h in Headers */,
+				AEF9D8E52F9F3F6A00113704 /* logger.h in Headers */,
+				AEF9D8FB2F9F3F6A00113704 /* TCP_connection.h in Headers */,
+				AEF9D9012F9F3F6A00113704 /* tox.h in Headers */,
+				AEF9D8DF2F9F3F6A00113704 /* group.h in Headers */,
+				AEF9D8DD2F9F3F6A00113704 /* friend_requests.h in Headers */,
+				AEF9D8ED2F9F3F6A00113704 /* network.h in Headers */,
+				AEF9D8FD2F9F3F6A00113704 /* TCP_server.h in Headers */,
+				AEF9D8FE2F9F3F6A00113704 /* tox_old_code.h in Headers */,
+				AEF9D8DB2F9F3F6A00113704 /* friend_connection.h in Headers */,
+				AEF9D8E82F9F3F6A00113704 /* Messenger.h in Headers */,
+				AEF9D8E92F9F3F6A00113704 /* misc_tools.h in Headers */,
+				AEF9D8F72F9F3F6A00113704 /* ping.h in Headers */,
+				AEF9D8D92F9F3F6A00113704 /* DHT.h in Headers */,
+				AEF9D8F92F9F3F6A00113704 /* TCP_client.h in Headers */,
+				AEF9D8EB2F9F3F6A00113704 /* net_crypto.h in Headers */,
+				AEF9D8EF2F9F3F6A00113704 /* onion_announce.h in Headers */,
+				AEF9D9032F9F3F6A00113704 /* util.h in Headers */,
+				AEF9D8D72F9F3F6A00113704 /* crypto_core.h in Headers */,
+				AEF9D8D52F9F3F6A00113704 /* assoc.h in Headers */,
+				AEF9D8F12F9F3F6A00113704 /* onion_client.h in Headers */,
+				AEF9D8F52F9F3F6A00113704 /* ping_array.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,21 +361,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9DABC0C18E53B3600B2A6B2 /* onion_announce.c in Sources */,
-				B9DABC0318E53B3600B2A6B2 /* friend_requests.c in Sources */,
-				B9DABC0518E53B3600B2A6B2 /* LAN_discovery.c in Sources */,
-				B9DABC0E18E53B3600B2A6B2 /* ping.c in Sources */,
-				B9DABC0A18E53B3600B2A6B2 /* network.c in Sources */,
-				B9DABC0D18E53B3600B2A6B2 /* onion_client.c in Sources */,
-				B9DABC0418E53B3600B2A6B2 /* group_chats.c in Sources */,
-				B9DABC1018E53B3600B2A6B2 /* tox.c in Sources */,
-				B9DABC0118E53B3600B2A6B2 /* assoc.c in Sources */,
-				B9DABC0918E53B3600B2A6B2 /* net_crypto.c in Sources */,
-				B9DABC0818E53B3600B2A6B2 /* Messenger.c in Sources */,
-				B9DABC0218E53B3600B2A6B2 /* DHT.c in Sources */,
-				B9DABC0618E53B3600B2A6B2 /* Lossless_UDP.c in Sources */,
-				B9DABC0B18E53B3600B2A6B2 /* onion.c in Sources */,
-				B9DABC1118E53B3600B2A6B2 /* util.c in Sources */,
+				AEF9D8DC2F9F3F6A00113704 /* friend_requests.c in Sources */,
+				AEF9D8EC2F9F3F6A00113704 /* network.c in Sources */,
+				AEF9D8D82F9F3F6A00113704 /* DHT.c in Sources */,
+				AEF9D9022F9F3F6A00113704 /* util.c in Sources */,
+				AEF9D8D42F9F3F6A00113704 /* assoc.c in Sources */,
+				AEF9D8F02F9F3F6A00113704 /* onion_client.c in Sources */,
+				AEF9D8E22F9F3F6A00113704 /* list.c in Sources */,
+				AEF9D8E42F9F3F6A00113704 /* logger.c in Sources */,
+				AEF9D8E72F9F3F6A00113704 /* Messenger.c in Sources */,
+				AEF9D8DE2F9F3F6A00113704 /* group.c in Sources */,
+				AEF9D8F82F9F3F6A00113704 /* TCP_client.c in Sources */,
+				AEF9D8F62F9F3F6A00113704 /* ping.c in Sources */,
+				AEF9D9002F9F3F6A00113704 /* tox.c in Sources */,
+				AEF9D8EA2F9F3F6A00113704 /* net_crypto.c in Sources */,
+				AEF9D8F22F9F3F6A00113704 /* onion.c in Sources */,
+				AEF9D8EE2F9F3F6A00113704 /* onion_announce.c in Sources */,
+				AEF9D8E02F9F3F6A00113704 /* LAN_discovery.c in Sources */,
+				AEF9D8D62F9F3F6A00113704 /* crypto_core.c in Sources */,
+				AEF9D8DA2F9F3F6A00113704 /* friend_connection.c in Sources */,
+				AEF9D8F42F9F3F6A00113704 /* ping_array.c in Sources */,
+				AEF9D8FC2F9F3F6A00113704 /* TCP_server.c in Sources */,
+				AEF9D8FA2F9F3F6A00113704 /* TCP_connection.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

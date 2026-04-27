@@ -44,16 +44,15 @@
     }
     
     // Plain Tox address
-    if ([self.originalInput isMatchedByRegex:@"^[0-9A-Fa-f]+$"] && [self.originalInput length] == TOX_FRIEND_ADDRESS_SIZE) {
+    if ([self.originalInput isMatchedByRegex:@"^[0-9A-Fa-f]+$"] && [self.originalInput length] == TOX_ADDRESS_SIZE*2) {
         TXCFriendAddressError error = [TXCFriendAddress friendAddressIsValid:self.originalInput];
         if (error == TXCFriendAddressError_None){
             self.resolvedAddress = [self.originalInput copy];
             self.completionBlock(self.resolvedAddress, TXCFriendAddressError_None);
-            return;
         } else {
             self.completionBlock(nil, error);
-            return;
         }
+        return;
     }
     
     // tox:// address (for plain address)
@@ -63,11 +62,10 @@
         if (error == TXCFriendAddressError_None) {
             self.resolvedAddress = addressToCheck;
             self.completionBlock(self.resolvedAddress, TXCFriendAddressError_None);
-            return;
         } else {
             self.completionBlock(nil, error);
-            return;
         }
+        return;
     }
     
     // tox:// address (for DNS lookup)
@@ -106,16 +104,16 @@
         return TXCFriendAddressError_Invalid;
     }
     
-    if ([theKey length] != TOX_FRIEND_ADDRESS_SIZE*2) {
+    if ([theKey length] != TOX_ADDRESS_SIZE*2) {
         return  TXCFriendAddressError_Invalid;
     }
     
     // Our key
-    char convertedKey[(TOX_FRIEND_ADDRESS_SIZE * 2) + 1];
+    char convertedKey[(TOX_ADDRESS_SIZE * 2) + 1];
     int pos = 0;
-    uint8_t ourAddress[TOX_FRIEND_ADDRESS_SIZE];
-    tox_get_address([[TXCSingleton sharedSingleton] toxCoreInstance], ourAddress);
-    for (int i = 0; i < TOX_FRIEND_ADDRESS_SIZE; ++i, pos += 2) {
+    uint8_t ourAddress[TOX_ADDRESS_SIZE];
+    tox_self_get_address([[TXCSingleton sharedSingleton] toxCoreInstance], ourAddress);
+    for (int i = 0; i < TOX_ADDRESS_SIZE; ++i, pos += 2) {
         sprintf(&convertedKey[pos] ,"%02X", ourAddress[i] & 0xff);
     }
     if ([[NSString stringWithUTF8String:convertedKey] isEqualToString:theKey]) {
@@ -124,7 +122,7 @@
     
     // Friend's key
     for (TXCFriendObject *tempFriend in [[TXCSingleton sharedSingleton] mainFriendList]) {
-        if ([[tempFriend.publicKey uppercaseString] isEqualToString:[[theKey substringToIndex:TOX_CLIENT_ID_SIZE*2] uppercaseString]]) {
+        if ([[tempFriend.publicKey uppercaseString] isEqualToString:[[theKey substringToIndex:TOX_PUBLIC_KEY_SIZE*2] uppercaseString]]) {
             return TXCFriendAddressError_AlreadyAdded;
         }
     }
