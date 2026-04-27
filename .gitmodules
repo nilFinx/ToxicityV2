@@ -16,9 +16,6 @@
 [submodule "Submodules/ProjectTox-Core/ProjectTox-Core"]
 	path = Submodules/ProjectTox-Core/ProjectTox-Core
 	url = https://github.com/irungentoo/ProjectTox-Core.git
-[submodule "Submodules/ProjectTox-Core/sodium/libsodium-ios"]
-	path = Submodules/ProjectTox-Core/sodium/libsodium-ios
-	url = https://github.com/mochtu/libsodium-ios.git
 [submodule "Submodules/ProjectTox-Core/sodium/libsodium"]
 	path = Submodules/ProjectTox-Core/sodium/libsodium
 	url = https://github.com/jedisct1/libsodium
