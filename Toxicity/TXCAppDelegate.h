@@ -1,10 +1,5 @@
-//
-//  TXCAppDelegate.h
-//  Toxicity
-//
-//  Created by James Linnell on 8/4/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//      2026 nilFinx
 
 #import <UIKit/UIKit.h>
 #import "TXCSingleton.h"
@@ -35,16 +30,14 @@ typedef NS_ENUM(NSUInteger, TXCLocalNotification) {
 
 // Tox loop stuff
 @property (nonatomic, assign) int on;
-@property (nonatomic, assign) uint8_t *toxWaitData;
-@property (nonatomic, assign) uint16_t toxWaitBufferSize;
 
-// Tox thread stuff
 @property (nonatomic, strong) dispatch_queue_t toxMainThread;
 @property (nonatomic, assign) TXCThreadState toxMainThreadState;
 @property (nonatomic, strong) dispatch_queue_t toxBackgroundThread;
 @property (nonatomic, assign) TXCThreadState toxBackgroundThreadState;
 
 unsigned char * hex_string_to_bin(char hex_string[]);
+char * bin_to_hex_string(uint8_t bin[], size_t size);
 int friendNumForID(NSString *theKey);
 - (void)toxCoreLoopInBackground:(BOOL)inBackground;
 

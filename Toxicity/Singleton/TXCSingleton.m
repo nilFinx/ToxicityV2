@@ -9,7 +9,7 @@
 #import "TXCSingleton.h"
 #import <dns_sd.h>
 
-extern NSString *const TXCToxAppDelegateUserDefaultsToxData;
+extern NSString *const TXCToxAppDelegateUserDefaultsToxSave;
 
 @implementation TXCSingleton
 
@@ -100,7 +100,7 @@ extern NSString *const TXCToxAppDelegateUserDefaultsToxData;
     uint8_t *toxBuffer = malloc(toxLength);
     tox_get_savedata([[TXCSingleton sharedSingleton] toxCoreInstance], toxBuffer);
     NSData *toxData = [[NSData alloc] initWithBytes:toxBuffer length:toxLength];
-    [prefs setObject:toxData forKey:TXCToxAppDelegateUserDefaultsToxData];
+    [prefs setObject:toxData forKey:TXCToxAppDelegateUserDefaultsToxSave];
     [prefs synchronize];
 }
 

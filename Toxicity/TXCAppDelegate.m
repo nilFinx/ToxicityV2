@@ -1,33 +1,31 @@
-//
-//  TXCAppDelegate.m
-//  Toxicity
-//
-//  Created by James Linnell on 8/4/13.
 //  Copyright (c) 2014 James Linnell
 //      2026 nilFinx
-//
 
 // Known tags:
 // TODO
 // TOOD_BUMP
 // UNFINISHED
+// ERRPRINT (as part of the error printing migration later on)
 
 #import "TXCAppDelegate.h"
+#import "TXCFriendAddress.h"
 #import "TWMessageBarManager.h"
 #import "JSBubbleView.h"
 #import <ZBarReaderView.h>
-#import "TXCFriendAddress.h"
 
-NSString *const TXCToxAppDelegateNotificationFriendAdded = @"FriendAdded";
-NSString *const TXCToxAppDelegateNotificationGroupAdded = @"GroupAdded";
-NSString *const TXCToxAppDelegateNotificationFriendRequestReceived = @"FriendRequestReceived";
-NSString *const TXCToxAppDelegateNotificationGroupInviteReceived = @"GroupInviteReceived";
-NSString *const TXCToxAppDelegateNotificationNewMessage = @"NewMessage";
-NSString *const TXCToxAppDelegateNotificationFriendUserStatusChanged = @"FriendUserStatusChanged";
-NSString *const ToxAppDelegateNotificationDHTConnected              = @"DHTConnected";
-NSString *const ToxAppDelegateNotificationDHTDisconnected           = @"DHTDisconnected";
+NSString *const TXCToxAppDelegateNotificationFriendAdded				= @"FriendAdded";
+NSString *const TXCToxAppDelegateNotificationGroupAdded					= @"GroupAdded";
+NSString *const TXCToxAppDelegateNotificationFriendRequestReceived		= @"FriendRequestReceived";
+NSString *const TXCToxAppDelegateNotificationGroupInviteReceived		= @"GroupInviteReceived";
+NSString *const TXCToxAppDelegateNotificationNewMessage					= @"NewMessage";
+NSString *const TXCToxAppDelegateNotificationFriendUserStatusChanged	= @"FriendUserStatusChanged";
+NSString *const ToxAppDelegateNotificationDHTConnected					= @"DHTConnected";
+NSString *const ToxAppDelegateNotificationDHTDisconnected				= @"DHTDisconnected";
 
-NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
+NSString *const TXCToxAppDelegateUserDefaultsToxSave					= @"TXCToxData";
+
+NSString *const TXCToxAppDelegateUserDefaultName						= @"Toxicity User";
+NSString *const TXCToxAppDelegateUserDefaultStatus						= @"Toxing on Toxicity";
 
 @implementation TXCAppDelegate
 
@@ -40,24 +38,18 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
     [self setupTox];
 
     [self customizeAppearence];
-
-    // Tox thread
-    self.toxMainThread = dispatch_queue_create("com.Jman.Toxicity", DISPATCH_QUEUE_SERIAL);
+	
+    self.toxMainThread = dispatch_queue_create("space.recycledplist.Toxicity", DISPATCH_QUEUE_SERIAL);
     self.toxMainThreadState = TXCThreadState_killed;
-    self.toxBackgroundThread = dispatch_queue_create("com.Jman.ToxicityBG", DISPATCH_QUEUE_SERIAL);
+    self.toxBackgroundThread = dispatch_queue_create("space.recycledplist.ToxicityBG", DISPATCH_QUEUE_SERIAL);
     self.toxBackgroundThreadState = TXCThreadState_killed;
-    
-    self.toxWaitData = NULL;
-    self.toxWaitBufferSize = 6969;
-    self.toxWaitData = malloc(self.toxWaitBufferSize);
-    
     
     UILocalNotification *locationNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (locationNotification) {
-        // Go to most recent chat message
+        // TODO: ? Go to most recent chat message
     }
+	// TODO: Only reduce badge number when the chats are visited
     application.applicationIconBadgeNumber = 0;
-
     
     return YES;
 }
@@ -68,30 +60,30 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
         [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"New Message"
                                                        description:notification.alertBody
                                                               type:TWMessageBarMessageTypeInfo];
-    }
-    application.applicationIconBadgeNumber = 0;
+		application.applicationIconBadgeNumber = 0;
+	}
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    // Sent when the application is *about* to move from active to inactive state.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+	// Save to be safe.
+	
+	[TXCSingleton saveToxDataInUserDefaults];
+	 
     // First and foremost kill our main thread. This is a must.
     [self killToxThreadInBackground:NO];
-    while (self.toxMainThreadState != TXCThreadState_killed) {
-        // Wait for thread to officially end
-    }
-
-    
+    while (self.toxMainThreadState != TXCThreadState_killed) { }
+	
+	// Do nothing on devices that lacks multitasking support.
     if (![[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)]) {
         if (![[UIDevice currentDevice] isMultitaskingSupported]) {
             return;
         }
-        return;
     }
     
     // Multitasking supported
@@ -113,15 +105,15 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    // Called as part of the transition from the background to the inactive state
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    if ([[TXCSingleton sharedSingleton] toxCoreInstance] == NULL) {
+	if ([[TXCSingleton sharedSingleton] toxCoreInstance] == NULL) {
         [self setupTox];
     }
+	
     // Kill BG thread, if there is any.
     [self killToxThreadInBackground:YES];
     
@@ -131,21 +123,19 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
     
     // Start main thread again.
     [self startToxThreadInBackground:NO];
-    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    
     // Kill any threads present
     [self killToxThreadInBackground:YES];
     [self killToxThreadInBackground:NO];
-    
-    // Wait for them to end (?)
+	
     while (self.toxMainThreadState != TXCThreadState_killed && self.toxBackgroundThreadState != TXCThreadState_killed) {
         // Wait for both threads (only one should be running at a time though) to end
     }
+	
+	[TXCSingleton saveToxDataInUserDefaults];
     
     // Properly kill tox.
     tox_kill([[TXCSingleton sharedSingleton] toxCoreInstance]);
@@ -196,13 +186,13 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
     tox_callback_group_namelist_change(toxInstance, print_groupnamelistchange,    NULL);
     
     // Load save. Which is held in NSData bytes in the user defaults
-    if ([prefs objectForKey:TXCToxAppDelegateUserDefaultsToxData] == nil) {
+    if ([prefs objectForKey:TXCToxAppDelegateUserDefaultsToxSave] == nil) {
         NSLog(@"saving new save");
         saveToxDataInUserDefaults();
     } else {
         NSLog(@"using already made save");
         // Save already made, load it from memory
-        NSData *theKey = [prefs objectForKey:TXCToxAppDelegateUserDefaultsToxData];
+        NSData *theKey = [prefs objectForKey:TXCToxAppDelegateUserDefaultsToxSave];
         
         uint8_t *data = (uint8_t *)[theKey bytes];
         
@@ -274,115 +264,120 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
 
 - (void)setupTox
 {
-    //user defaults is the easy way to save info between app launches. dont have to read a file manually, etc. basically a plist
+    // User defaults is the easy way to save info between app launches. Don't have to read a file manually, etc. Basically a plist.
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    
-    /***** Start Loading from NSUserDefaults *****/
-    /***** Load:
-     Public/Private Key Data - NSData with bytes
-     Our Username/nick and Status Message - NSString for both
-     Friend List - NSArray of Archived instances of TXCFriendObject
-     Saved DHT Nodes - NSArray of Archived instances of TXCDHTNodeObject
-     *****/
     
     TOX_ERR_OPTIONS_NEW optNewErr;
     struct Tox_Options* opt = tox_options_new(&optNewErr);
-    
     if (optNewErr != TOX_ERR_OPTIONS_NEW_OK)
-        exit(1);
-    
-    //load save, which is held in NSData bytes in the user defaults
-    if ([prefs objectForKey:TXCToxAppDelegateUserDefaultsToxData] != nil) {
-        NSLog(@"Loading already made save");
-        //key already made, load it from memory
-        NSData *theKey = [prefs objectForKey:TXCToxAppDelegateUserDefaultsToxData];
+	{
+		NSLog(@"Failed to initialize Tox options: %i", optNewErr); // ERRPRINT
+		exit(1);
+	}
+	
+    // Load save
+    if ([prefs objectForKey:TXCToxAppDelegateUserDefaultsToxSave] != nil) {
+        NSLog(@"Loading the save");
+        NSData *theKey = [prefs objectForKey:TXCToxAppDelegateUserDefaultsToxSave];
         
         uint8_t *data = (uint8_t *)[theKey bytes];
-        
+		
+		// TODO: Swap for setters
         opt->savedata_type = TOX_SAVEDATA_TYPE_TOX_SAVE;
         opt->savedata_length = [theKey length];
         opt->savedata_data = data;
     }
+	
+	TOX_ERR_NEW toxNewErr;
+    Tox *tox = tox_new(opt, &toxNewErr);
+	if (toxNewErr != TOX_ERR_NEW_OK)
+	{
+		NSLog(@"Failed to initialize Tox: %i", toxNewErr); // ERRPRINT
+		exit(1);
+	}
+	
+	[[TXCSingleton sharedSingleton] setToxCoreInstance:tox];
     
-    // TODO_BUMP error handling
-    Tox *tempTox = tox_new(0, 0);
-    if (tempTox) {
-        [[TXCSingleton sharedSingleton] setToxCoreInstance:tempTox];
-    }
-    // so don't do anything on failure??
-    
-    if ([prefs objectForKey:TXCToxAppDelegateUserDefaultsToxData] == nil) {
-        NSLog(@"Saving new save");
-        saveToxDataInUserDefaults();
-    }
-    
-    //callbacks
-    tox_callback_friend_request(       [[TXCSingleton sharedSingleton] toxCoreInstance], print_request,                NULL);
-    tox_callback_group_invite(         [[TXCSingleton sharedSingleton] toxCoreInstance], print_groupinvite,            NULL);
-    tox_callback_friend_message(       [[TXCSingleton sharedSingleton] toxCoreInstance], print_message,                NULL);
-    tox_callback_group_message(        [[TXCSingleton sharedSingleton] toxCoreInstance], print_groupmessage,           NULL);
-    tox_callback_friend_name(          [[TXCSingleton sharedSingleton] toxCoreInstance], print_nickchange,             NULL);
-    tox_callback_friend_status_message(       [[TXCSingleton sharedSingleton] toxCoreInstance], print_statuschange,           NULL);
-    tox_callback_friend_connection_status(    [[TXCSingleton sharedSingleton] toxCoreInstance], print_connectionstatuschange, NULL);
-    tox_callback_friend_status(          [[TXCSingleton sharedSingleton] toxCoreInstance], print_userstatuschange,       NULL);
-    tox_callback_group_namelist_change([[TXCSingleton sharedSingleton] toxCoreInstance], print_groupnamelistchange,    NULL);
-    
-    //load nick and statusmsg
-    if ([prefs objectForKey:@"self_nick"] != nil) {
-        [[TXCSingleton sharedSingleton] setUserNick:[prefs objectForKey:@"self_nick"]];
-        tox_self_set_name([[TXCSingleton sharedSingleton] toxCoreInstance], (uint8_t *)[[[TXCSingleton sharedSingleton] userNick] UTF8String], strlen([[[TXCSingleton sharedSingleton] userNick] UTF8String]) + 1, 0); // TODO_BUMP error handling
-    } else {
-        [[TXCSingleton sharedSingleton] setUserNick:@"Toxicity User"];
-        tox_self_set_name([[TXCSingleton sharedSingleton] toxCoreInstance], (uint8_t *)"Toxicity User", strlen("Toxicity User") + 1, 0); // TODO_BUMP error handling
-    }
-    if ([prefs objectForKey:@"self_status_message"] != nil) {
-        [[TXCSingleton sharedSingleton] setUserStatusMessage:[prefs objectForKey:@"self_status_message"]];
-        tox_self_set_status_message([[TXCSingleton sharedSingleton] toxCoreInstance], (uint8_t *)[[[TXCSingleton sharedSingleton] userStatusMessage] UTF8String], strlen([[[TXCSingleton sharedSingleton] userStatusMessage] UTF8String]) + 1, 0); // TODO_BUMP error handling
-    } else {
-        [[TXCSingleton sharedSingleton] setUserStatusMessage:@"Toxing on Toxicity"];
-        tox_self_set_status_message([[TXCSingleton sharedSingleton] toxCoreInstance], (uint8_t *)"Toxing on Toxicity", strlen("Toxing on Toxicity") + 1, 0); // TODO_BUMP error handling
+    if ([prefs objectForKey:TXCToxAppDelegateUserDefaultsToxSave] == nil) {
+        NSLog(@"Saving the new save");
+		[TXCSingleton saveToxDataInUserDefaults];
     }
     
-    //loads friend list
-    if ([prefs objectForKey:@"friend_list"] == nil) {
-        
-    } else {
-        NSMutableArray *array = [[NSMutableArray alloc] init];
-        for (NSData *data in [prefs objectForKey:@"friend_list"]) {
-            TXCFriendObject *tempFriend = (TXCFriendObject *)[NSKeyedUnarchiver unarchiveObjectWithData:data];
-            [array addObject:tempFriend];
-            
-            unsigned char *idToAdd = hex_string_to_bin((char *)[tempFriend.publicKey UTF8String]);
-            int num = tox_friend_add_norequest([[TXCSingleton sharedSingleton] toxCoreInstance], idToAdd, 0); // TODO_BUMP error handling
-            if (num >= 0) {
-                [[[TXCSingleton sharedSingleton] mainFriendMessages] insertObject:[NSArray array] atIndex:num];
-                [[[TXCSingleton sharedSingleton] mainFriendList] insertObject:tempFriend atIndex:num];
-            }
-            free(idToAdd);
-        }
-    }
+    // Callbacks
+    tox_callback_friend_request(				tox, print_request);
+    tox_callback_friend_message(				tox, print_message);
+    tox_callback_friend_name(					tox, print_nickchange);
+    tox_callback_friend_status_message(			tox, print_statuschange);
+    tox_callback_friend_connection_status(		tox, print_connectionstatuschange);
+    tox_callback_friend_status(					tox, print_userstatuschange);
+	tox_callback_conference_invite(				tox, print_groupinvite);
+	tox_callback_conference_message(			tox, print_groupmessage);
+    tox_callback_conference_peer_list_changed(	tox, print_groupnamelistchange);
+	// TODO: peer name change
+	 
+    // Load nick and status message
+    if (tox_self_get_name_size(tox) == 0) {
+        [[TXCSingleton sharedSingleton] setUserNick:TXCToxAppDelegateUserDefaultName];
+        tox_self_set_name(tox, (uint8_t *)[[[TXCSingleton sharedSingleton] userNick] UTF8String], strlen([[[TXCSingleton sharedSingleton] userNick] UTF8String]), NULL); // TODO_BUMP error handling
+	} else {
+		uint8_t name[tox_self_get_name_size(tox)];
+		tox_self_get_name(tox, name);
+		[[TXCSingleton sharedSingleton] setUserNick:[NSString stringWithFormat:@"%s", name]];
+	}
+    if (tox_self_get_status_message_size(tox) == 0) {
+        [[TXCSingleton sharedSingleton] setUserStatusMessage:TXCToxAppDelegateUserDefaultStatus];
+		tox_self_set_status_message(tox, (uint8_t *)[[[TXCSingleton sharedSingleton] userStatusMessage] UTF8String], [[[TXCSingleton sharedSingleton] userStatusMessage] length], NULL); // TODO_BUMP error handling
+	} else {
+		uint8_t status[tox_self_get_status_message_size(tox)];
+		tox_self_get_status_message(tox, status);
+		[[TXCSingleton sharedSingleton] setUserStatusMessage:[NSString stringWithFormat:@"%s", status]];
+	}
+	
+	 int size = tox_self_get_friend_list_size(tox);
+	 if (size != 0) {
+		 uint32_t friends[size];
+		 tox_self_get_friend_list(tox, friends);
+		 for (int i = 0; i < size; i++) {
+			uint32_t fid = friends[i];
+			
+		  	TXCFriendObject *friend = [[TXCFriendObject alloc] init];
+			
+			uint8_t pkey[TOX_PUBLIC_KEY_SIZE];
+			tox_friend_get_public_key(tox, fid, pkey, NULL);
+			char *cpkey = bin_to_hex_string(pkey, TOX_PUBLIC_KEY_SIZE);
+			friend.publicKey = [NSString stringWithFormat:@"%s", cpkey];
+			free(cpkey);
+			
+			int nameSize = tox_friend_get_name_size(tox, fid, NULL);
+			if (nameSize != 0) {
+				uint8_t name[nameSize];
+				tox_friend_get_name(tox, fid, name, NULL);
+				friend.nickname = [[NSString alloc] initWithBytes:name length:nameSize encoding:NSUTF8StringEncoding];
+			}
+			
+			int statSize = tox_friend_get_status_message_size(tox, fid, NULL);
+		  	if (statSize != 0) {
+				uint8_t stat[statSize];
+				tox_friend_get_status_message(tox, fid, stat, NULL);
+				friend.statusMessage = [[NSString alloc] initWithBytes:stat length:statSize encoding:NSUTF8StringEncoding];
+			}
+			
+			[[[TXCSingleton sharedSingleton] mainFriendMessages] insertObject:[NSArray array] atIndex:fid];
+			[[[TXCSingleton sharedSingleton] mainFriendList] insertObject:friend atIndex:fid];
+		}
+	}
     
     //loads any pending friend requests
-    if ([prefs objectForKey:@"pending_requests_list"] == nil) {
-        
-    } else {
+    if ([prefs objectForKey:@"pending_requests_list"] != nil)
         [[TXCSingleton sharedSingleton] setPendingFriendRequests:(NSMutableDictionary *)[prefs objectForKey:@"pending_requests_list"]];
-    }
-    
-    /***** End NSUserDefault Loading *****/
-    
-    
-    //Miscellaneous
-    
-    //print our our client id/address
-    char convertedKey[(TOX_ADDRESS_SIZE * 2) + 1];
-    int pos = 0;
-    uint8_t ourAddress1[TOX_ADDRESS_SIZE];
+	
+	uint8_t ourAddress1[TOX_ADDRESS_SIZE];
     tox_self_get_address([[TXCSingleton sharedSingleton] toxCoreInstance], ourAddress1);
-    for (int i = 0; i < TOX_ADDRESS_SIZE; ++i, pos += 2) {
-        sprintf(&convertedKey[pos] ,"%02X", ourAddress1[i] & 0xff);
-    }
-    NSLog(@"Our Address: %s", convertedKey);
+	char *convertedAddress = bin_to_hex_string(ourAddress1, TOX_ADDRESS_SIZE);
+    NSLog(@"Our Address: %s", convertedAddress);
+	free(convertedAddress);
+	
+	NSLog(@"Running on ToxCore %i.%i.%i", tox_version_major(), tox_version_minor(), tox_version_patch());
 }
 
 #pragma mark - End Application Delegation
@@ -391,26 +386,30 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
 
 - (void)connectToDHTWithIP:(TXCDHTNodeObject *)theDHTInfo {
     NSLog(@"Connecting to %@ %@ %@", [theDHTInfo dhtIP], [theDHTInfo dhtPort], [theDHTInfo dhtKey]);
-    const char *dht_ip = [[theDHTInfo dhtIP] UTF8String];
+	const char *dht_ip = [[theDHTInfo dhtIP] UTF8String];
     const char *dht_port = [[theDHTInfo dhtPort] UTF8String];
     const char *dht_key = [[theDHTInfo dhtKey] UTF8String];
     
     
-    //used from toxic source, this tells tox core to make a connection into the dht network    
+    // Used from toxic source, this tells ToxCore to make a connection into the dht network
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_async(self.toxMainThread, ^{
         unsigned char *binary_string = hex_string_to_bin((char *)dht_key);
+	 	TOX_ERR_BOOTSTRAP err;
         tox_bootstrap([[TXCSingleton sharedSingleton] toxCoreInstance],
                                    dht_ip,
-                                   // TODO_BUMP TOX_ENABLE_IPV6_DEFAULT,
                                    htons(atoi(dht_port)),
-                                   binary_string, 0); //actual connection // TODO_BUMP error handling
+                                   binary_string, &err);
         free(binary_string);
+	 	if (err != TOX_ERR_BOOTSTRAP_OK)
+			 NSLog(@"Error bootstrapping to %s: %i", dht_ip, err);
         dispatch_semaphore_signal(semaphore);
     });
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 
 }
+
+// TODO: Audit from here
 
 - (void)userNickChanged {
     char *newNick = (char *)[[[TXCSingleton sharedSingleton] userNick] UTF8String];
@@ -509,15 +508,17 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
         char *utf8Message = (char *)[messageToSend UTF8String];
         
         // TODO_BUMP error handling here
-        if (isGroupMessage == NO) { //chat message
-            if (isActionMessage) {
-                char *utf8FormattedMessage = (char *)[[messageToSend substringFromIndex:2] UTF8String];
-                num = tox_friend_send_message([[TXCSingleton sharedSingleton] toxCoreInstance], friendNum, TOX_MESSAGE_TYPE_ACTION, (uint8_t *)utf8FormattedMessage, strlen(utf8FormattedMessage) + 1, 0);
-            } else {
-                num = tox_friend_send_message([[TXCSingleton sharedSingleton] toxCoreInstance], friendNum, TOX_MESSAGE_TYPE_NORMAL, (uint8_t *)utf8Message, strlen(utf8Message) + 1, 0);
-            }
-        } else { //group message
-            num = tox_group_message_send([[TXCSingleton sharedSingleton] toxCoreInstance], friendNum, (uint8_t *)utf8Message, strlen(utf8Message) + 1);
+        if (isGroupMessage == NO) {
+		  	TOX_ERR_FRIEND_SEND_MESSAGE err;
+			const char *msg = isActionMessage ? [[messageToSend substringFromIndex:2] UTF8String] : [messageToSend UTF8String];
+			num = tox_friend_send_message([[TXCSingleton sharedSingleton] toxCoreInstance], friendNum,
+				isActionMessage ? TOX_MESSAGE_TYPE_ACTION : TOX_MESSAGE_TYPE_NORMAL, (uint8_t *)msg, strlen(utf8Message), &err);
+			 if (err != TOX_ERR_FRIEND_SEND_MESSAGE_OK)
+				  NSLog(@"Friend message send error: %i", err);
+        } else {
+			const char *msg = isActionMessage ? [[messageToSend substringFromIndex:2] UTF8String] : [messageToSend UTF8String];
+			num = tox_conference_send_message([[TXCSingleton sharedSingleton] toxCoreInstance], friendNum,
+		  		isActionMessage ? TOX_MESSAGE_TYPE_ACTION : TOX_MESSAGE_TYPE_NORMAL, (uint8_t *)msg, strlen(utf8Message), NULL);
         }
         
         if (num == -1) {
@@ -568,7 +569,6 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
         {
             //add friend to singleton array, for use throughout the app
             TXCFriendObject *tempFriend = [[TXCFriendObject alloc] init];
-            [tempFriend setPublicKeyWithNoSpam:theirKey];
             [tempFriend setPublicKey:[theirKey substringToIndex:(TOX_PUBLIC_KEY_SIZE * 2)]];
             NSLog(@"new friend key: %@", [tempFriend publicKey]);
             [tempFriend setStatusMessage:@"Sending request..."];
@@ -578,6 +578,7 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
             
             //save in user defaults
             [TXCSingleton saveFriendListInUserDefaults];
+		  	[TXCSingleton saveToxDataInUserDefaults];
 
             [[NSNotificationCenter defaultCenter] postNotificationName:TXCToxAppDelegateNotificationFriendAdded object:nil];
             break;
@@ -622,6 +623,7 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
                     
                     //save in user defaults
                     [TXCSingleton saveFriendListInUserDefaults];
+					[TXCSingleton saveToxDataInUserDefaults];
                     
                     //remove from the pending requests
                     [[[TXCSingleton sharedSingleton] pendingFriendRequests] removeObjectForKey:arrayKey];
@@ -713,15 +715,14 @@ NSString *const TXCToxAppDelegateUserDefaultsToxData = @"TXCToxData";
 }
 
 - (int)deleteGroupchat:(NSInteger)theGroupNumber {
-    __block int num = 0;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_async(self.toxMainThread, ^{
-        num = tox_del_groupchat([[TXCSingleton sharedSingleton] toxCoreInstance], theGroupNumber);
+        tox_conference_delete([[TXCSingleton sharedSingleton] toxCoreInstance], theGroupNumber, NULL);
         dispatch_semaphore_signal(semaphore);
     });
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-    
-    return num;
+	 
+    return 6969; // TODO_BUMP Why is this a number and not void again
 }
 
 #pragma mark - End Tox related Methods
@@ -739,14 +740,11 @@ void print_request(Tox *tox, uint8_t *public_key, uint8_t *data, uint16_t length
         
         // Convert the bin key to a char key. Reverse of hex_string_to_bin. Used in a lot of places.
         // TODO: Make the bin > char key conversion a function
-        char convertedKey[(TOX_PUBLIC_KEY_SIZE * 2) + 1];
-        int pos = 0;
-        for (int i = 0; i < TOX_PUBLIC_KEY_SIZE; ++i, pos += 2) {
-            sprintf(&convertedKey[pos] ,"%02X", public_key[i] & 0xff);
-        }
+		char *convertedKey = bin_to_hex_string(public_key, TOX_PUBLIC_KEY_SIZE);
         
         // Check to see if this person is already on our friends list
         for (TXCFriendObject *tempFriend in [[TXCSingleton sharedSingleton] mainFriendList]) {
+			// If they're on our friends list, just auto accept.
             if ([tempFriend.publicKey isEqualToString:[NSString stringWithUTF8String:convertedKey]]) {
                 NSLog(@"The friend request we got is one of a friend we already have, calling add_no_request: %@ %@", tempFriend.nickname, tempFriend.publicKey);
 				// No need to kill thread, this is synchronous
@@ -757,7 +755,6 @@ void print_request(Tox *tox, uint8_t *public_key, uint8_t *data, uint16_t length
             }
         }
 		
-        // If they're not on our friends list then dont add a request, just auto accept
 		// We got a friend request, so we have to store it!
         // The pending dictionary has the object as nsdata bytes of the bin version of the publickey, and the dict key is the nsstring of said publickey
         [[[TXCSingleton sharedSingleton] pendingFriendRequests]
@@ -849,12 +846,12 @@ void print_message(Tox *m, int friendnumber, TOX_MESSAGE_TYPE type, uint8_t * st
     });
 }
 
-void print_groupmessage(Tox *tox, int groupnumber, int friendgroupnumber, uint8_t * message, uint16_t length, void *userdata) {
-    NSLog(@"Group message received from group [%d], message: %s. Friend [%d]", groupnumber, message, friendgroupnumber);
+void print_groupmessage(Tox *tox, int cid, int pid, uint8_t * message, uint16_t length, void *userdata) {
+    NSLog(@"Group message received from group [%d], message: %s. Friend [%d]", cid, message, pid);
     dispatch_sync(dispatch_get_main_queue(), ^{
-        
-        uint8_t *theirNameC[TOX_MAX_NAME_LENGTH];
-        tox_group_peername([[TXCSingleton sharedSingleton] toxCoreInstance], groupnumber, friendgroupnumber, (uint8_t *)theirNameC);
+		Tox *tox = [[TXCSingleton sharedSingleton] toxCoreInstance];
+        uint8_t *theirNameC[tox_conference_peer_get_name_size(tox, cid, pid, NULL)];
+        tox_conference_peer_get_name(tox, cid, pid, theirNameC, NULL);
         NSString *theirName = [NSString stringWithUTF8String:(const char *)theirNameC];
         NSString *theirMessage = [NSString stringWithUTF8String:(const char *)message];
         
@@ -869,23 +866,23 @@ void print_groupmessage(Tox *tox, int groupnumber, int friendgroupnumber, uint8_
         theMessage.didFailToSend = NO;
         theMessage.actionMessage = NO;
         theMessage.groupMessage = YES;
-        theMessage.senderKey = [[[[TXCSingleton sharedSingleton] groupList] objectAtIndex:groupnumber] groupPulicKey];
+        theMessage.senderKey = [[[[TXCSingleton sharedSingleton] groupList] objectAtIndex:cid] groupPulicKey];
         //add to singleton
         //if the message coming through is not to the currently opened chat window, then uialertview it
-        if ((groupnumber != [[[TXCSingleton sharedSingleton] currentlyOpenedFriendNumber] row] &&
+        if ((cid != [[[TXCSingleton sharedSingleton] currentlyOpenedFriendNumber] row] &&
             [[[TXCSingleton sharedSingleton] currentlyOpenedFriendNumber] section] != 0) ||
             [[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground ||
             [[UIApplication sharedApplication] applicationState] == UIApplicationStateInactive) {
-            NSMutableArray *tempMessages = [[[[TXCSingleton sharedSingleton] groupMessages] objectAtIndex:groupnumber] mutableCopy];
+            NSMutableArray *tempMessages = [[[[TXCSingleton sharedSingleton] groupMessages] objectAtIndex:cid] mutableCopy];
             [tempMessages addObject:theMessage];
 
             // Add message to singleton
-            [[TXCSingleton sharedSingleton] groupMessages][groupnumber] = [tempMessages copy];
+            [[TXCSingleton sharedSingleton] groupMessages][cid] = [tempMessages copy];
             
             // Fire a local notification for the message
             UILocalNotification *groupMessageNotification = [[UILocalNotification alloc] init];
             groupMessageNotification.fireDate = [NSDate date];
-            groupMessageNotification.alertBody = [NSString stringWithFormat:@"[Group %d][%@]: %@", groupnumber, theirName, theirMessage];
+            groupMessageNotification.alertBody = [NSString stringWithFormat:@"[Group %d][%@]: %@", cid, theirName, theirMessage];
             groupMessageNotification.alertAction = @"show the message";
             groupMessageNotification.timeZone = [NSTimeZone defaultTimeZone];
             groupMessageNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
@@ -923,8 +920,9 @@ void print_nickchange(Tox *m, int friendnumber, uint8_t * string, uint16_t lengt
         
         //save in user defaults
         [TXCSingleton saveFriendListInUserDefaults];
-        
-        //for now
+		[TXCSingleton saveToxDataInUserDefaults];
+	 	
+	 	//for now
         [[NSNotificationCenter defaultCenter] postNotificationName:TXCToxAppDelegateNotificationFriendAdded object:nil];
     });
 }
@@ -954,6 +952,7 @@ void print_statuschange(Tox *m, int friendnumber,  uint8_t * string, uint16_t le
         
         //save in user defaults
         [TXCSingleton saveFriendListInUserDefaults];
+		[TXCSingleton saveToxDataInUserDefaults];
         
         //for now
         [[NSNotificationCenter defaultCenter] postNotificationName:TXCToxAppDelegateNotificationFriendAdded object:nil];
@@ -1045,6 +1044,7 @@ void print_connectionstatuschange(Tox *m, int friendnumber, uint8_t status, void
 }
 
 void print_groupnamelistchange(Tox *m, int groupnumber, int peernumber, uint8_t change, void *userdata) {
+	// TODO: Restore
     /*void (^code_block)(void) = ^void(void) {
         NSLog(@"New names:");
         uint8_t groupPeerList[256][TOX_MAX_NAME_LENGTH];
@@ -1057,12 +1057,12 @@ void print_groupnamelistchange(Tox *m, int groupnumber, int peernumber, uint8_t 
         code_block();
     } else {
         dispatch_sync(dispatch_get_main_queue(), code_block);
-    }*/
+    }
     switch (change) {
         case TOX_CHAT_CHANGE_PEER_ADD:
             NSLog(@"GroupChat[%d]: New Peer ([%d])", groupnumber, peernumber);
             break;
-        case TOX_CHAT_CHANGE_PEER_NAME:
+        case :
             NSLog(@"GroupChat[%d]: Peer[%d] -> ", groupnumber, peernumber);
             break;
         case TOX_CHAT_CHANGE_PEER_DEL:
@@ -1070,7 +1070,7 @@ void print_groupnamelistchange(Tox *m, int groupnumber, int peernumber, uint8_t 
             break;
         default:
             break;
-    }
+    }*/
 }
 
 #pragma mark - End Tox Core Callback Functions
@@ -1119,17 +1119,17 @@ void print_groupnamelistchange(Tox *m, int groupnumber, int peernumber, uint8_t 
 - (void)toxCoreLoopInBackground:(BOOL)inBackground {
     
     TXCSingleton *singleton = [TXCSingleton sharedSingleton];
-    Tox *toxInstance = [[TXCSingleton sharedSingleton] toxCoreInstance];
+    Tox *tox = [[TXCSingleton sharedSingleton] toxCoreInstance];
     
     //code to check if node connection has changed, if so notify the app
-    if (self.on == 0 && tox_self_get_connection_status([[TXCSingleton sharedSingleton] toxCoreInstance]) != TOX_CONNECTION_NONE) {
+    if (self.on == 0 && tox_self_get_connection_status(tox) != TOX_CONNECTION_NONE) {
         NSLog(@"DHT Connected!");
         dispatch_sync(dispatch_get_main_queue(), ^{
             [[NSNotificationCenter defaultCenter] postNotificationName:ToxAppDelegateNotificationDHTConnected object:nil];
         });
         self.on = 1;
     }
-    if (self.on == 1 && !tox_self_get_connection_status([[TXCSingleton sharedSingleton] toxCoreInstance]) != TOX_CONNECTION_NONE) {
+    if (self.on == 1 && !tox_self_get_connection_status(tox) != TOX_CONNECTION_NONE) {
         NSLog(@"DHT Disconnected!");
         dispatch_sync(dispatch_get_main_queue(), ^{
             [[NSNotificationCenter defaultCenter] postNotificationName:ToxAppDelegateNotificationDHTDisconnected object:nil];
@@ -1140,19 +1140,22 @@ void print_groupnamelistchange(Tox *m, int groupnumber, int peernumber, uint8_t 
     if (self.on == 0 && singleton.lastAttemptedConnect < time(0)+2) {
         int num = rand() % [singleton.dhtNodeList count];
         unsigned char *binary_string = hex_string_to_bin((char *)[singleton.dhtNodeList[num][@"key"] UTF8String]);
+		TOX_ERR_BOOTSTRAP err;
+	 	const char *ip = [singleton.dhtNodeList[num][@"ip"] UTF8String];
         tox_bootstrap([[TXCSingleton sharedSingleton] toxCoreInstance],
-                                   [singleton.dhtNodeList[num][@"ip"] UTF8String],
-                                   // TODO_BUMP TOX_ENABLE_IPV6_DEFAULT,
+                                   ip,
                                    htons(atoi([singleton.dhtNodeList[num][@"port"] UTF8String])),
-                                   binary_string, 0); //actual connection // TODO_BUMP error handling
+                                   binary_string, &err);
         free(binary_string);
+		if (err != TOX_ERR_BOOTSTRAP_OK)
+			 NSLog(@"Error bootstrapping to %s: %i", ip, err);
     }
     
     // TODO: Optimized tox_iterate
     
     // Run tox_do
     time_t a = time(0);
-    tox_iterate([[TXCSingleton sharedSingleton] toxCoreInstance]);
+    tox_iterate(tox, NULL);
     if (time(0) - a > 1) {
         NSLog(@"tox_do took more than %lu seconds!", time(0) - a);
     }
@@ -1183,27 +1186,6 @@ void print_groupnamelistchange(Tox *m, int groupnumber, int peernumber, uint8_t 
             return;
         }
     }
-    
-    
-    
-    if (self.on) {
-        //print when the number of connected clients changes
-        static int lastCount = 0;
-        Messenger *m = (Messenger *)[[TXCSingleton sharedSingleton] toxCoreInstance];
-        uint32_t i;
-        uint64_t temp_time = time(0);
-        uint16_t count = 0;
-        for(i = 0; i < LCLIENT_LIST; ++i) {
-            if (!(m->dht->close_clientlist[i].assoc4.timestamp + 70 <= temp_time) ||
-                !(m->dht->close_clientlist[i].assoc6.timestamp + 70 <= temp_time))
-                ++count;
-            
-        }
-        if (count != lastCount) {
-            NSLog(@"****Nodes connected: %d", count);
-        }
-        lastCount = count;
-    }
 }
 
 #pragma mark - End Thread Methods
@@ -1212,14 +1194,24 @@ void print_groupnamelistchange(Tox *m, int groupnumber, int peernumber, uint8_t 
 
 unsigned char * hex_string_to_bin(char hex_string[])
 {
-    size_t len = strlen(hex_string);
-    unsigned char *val = malloc(len);
-    char *pos = hex_string;
-    int i;
-    for (i = 0; i < len; ++i, pos+=2)
-        sscanf(pos,"%2hhX",&val[i]);
-    
-    return val;
+	size_t len = strlen(hex_string);
+	unsigned char *val = malloc(len);
+	char *pos = hex_string;
+	int i;
+	for (i = 0; i < len; ++i, pos+=2)
+		sscanf(pos,"%2hhX",&val[i]);
+	
+	return val;
+}
+
+char * bin_to_hex_string(uint8_t bin[], size_t len)
+{
+	char *hexString = malloc(len * 2 + 1);
+	int pos = 0;
+	for (int i = 0; i < len; ++i, pos += 2) {
+		sprintf(&hexString[pos] ,"%02X", bin[i] & 0xff);
+	}
+	return hexString;
 }
 
 /*
@@ -1328,17 +1320,12 @@ uint32_t resolve_addr(const char *address)
 }
 
 - (void)configureNavigationControllerDesign:(UINavigationController *)navController {
-    //first, non ios specific stuff:
-    
-    
-    //ios specific stuff
-    
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        // Load resources for iOS 6.1 or earlier
+        // iOS 6.1 or earlier
         navController.navigationBar.tintColor = [UIColor colorWithRed:0.3f green:0.37f blue:0.43f alpha:1];
         navController.toolbar.tintColor = [UIColor colorWithRed:0.3f green:0.37f blue:0.43f alpha:1];
     } else {
-        // Load resources for iOS 7 or later
+        // iOS 7 or later
         navController.navigationBar.barTintColor = [UIColor colorWithRed:0.3f green:0.37f blue:0.43f alpha:1];
         navController.toolbar.barTintColor = [UIColor colorWithRed:0.3f green:0.37f blue:0.43f alpha:1];
         

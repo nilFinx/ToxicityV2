@@ -392,6 +392,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
                 
                 //save in user defaults
                 [TXCSingleton saveFriendListInUserDefaults];
+				[TXCSingleton saveToxDataInUserDefaults];
                 
                 [self.tableView endUpdates];
             } else {

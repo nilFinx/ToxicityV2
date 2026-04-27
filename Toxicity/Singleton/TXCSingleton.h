@@ -48,6 +48,7 @@ typedef enum {
 + (BOOL)friendNumber:(int)theNumber matchesKey:(NSString *)theKey;
 + (void)saveFriendListInUserDefaults;
 + (void)saveGroupListInUserDefaults;
++ (void)saveToxDataInUserDefaults;
 
 - (void)avatarImageForKey:(NSString *)key type:(AvatarType)type finishBlock:(void (^)(UIImage *))finishBlock;
 

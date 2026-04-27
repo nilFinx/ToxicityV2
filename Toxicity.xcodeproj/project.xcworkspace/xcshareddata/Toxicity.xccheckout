@@ -20,12 +20,16 @@
 		<string>https://github.com/terryworona/TWMessageBarManager.git</string>
 		<key>6CF1BB6B298BB35E23A1E12E3C648F8ACA35D780</key>
 		<string>https://github.com/mochtu/libsodium-ios.git</string>
+		<key>81A28796384A028E6C2D47C039DB8B3E5DD6D0FC</key>
+		<string>https://github.com/jedisct1/libsodium</string>
 		<key>864AD83DC80A08A0327EA6100E60BA0C7D02C7F8</key>
 		<string>https://github.com/bobftw/zbarSDK</string>
 		<key>90530B99EB0008E7A50951FDFBE02169118FA649</key>
 		<string>https://github.com/jessesquires/JSQMessagesViewController.git</string>
 		<key>9E57F0987DAD04C4DEDF2958D8A18017BD14B322</key>
 		<string>https://github.com/irungentoo/toxcore</string>
+		<key>F75C511F7B5B4ADAC9884BC3D1D2906ED9B3A843</key>
+		<string>https://github.com/TokTok/cmp</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Toxicity.xcodeproj</string>
@@ -41,12 +45,16 @@
 		<string>../..Submodules/TWMessageBarManager</string>
 		<key>6CF1BB6B298BB35E23A1E12E3C648F8ACA35D780</key>
 		<string>../../../toxicity-backup/Submodules/ProjectTox-Core/sodium/libsodium-ios</string>
+		<key>81A28796384A028E6C2D47C039DB8B3E5DD6D0FC</key>
+		<string>../../../toxicity/Submodules/ProjectTox-Core/sodium/libsodium-ios/src/libsodium</string>
 		<key>864AD83DC80A08A0327EA6100E60BA0C7D02C7F8</key>
 		<string>../..Submodules/zbarSDK</string>
 		<key>90530B99EB0008E7A50951FDFBE02169118FA649</key>
 		<string>../..Submodules/MessagesTableViewController</string>
 		<key>9E57F0987DAD04C4DEDF2958D8A18017BD14B322</key>
 		<string>../..Submodules/ProjectTox-Core/ProjectTox-Core</string>
+		<key>F75C511F7B5B4ADAC9884BC3D1D2906ED9B3A843</key>
+		<string>../../../toxicity/Submodules/ProjectTox-Core/ProjectTox-Core/third_party/cmp</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jamamp/Toxicity.git</string>
@@ -60,9 +68,25 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F75C511F7B5B4ADAC9884BC3D1D2906ED9B3A843</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cmp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>3295696B2ABB63B244A5608CBC7B986155E10CBC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>JSQSystemSoundPlayer-submodule</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>81A28796384A028E6C2D47C039DB8B3E5DD6D0FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libsodium</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
