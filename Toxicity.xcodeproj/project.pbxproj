@@ -232,7 +232,7 @@
 		B94F2C6617AF25C0003EA6E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B94F2C6817AF25C0003EA6E8 /* Toxicity-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Toxicity-Prefix.pch"; sourceTree = "<group>"; };
 		B94F2C6917AF25C0003EA6E8 /* TXCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXCAppDelegate.h; sourceTree = "<group>"; };
-		B94F2C6A17AF25C0003EA6E8 /* TXCAppDelegate.m */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.c.objc; path = TXCAppDelegate.m; sourceTree = "<group>"; };
+		B94F2C6A17AF25C0003EA6E8 /* TXCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXCAppDelegate.m; sourceTree = "<group>"; };
 		B94F2C7317AF25C0003EA6E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B97D602C17B84328001C07B8 /* status-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-gray.png"; path = "Images/status-gray.png"; sourceTree = "<group>"; };
 		B97D602D17B84328001C07B8 /* status-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-gray@2x.png"; path = "Images/status-gray@2x.png"; sourceTree = "<group>"; };
