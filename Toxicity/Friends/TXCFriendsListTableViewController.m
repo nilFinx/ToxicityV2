@@ -1,21 +1,16 @@
-//
-//  TXCFriendsListTableViewController.m
-//  Toxicity
-//
-//  Created by James Linnell on 8/5/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//		2026 nilFinx
 
 #import "TXCFriendsListTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "TXCSingleton.h"
 #import "TXCFriendChatViewController.h"
-#import "TXCGroupChatViewController.h"
+#import "TXCConferenceViewController.h"
 #import "TXCRequestsTableViewController.h"
 #import "TXCFriendCell.h"
 #import "TXCAppDelegate.h"
 #import "TXCFriendListHeader.h"
-#import "TXCGroupObject.h"
+#import "TXCConferenceObject.h"
 #import "TXCSettingsViewController.h"
 
 #include "tox.h"
@@ -24,16 +19,16 @@
 extern NSString *const TXCToxAppDelegateNotificationFriendAdded;
 extern NSString *const TXCToxAppDelegateNotificationNewMessage;
 extern NSString *const TXCToxAppDelegateNotificationFriendUserStatusChanged;
-extern NSString *const TXCToxAppDelegateNotificationGroupAdded;
+extern NSString *const TXCToxAppDelegateNotificationConferenceAdded;
 extern NSString *const TXCToxAppDelegateNotificationFriendRequestReceived;
-extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
+extern NSString *const TXCToxAppDelegateNotificationConferenceInviteReceived;
 
 @interface TXCFriendsListTableViewController ()
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *settingsButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *requestsButton;
 @property (nonatomic, strong) NSMutableArray *mainFriendList;
 @property (nonatomic, strong) TXCFriendListHeader *headerForFriends;
-@property (nonatomic, strong) TXCFriendListHeader *headerForGroups;
+@property (nonatomic, strong) TXCFriendListHeader *headerForConferences;
 @property (nonatomic, assign, getter = isNewMessage) BOOL messageIsNew;
 @property (nonatomic, copy) NSString *publicKeyOfLastMessageAithor;
 - (IBAction)requestsButtonPushed:(id)sender;
@@ -86,7 +81,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
     [self.tableView registerClass:[TXCFriendCell class] forCellReuseIdentifier:@"FriendListCell"];
     
     self.headerForFriends = [[TXCFriendListHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 22)];
-    self.headerForGroups = [[TXCFriendListHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 22)];
+    self.headerForConferences = [[TXCFriendListHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 22)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -100,7 +95,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(friendListUpdate)
-                                                 name:TXCToxAppDelegateNotificationGroupAdded
+                                                 name:TXCToxAppDelegateNotificationConferenceAdded
                                                object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -120,7 +115,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateRequestsButton)
-                                                 name:TXCToxAppDelegateNotificationGroupInviteReceived
+                                                 name:TXCToxAppDelegateNotificationConferenceInviteReceived
                                                object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processingNewMessageWithNotificaton:)
@@ -162,7 +157,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
 - (void)updateRequestsButton {
     //update the name of the button
     NSUInteger countRequests = [[[[TXCSingleton sharedSingleton] pendingFriendRequests] allKeys] count];
-    NSUInteger countInvites = [[[[TXCSingleton sharedSingleton] pendingGroupInvites] allKeys] count];
+    NSUInteger countInvites = [[[[TXCSingleton sharedSingleton] pendingConferenceInvites] allKeys] count];
     if (countRequests > 0 || countInvites > 0) {
         self.navigationItem.rightBarButtonItem.title = [NSString stringWithFormat:@"Requests (%u)", countRequests + countInvites];
     } else {
@@ -179,7 +174,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
-            return [TXCSingleton sharedSingleton].groupList.count;
+            return [TXCSingleton sharedSingleton].conferenceList.count;
 
         case 1:
             return self.mainFriendList.count;
@@ -193,9 +188,9 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
     
     switch (section) {
         case 0:
-            if ([TXCSingleton sharedSingleton].groupList.count > 0) {
-                self.headerForGroups.textLabel.text = @"Groups";
-                return self.headerForGroups;
+            if ([TXCSingleton sharedSingleton].conferenceList.count > 0) {
+                self.headerForConferences.textLabel.text = @"Conferences";
+                return self.headerForConferences;
             }
             break;
             
@@ -224,7 +219,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     switch (section) {
         case 0:
-            if ([TXCSingleton sharedSingleton].groupList.count == 0) {
+            if ([TXCSingleton sharedSingleton].conferenceList.count == 0) {
                 return 0;
             } else {
                 return 22;
@@ -293,20 +288,20 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
         }];
         
     } else if (indexPath.section == 0){
-        // Groups
-        TXCGroupObject *groupObject = [[TXCSingleton sharedSingleton] groupList][indexPath.row];
+        // Conferences
+        TXCConferenceObject *conferenceObject = [[TXCSingleton sharedSingleton] conferenceList][indexPath.row];
         
         if (self.numberOfLastMessageAuthor == indexPath.row) {
             cell.lastMessage = self.lastMessage;
         }
         
-        [cell configureCellWithGroupObject:groupObject];
+        [cell configureCellWithConferenceObject:conferenceObject];
         
         
         cell.avatarImageView.image = [TXCSingleton sharedSingleton].defaultAvatarImage;
-        [[TXCSingleton sharedSingleton] avatarImageForKey:groupObject.groupPulicKey type:AvatarType_Friend finishBlock:^(UIImage *avatarImage) {
+		[[TXCSingleton sharedSingleton] avatarImageForKey:conferenceObject.publicKey type:AvatarType_Friend finishBlock:^(UIImage *avatarImage) {
             if (cell) {
-                if ([cell.friendIdentifier isEqualToString:groupObject.groupPulicKey]) {
+                if ([cell.friendIdentifier isEqualToString:conferenceObject.publicKey]) {
                     cell.avatarImageView.image = avatarImage;
                 } else {
                     //this could have taken any amount of time to accomplish (either right from cache had to download a new one
@@ -314,7 +309,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
                     NSArray *visibleCells = [tableView visibleCells];
                     [visibleCells enumerateObjectsUsingBlock:^(TXCFriendCell *tempCell, NSUInteger idx, BOOL *stop) {
                         if (tempCell) {
-                            if ([tempCell.friendIdentifier isEqualToString:[[TXCSingleton sharedSingleton] groupList][indexPath.row]]) {
+                            if ([tempCell.friendIdentifier isEqualToString:[[TXCSingleton sharedSingleton] conferenceList][indexPath.row]]) {
                                 tempCell.avatarImageView.image = avatarImage;
                             }
                         }
@@ -323,7 +318,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
             } else {
                 TXCFriendCell *theCell = (TXCFriendCell *)[self.tableView cellForRowAtIndexPath:indexPath];
                 if (theCell) {
-                    if ([theCell.friendIdentifier isEqualToString:groupObject.groupPulicKey]) {
+                    if ([theCell.friendIdentifier isEqualToString:conferenceObject.publicKey]) {
                         theCell.avatarImageView.image = avatarImage;
                     }
                 }
@@ -351,23 +346,23 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
         
         if (indexPath.section == 0) {
             
-            //group delete
-            NSInteger num = [ourDelegate deleteGroupchat:indexPath.row];
+            //Conference delete
+            NSInteger num = [ourDelegate deleteConference:indexPath.row];
             
             if (num == 0) {
                 [self.tableView beginUpdates];
                 
                 [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
                 
-                [[TXCSingleton sharedSingleton].groupList removeObjectAtIndex:indexPath.row];
-                [[TXCSingleton sharedSingleton].groupMessages removeObjectAtIndex:indexPath.row];
+                [[TXCSingleton sharedSingleton].conferenceList removeObjectAtIndex:indexPath.row];
+                [[TXCSingleton sharedSingleton].conferenceMessages removeObjectAtIndex:indexPath.row];
                 
                 //todo: save when i start saving these things
                 
                 [self.tableView endUpdates];
             } else {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                message:@"Something went wrong ith deleting the group chat! Tox Core issue."
+                                                                message:@"Something went wrong ith deleting the Conference chat! Tox Core issue."
                                                                delegate:nil
                                                       cancelButtonTitle:@"Okay"
                                                       otherButtonTitles:nil];
@@ -391,7 +386,6 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
                 self.mainFriendList = [[TXCSingleton sharedSingleton] mainFriendList];
                 
                 //save in user defaults
-                [TXCSingleton saveFriendListInUserDefaults];
 				[TXCSingleton saveToxDataInUserDefaults];
                 
                 [self.tableView endUpdates];
@@ -415,7 +409,7 @@ extern NSString *const TXCToxAppDelegateNotificationGroupInviteReceived;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        TXCGroupChatViewController *chatVC = [[TXCGroupChatViewController alloc] initWithFriendIndex:indexPath];
+        TXCConferenceChatViewController *chatVC = [[TXCConferenceChatViewController alloc] initWithFriendIndex:indexPath];
         [self.navigationController pushViewController:chatVC animated:YES];
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     } else {

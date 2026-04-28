@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEB742242FA060950077408B /* TXCConferenceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB742232FA060950077408B /* TXCConferenceObject.m */; };
+		AEB7422B2FA060B30077408B /* TXCConferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7422A2FA060B30077408B /* TXCConferenceViewController.m */; };
 		B9044EB518DD606400031DA5 /* InputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9044EB218DD606400031DA5 /* InputCell.m */; };
 		B9044EB618DD606400031DA5 /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9044EB418DD606400031DA5 /* StatusCell.m */; };
 		B9044EBD18DD609300031DA5 /* TXCQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9044EBC18DD609300031DA5 /* TXCQRCodeViewController.m */; };
@@ -26,7 +28,6 @@
 		B97D603717B84328001C07B8 /* status-green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B97D602F17B84328001C07B8 /* status-green@2x.png */; };
 		B97D603A17B84328001C07B8 /* status-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = B97D603217B84328001C07B8 /* status-yellow.png */; };
 		B97D603B17B84328001C07B8 /* status-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B97D603317B84328001C07B8 /* status-yellow@2x.png */; };
-		B97D604217B95145001C07B8 /* TXCDHTNodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B97D604117B95145001C07B8 /* TXCDHTNodeObject.m */; };
 		B97D604517B95154001C07B8 /* TXCFriendObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B97D604417B95154001C07B8 /* TXCFriendObject.m */; };
 		B97D604717B9EB29001C07B8 /* default-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = B97D604617B9EB29001C07B8 /* default-avatar.png */; };
 		B97D604A17BB33E7001C07B8 /* status-red.png in Resources */ = {isa = PBXBuildFile; fileRef = B97D604817BB33E7001C07B8 /* status-red.png */; };
@@ -95,7 +96,6 @@
 		B98C9C3617DACDFD008B10E0 /* default-avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B98C9C3517DACDFD008B10E0 /* default-avatar@2x.png */; };
 		B98C9C3F17DC0C36008B10E0 /* TXCFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B98C9C3C17DC0C36008B10E0 /* TXCFriendCell.m */; };
 		B98C9C4317DC16D8008B10E0 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = B98C9C4217DC16D8008B10E0 /* UIView+Shadow.m */; };
-		B9A5343117EAD17800F2FD94 /* TXCGroupChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A5343017EAD17800F2FD94 /* TXCGroupChatViewController.m */; };
 		B9B9C6D917D59E2F006BF8AC /* status-gray-navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B9C6D117D59E2F006BF8AC /* status-gray-navbar.png */; };
 		B9B9C6DA17D59E2F006BF8AC /* status-gray-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B9C6D217D59E2F006BF8AC /* status-gray-navbar@2x.png */; };
 		B9B9C6DB17D59E2F006BF8AC /* status-green-navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B9C6D317D59E2F006BF8AC /* status-green-navbar.png */; };
@@ -114,7 +114,6 @@
 		B9D2FF3C18EA93DF000D8F30 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D2FF3B18EA93DF000D8F30 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B9D2FF3E18EA9553000D8F30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D2FF3D18EA9553000D8F30 /* libicucore.dylib */; };
 		B9D5C95D17E3E31500B84BEF /* TXCFriendListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C95C17E3E31500B84BEF /* TXCFriendListHeader.m */; };
-		B9D5C96017E54F5100B84BEF /* TXCGroupObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D5C95F17E54F5100B84BEF /* TXCGroupObject.m */; };
 		B9D859DC17C34535005FD2D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D859DB17C34535005FD2D2 /* AVFoundation.framework */; };
 		B9D859DE17C3453B005FD2D2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D859DD17C3453B005FD2D2 /* CoreMedia.framework */; };
 		B9D859E017C34542005FD2D2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D859DF17C34542005FD2D2 /* CoreVideo.framework */; };
@@ -212,6 +211,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEB742222FA060950077408B /* TXCConferenceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TXCConferenceObject.h; path = Objects/TXCConferenceObject.h; sourceTree = "<group>"; };
+		AEB742232FA060950077408B /* TXCConferenceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCConferenceObject.m; path = Objects/TXCConferenceObject.m; sourceTree = "<group>"; };
+		AEB742292FA060B30077408B /* TXCConferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TXCConferenceViewController.h; path = Friends/TXCConferenceViewController.h; sourceTree = "<group>"; };
+		AEB7422A2FA060B30077408B /* TXCConferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCConferenceViewController.m; path = Friends/TXCConferenceViewController.m; sourceTree = "<group>"; };
 		B9044EB118DD606400031DA5 /* InputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InputCell.h; path = Settings/Cells/InputCell.h; sourceTree = "<group>"; };
 		B9044EB218DD606400031DA5 /* InputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InputCell.m; path = Settings/Cells/InputCell.m; sourceTree = "<group>"; };
 		B9044EB318DD606400031DA5 /* StatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusCell.h; path = Settings/Cells/StatusCell.h; sourceTree = "<group>"; };
@@ -240,8 +243,6 @@
 		B97D602F17B84328001C07B8 /* status-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-green@2x.png"; path = "Images/status-green@2x.png"; sourceTree = "<group>"; };
 		B97D603217B84328001C07B8 /* status-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-yellow.png"; path = "Images/status-yellow.png"; sourceTree = "<group>"; };
 		B97D603317B84328001C07B8 /* status-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-yellow@2x.png"; path = "Images/status-yellow@2x.png"; sourceTree = "<group>"; };
-		B97D604017B95145001C07B8 /* TXCDHTNodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TXCDHTNodeObject.h; path = Objects/TXCDHTNodeObject.h; sourceTree = "<group>"; };
-		B97D604117B95145001C07B8 /* TXCDHTNodeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCDHTNodeObject.m; path = Objects/TXCDHTNodeObject.m; sourceTree = "<group>"; };
 		B97D604317B95154001C07B8 /* TXCFriendObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TXCFriendObject.h; path = Objects/TXCFriendObject.h; sourceTree = "<group>"; };
 		B97D604417B95154001C07B8 /* TXCFriendObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCFriendObject.m; path = Objects/TXCFriendObject.m; sourceTree = "<group>"; };
 		B97D604617B9EB29001C07B8 /* default-avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "default-avatar.png"; path = "Images/default-avatar.png"; sourceTree = "<group>"; };
@@ -329,8 +330,6 @@
 		B98C9C3C17DC0C36008B10E0 /* TXCFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCFriendCell.m; path = "Custom Views/TXCFriendCell.m"; sourceTree = "<group>"; };
 		B98C9C4117DC16D8008B10E0 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Shadow.h"; path = "Custom Views/UIView+Shadow.h"; sourceTree = "<group>"; };
 		B98C9C4217DC16D8008B10E0 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shadow.m"; path = "Custom Views/UIView+Shadow.m"; sourceTree = "<group>"; };
-		B9A5342F17EAD17800F2FD94 /* TXCGroupChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TXCGroupChatViewController.h; path = Friends/TXCGroupChatViewController.h; sourceTree = "<group>"; };
-		B9A5343017EAD17800F2FD94 /* TXCGroupChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCGroupChatViewController.m; path = Friends/TXCGroupChatViewController.m; sourceTree = "<group>"; };
 		B9B9C6D117D59E2F006BF8AC /* status-gray-navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-gray-navbar.png"; path = "Images/status-gray-navbar.png"; sourceTree = "<group>"; };
 		B9B9C6D217D59E2F006BF8AC /* status-gray-navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-gray-navbar@2x.png"; path = "Images/status-gray-navbar@2x.png"; sourceTree = "<group>"; };
 		B9B9C6D317D59E2F006BF8AC /* status-green-navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "status-green-navbar.png"; path = "Images/status-green-navbar.png"; sourceTree = "<group>"; };
@@ -356,8 +355,6 @@
 		B9D2FF3D18EA9553000D8F30 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		B9D5C95B17E3E31500B84BEF /* TXCFriendListHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TXCFriendListHeader.h; path = "Custom Views/TXCFriendListHeader.h"; sourceTree = "<group>"; };
 		B9D5C95C17E3E31500B84BEF /* TXCFriendListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCFriendListHeader.m; path = "Custom Views/TXCFriendListHeader.m"; sourceTree = "<group>"; };
-		B9D5C95E17E54F5100B84BEF /* TXCGroupObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TXCGroupObject.h; path = Objects/TXCGroupObject.h; sourceTree = "<group>"; };
-		B9D5C95F17E54F5100B84BEF /* TXCGroupObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TXCGroupObject.m; path = Objects/TXCGroupObject.m; sourceTree = "<group>"; };
 		B9D859DB17C34535005FD2D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B9D859DD17C3453B005FD2D2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B9D859DF17C34542005FD2D2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -538,14 +535,12 @@
 		B97D603F17B95121001C07B8 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				B97D604017B95145001C07B8 /* TXCDHTNodeObject.h */,
-				B97D604117B95145001C07B8 /* TXCDHTNodeObject.m */,
+				AEB742222FA060950077408B /* TXCConferenceObject.h */,
+				AEB742232FA060950077408B /* TXCConferenceObject.m */,
 				B97D604317B95154001C07B8 /* TXCFriendObject.h */,
 				B97D604417B95154001C07B8 /* TXCFriendObject.m */,
 				B97D605317BCBF77001C07B8 /* TXCMessageObject.h */,
 				B97D605417BCBF77001C07B8 /* TXCMessageObject.m */,
-				B9D5C95E17E54F5100B84BEF /* TXCGroupObject.h */,
-				B9D5C95F17E54F5100B84BEF /* TXCGroupObject.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -749,12 +744,12 @@
 		B9BB99DB17B0E31100A1ACEC /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				AEB742292FA060B30077408B /* TXCConferenceViewController.h */,
+				AEB7422A2FA060B30077408B /* TXCConferenceViewController.m */,
 				B9BB99DC17B0E38900A1ACEC /* TXCFriendsListTableViewController.h */,
 				B9BB99DD17B0E38900A1ACEC /* TXCFriendsListTableViewController.m */,
 				B9BB9A5C17B4B20100A1ACEC /* TXCFriendChatViewController.h */,
 				B9BB9A5D17B4B20100A1ACEC /* TXCFriendChatViewController.m */,
-				B9A5342F17EAD17800F2FD94 /* TXCGroupChatViewController.h */,
-				B9A5343017EAD17800F2FD94 /* TXCGroupChatViewController.m */,
 				D10DE26DC4276843C4A2E6C0 /* TXCChatViewController.h */,
 				D10DEF2B151C990D72A68D80 /* TXCChatViewController.m */,
 			);
@@ -1120,20 +1115,19 @@
 				B9BB99E417B0E39200A1ACEC /* TXCSettingsViewController.m in Sources */,
 				B9BB99E817B0E41F00A1ACEC /* TXCSingleton.m in Sources */,
 				B9BB9A5E17B4B20100A1ACEC /* TXCFriendChatViewController.m in Sources */,
-				B97D604217B95145001C07B8 /* TXCDHTNodeObject.m in Sources */,
 				B97D604517B95154001C07B8 /* TXCFriendObject.m in Sources */,
 				B97D605517BCBF77001C07B8 /* TXCMessageObject.m in Sources */,
 				B9D85A2317CB0942005FD2D2 /* TXCRequestsTableViewController.m in Sources */,
 				B98C9C3F17DC0C36008B10E0 /* TXCFriendCell.m in Sources */,
 				B98C9C4317DC16D8008B10E0 /* UIView+Shadow.m in Sources */,
+				AEB742242FA060950077408B /* TXCConferenceObject.m in Sources */,
 				B9D5C95D17E3E31500B84BEF /* TXCFriendListHeader.m in Sources */,
-				B9D5C96017E54F5100B84BEF /* TXCGroupObject.m in Sources */,
 				B9D2FF3518EA8454000D8F30 /* TXCFriendAddress.m in Sources */,
 				B98040F918BC886B0069590C /* JSBubbleMessageCell.m in Sources */,
 				B9044EC318DD60D400031DA5 /* UIColor+ToxicityColors.m in Sources */,
-				B9A5343117EAD17800F2FD94 /* TXCGroupChatViewController.m in Sources */,
 				B9044EB518DD606400031DA5 /* InputCell.m in Sources */,
 				D10DEDBEA0020FCC53AFB8BE /* TWMessageBarManager.m in Sources */,
+				AEB7422B2FA060B30077408B /* TXCConferenceViewController.m in Sources */,
 				D10DEBE28D0D1DDA48DE915D /* TXCChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

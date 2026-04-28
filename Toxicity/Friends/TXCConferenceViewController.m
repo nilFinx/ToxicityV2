@@ -1,12 +1,7 @@
-//
-//  ChatWindowViewController.m
-//  Toxicity
-//
-//  Created by James Linnell on 8/8/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//		2026 nilFinx
 
-#import "TXCGroupChatViewController.h"
+#import "TXCConferenceViewController.h"
 #import "JSMessage.h"
 #import "JSBubbleImageViewFactory.h"
 #import "TXCSingleton.h"
@@ -16,18 +11,18 @@
 static NSString *const kSenderMe = @"Me";
 extern NSString *const TXCToxAppDelegateNotificationNewMessage;
 
-@interface TXCGroupChatViewController ()
+@interface TXCConferenceChatViewController ()
 
-@property (nonatomic, strong) NSMutableArray *mainGroupList;
-@property (nonatomic, strong) NSMutableArray *mainGroupMessages;
-@property (nonatomic, strong) TXCGroupObject *groupInfo;
+@property (nonatomic, strong) NSMutableArray *mainConferenceList;
+@property (nonatomic, strong) NSMutableArray *mainConferenceMessages;
+@property (nonatomic, strong) TXCConferenceObject *conferenceInfo;
 @property (nonatomic, strong) NSMutableArray *messages;
 @property (nonatomic, strong) NSIndexPath *friendIndex;
 @property (nonatomic, strong) UIImageView *statusNavBarImageView;
 
 @end
 
-@implementation TXCGroupChatViewController
+@implementation TXCConferenceChatViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,12 +39,12 @@ extern NSString *const TXCToxAppDelegateNotificationNewMessage;
     if (self) {
         self.friendIndex = theIndex;
         
-        self.mainGroupList = [[TXCSingleton sharedSingleton] groupList];
-        self.mainGroupMessages = [[TXCSingleton sharedSingleton] groupMessages];
+        self.mainConferenceList = [[TXCSingleton sharedSingleton] conferenceList];
+        self.mainConferenceMessages = [[TXCSingleton sharedSingleton] conferenceMessages];
         
-        self.messages = [[self.mainGroupMessages objectAtIndex:self.friendIndex.row] mutableCopy];
+        self.messages = [[self.mainConferenceMessages objectAtIndex:self.friendIndex.row] mutableCopy];
         
-        self.groupInfo = [self.mainGroupList objectAtIndex:self.friendIndex.row];
+        self.ConferenceInfo = [self.mainConferenceList objectAtIndex:self.friendIndex.row];
         
         [[TXCSingleton sharedSingleton] setCurrentlyOpenedFriendNumber:self.friendIndex];
     }
@@ -63,10 +58,10 @@ extern NSString *const TXCToxAppDelegateNotificationNewMessage;
     self.messageInputView.textView.placeHolder = @"";
     self.sender = kSenderMe;
 
-    if (!self.groupInfo.groupName.length) {
-        self.title = self.groupInfo.groupPulicKey;
+    if (!self.conferenceInfo.name.length) {
+        self.title = self.conferenceInfo.publicKey;
     } else {
-        self.title = self.groupInfo.groupName;
+        self.title = self.conferenceInfo.name;
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -83,7 +78,7 @@ extern NSString *const TXCToxAppDelegateNotificationNewMessage;
 - (void)viewDidDisappear:(BOOL)animated {
     NSLog(@"view did disappear");
     [super viewDidDisappear:animated];
-    [TXCSingleton sharedSingleton].groupMessages[self.friendIndex.row] = self.messages.mutableCopy;
+    [TXCSingleton sharedSingleton].conferenceMessages[self.friendIndex.row] = self.messages.mutableCopy;
     [[TXCSingleton sharedSingleton] setCurrentlyOpenedFriendNumber:[NSIndexPath indexPathForItem:-1 inSection:-1]];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -91,10 +86,10 @@ extern NSString *const TXCToxAppDelegateNotificationNewMessage;
 #pragma mark - Notifications Center stuff
 
 - (void)updateUserInfo {
-    if (!self.groupInfo.groupName.length)
-        self.title = self.groupInfo.groupPulicKey;
+    if (!self.conferenceInfo.name.length)
+        self.title = self.conferenceInfo.publicKey;
     else
-        self.title = self.groupInfo.groupName;
+        self.title = self.conferenceInfo.name;
     
     //todo: status (where to display?) and status type
 }
@@ -102,7 +97,7 @@ extern NSString *const TXCToxAppDelegateNotificationNewMessage;
 - (void)newMessage:(NSNotification *)notification {
     TXCMessageObject *receivedMessage = [notification object];
     
-    if ([receivedMessage.senderKey isEqualToString:self.groupInfo.groupPulicKey]) {
+    if ([receivedMessage.senderKey isEqualToString:self.conferenceInfo.publicKey]) {
         [self.tableView beginUpdates];
         
         [self.messages addObject:receivedMessage];
@@ -125,7 +120,7 @@ extern NSString *const TXCToxAppDelegateNotificationNewMessage;
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date
 {
     TXCMessageObject *tempMessage = [[TXCMessageObject alloc] init];
-    tempMessage.recipientKey = self.groupInfo.groupPulicKey;
+    tempMessage.recipientKey = self.conferenceInfo.publicKey;
     
     if ([text length] >= 5) {
         //only check for the "/me " if the message is 5 or more characters in length.
@@ -144,7 +139,7 @@ extern NSString *const TXCToxAppDelegateNotificationNewMessage;
     }
     tempMessage.origin = MessageLocation_Me;
     tempMessage.didFailToSend = NO;
-    tempMessage.groupMessage = YES;
+    tempMessage.ConferenceMessage = YES;
     
     TXCAppDelegate *ourDelegate = (TXCAppDelegate *)[[UIApplication sharedApplication] delegate];
     BOOL success = [ourDelegate sendMessage:tempMessage];

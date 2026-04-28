@@ -1,10 +1,5 @@
-//
-//  TXCFriendAddress.h
-//  Toxicity
-//
-//  Created by James Linnell on 3/31/14.
-//  Copyright (c) 2014 JamesTech. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//      2026 nilFinx
 
 #import <Foundation/Foundation.h>
 

@@ -1,14 +1,9 @@
-//
-//  TXCFriendCell.h
-//  Toxicity
-//
-//  Created by James Linnell on 8/25/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//		2026 nilFinx
 
 #import <UIKit/UIKit.h>
 @class TXCFriendObject;
-@class TXCGroupObject;
+@class TXCConferenceObject;
 
 typedef NS_ENUM(NSUInteger, FriendCellStatusColor) {
     FriendCellStatusColor_Gray,
@@ -31,7 +26,7 @@ typedef NS_ENUM(NSUInteger, FriendCellStatusColor) {
 @property (nonatomic, copy) NSString *lastMessage;
 
 - (void)configureCellWithFriendObject:(TXCFriendObject *)friendObject;
-- (void)configureCellWithGroupObject:(TXCGroupObject *)groupObject;
+- (void)configureCellWithConferenceObject:(TXCConferenceObject *)conferenceObject;
 - (void)addNewMessagePin;
 - (void)removeNewMessagePin;
 @end

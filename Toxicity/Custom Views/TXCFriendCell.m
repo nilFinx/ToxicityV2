@@ -1,10 +1,5 @@
-//
-//  TXCFriendCell.m
-//  Toxicity
-//
-//  Created by James Linnell on 8/25/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//		2026 nilFinx
 
 #import "TXCFriendCell.h"
 #import <QuartzCore/QuartzCore.h>
@@ -117,11 +112,11 @@
     return self;
 }
 
-- (void)configureCellWithGroupObject:(TXCGroupObject *)groupObject
+- (void)configureCellWithConferenceObject:(TXCConferenceObject *)conferenceObject
 {
-    self.friendIdentifier = [groupObject.groupPulicKey copy];
+    self.friendIdentifier = [conferenceObject.publicKey copy];
     [self configureBackroundColor];
-    [self configureLabelsWithGroupObject:groupObject];
+    [self configureLabelsWithConferenceObject:conferenceObject];
     self.statusIndicatorImageView.hidden = YES;
 }
 
@@ -136,20 +131,20 @@
 
 #pragma mark - Labels
 
-- (void)configureLabelsWithGroupObject:(TXCGroupObject *)groupObject
+- (void)configureLabelsWithConferenceObject:(TXCConferenceObject *)conferenceObject
 {
     [self configureLastMessageLabel];
-    [self configureNameLabelWithGroupName:groupObject.groupName];
-    [self configureStatusLabelWithGroupStatus:[[groupObject groupMembers] componentsJoinedByString:@", "]];
+    [self configureNameLabelWithConferenceName:conferenceObject.name];
+    [self configureStatusLabelWithConferenceStatus:[[conferenceObject members] componentsJoinedByString:@", "]];
 }
 
-- (void)configureStatusLabelWithGroupStatus:(NSString *)status
+- (void)configureStatusLabelWithConferenceStatus:(NSString *)status
 {
     
     self.statusLabel.text = status;
 }
 
-- (void)configureNameLabelWithGroupName:(NSString *)name
+- (void)configureNameLabelWithConferenceName:(NSString *)name
 {
     if (!name.length){
         self.nameLabel.text = [NSString stringWithFormat:@"%@...%@", [self.friendIdentifier substringToIndex:6], [self.friendIdentifier substringFromIndex:[self.friendIdentifier length] - 6]];

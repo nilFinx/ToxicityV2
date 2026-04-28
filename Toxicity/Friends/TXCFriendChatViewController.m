@@ -1,10 +1,5 @@
-//
-//  TXCFriendChatViewController.m
-//  Toxicity
-//
-//  Created by James Linnell on 8/8/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//		2026 nilFinx
 
 #import "TXCFriendChatViewController.h"
 #import "UIColor+ToxicityColors.h"
@@ -212,7 +207,7 @@ extern NSString *const TXCToxAppDelegateNotificationFriendUserStatusChanged;
     
     [JSMessageSoundEffect playMessageSentSound];
     
-    tempMessage.groupMessage = NO;
+    tempMessage.message = NO;
     
     TXCAppDelegate *ourDelegate = (TXCAppDelegate *)[UIApplication sharedApplication].delegate;
     BOOL success = [ourDelegate sendMessage:tempMessage];

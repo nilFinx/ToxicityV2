@@ -3,7 +3,8 @@
 
 #import "TXCChatViewController.h"
 
-@interface TXCFriendChatViewController : TXCChatViewController
+
+@interface TXCConferenceChatViewController : TXCChatViewController
 
 - (id)initWithFriendIndex:(NSIndexPath *)friendIndex;
 

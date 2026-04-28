@@ -1,10 +1,5 @@
-//
-//  main.m
-//  Toxicity
-//
-//  Created by James Linnell on 8/4/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//      2026 nilFinx
 
 #import <UIKit/UIKit.h>
 

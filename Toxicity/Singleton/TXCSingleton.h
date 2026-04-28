@@ -1,21 +1,16 @@
-//
-//  TXCSingleton.h
-//  Toxicity
-//
-//  Created by James Linnell on 8/6/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//      2026 nilFinx
 
 #import <Foundation/Foundation.h>
 #import "TXCDHTNodeObject.h"
 #import "TXCFriendObject.h"
 #include "tox.h"
 #import "TXCMessageObject.h"
-#import "TXCGroupObject.h"
+#import "TXCConferenceObject.h"
 
 typedef enum {
     AvatarType_Friend,
-    AvatarType_Group
+    AvatarType_Conference
 } AvatarType;
 
 @interface TXCSingleton : NSObject
@@ -37,17 +32,15 @@ typedef enum {
 @property (nonatomic, strong) UIImage *defaultAvatarImage;
 @property (nonatomic, strong) NSCache *avatarImageCache;
 
-@property (nonatomic, strong) NSMutableArray *groupList;
-@property (nonatomic, strong) NSMutableDictionary *pendingGroupInvites;
-@property (nonatomic, strong) NSMutableDictionary *pendingGroupInviteFriendNumbers;
-@property (nonatomic, strong) NSMutableArray *groupMessages;
+@property (nonatomic, strong) NSMutableArray *conferenceList;
+@property (nonatomic, strong) NSMutableDictionary *pendingConferenceInvites;
+@property (nonatomic, strong) NSMutableDictionary *pendingConferenceInviteFriendNumbers;
+@property (nonatomic, strong) NSMutableArray *conferenceMessages;
 
 
 + (TXCSingleton *)sharedSingleton;
 
 + (BOOL)friendNumber:(int)theNumber matchesKey:(NSString *)theKey;
-+ (void)saveFriendListInUserDefaults;
-+ (void)saveGroupListInUserDefaults;
 + (void)saveToxDataInUserDefaults;
 
 - (void)avatarImageForKey:(NSString *)key type:(AvatarType)type finishBlock:(void (^)(UIImage *))finishBlock;

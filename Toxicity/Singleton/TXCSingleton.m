@@ -1,10 +1,5 @@
-//
-//  TXCSingleton.m
-//  Toxicity
-//
-//  Created by James Linnell on 8/6/13.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//      2026 nilFinx
 
 #import "TXCSingleton.h"
 #import <dns_sd.h>
@@ -34,10 +29,10 @@ extern NSString *const TXCToxAppDelegateUserDefaultsToxSave;
         self.defaultAvatarImage = [UIImage imageNamed:@"default-avatar"];
         self.avatarImageCache = [[NSCache alloc] init];
         
-        self.groupList = [[NSMutableArray alloc] init];
-        self.pendingGroupInvites = [[NSMutableDictionary alloc] init];
-        self.pendingGroupInviteFriendNumbers = [[NSMutableDictionary alloc] init];
-        self.groupMessages = [[NSMutableArray alloc] init];
+        self.conferenceList = [[NSMutableArray alloc] init];
+        self.pendingConferenceInvites = [[NSMutableDictionary alloc] init];
+        self.pendingConferenceInviteFriendNumbers = [[NSMutableDictionary alloc] init];
+        self.conferenceMessages = [[NSMutableArray alloc] init];
         
         //if -1, no chat windows open
         self.currentlyOpenedFriendNumber = [NSIndexPath indexPathForItem:-1 inSection:-1];
@@ -83,29 +78,14 @@ extern NSString *const TXCToxAppDelegateUserDefaultsToxSave;
     return NO;
 }
 
-+ (void)saveFriendListInUserDefaults {
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (TXCFriendObject *arrayFriend in [[TXCSingleton sharedSingleton] mainFriendList]) {
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[arrayFriend copy]];
-        [array addObject:data];
-    }
-    [prefs setObject:array forKey:@"friend_list"];
-    [prefs synchronize];
-}
-
 + (void)saveToxDataInUserDefaults {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    uint32_t toxLength = tox_get_savedata_size([[TXCSingleton sharedSingleton] toxCoreInstance]);
+    size_t toxLength = tox_get_savedata_size([[TXCSingleton sharedSingleton] toxCoreInstance]);
     uint8_t *toxBuffer = malloc(toxLength);
     tox_get_savedata([[TXCSingleton sharedSingleton] toxCoreInstance], toxBuffer);
     NSData *toxData = [[NSData alloc] initWithBytes:toxBuffer length:toxLength];
     [prefs setObject:toxData forKey:TXCToxAppDelegateUserDefaultsToxSave];
     [prefs synchronize];
-}
-
-+ (void)saveGroupListInUserDefaults {
-    
 }
 
 #pragma mark - Avatar Cache methods
@@ -171,7 +151,7 @@ extern NSString *const TXCToxAppDelegateUserDefaultsToxSave;
 
 - (void)fetchRobohashAvatarForKey:(NSString *)theKey type:(AvatarType)type finishBlock:(void (^)(UIImage *))finishBlock {
     //todo: changed the size based on display?
-    NSURL *roboHashURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://robohash.org/%@.png?size=96x96%@", theKey, (type == AvatarType_Group ? @"&set=set3" : @"")]];
+    NSURL *roboHashURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://robohash.org/%@.png?size=96x96%@", theKey, (type == AvatarType_Conference ? @"&set=set3" : @"")]];
     NSURLRequest *request = [NSURLRequest requestWithURL:roboHashURL];
     
     [NSURLConnection sendAsynchronousRequest:request

@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, TXCThreadState) {
 
 typedef NS_ENUM(NSUInteger, TXCLocalNotification) {
 	TXCLocalNotification_friendMessage,
-	TXCLocalNotification_groupMessage
+	TXCLocalNotification_conferenceMessage
 };
 
 @interface TXCAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
@@ -41,16 +41,15 @@ char * bin_to_hex_string(uint8_t bin[], size_t size);
 int friendNumForID(NSString *theKey);
 - (void)toxCoreLoopInBackground:(BOOL)inBackground;
 
-- (void)connectToDHTWithIP:(TXCDHTNodeObject *)theDHTInfo;
-- (void)userNickChanged;
-- (void)userStatusChanged;
+- (BOOL)userNickChanged;
+- (BOOL)userStatusChanged;
 - (void)userStatusTypeChanged;
-- (void)addFriend:(NSString *)theirKey;
-- (BOOL)sendMessage:(TXCMessageObject *)theMessage;
-- (void)acceptFriendRequests:(NSArray *)theKeysToAccept;
-- (void)acceptGroupInvites:(NSArray *)theKeysToAccept;
-- (int)deleteFriend:(NSString*)friendKey;
-- (int)deleteGroupchat:(NSInteger)theGroupNumber;
+- (BOOL)addFriend:(NSString *)address;
+- (BOOL)sendMessage:(TXCMessageObject *)message;
+- (void)acceptFriendRequests:(NSArray *)keysToAccept;
+- (void)acceptConferenceInvites:(NSArray *)keysToAccept;
+- (BOOL)deleteFriend:(NSString*)friendKey;
+- (BOOL)deleteConference:(uint32_t)cid;
 
 - (void)configureNavigationControllerDesign:(UINavigationController *)navController;
 

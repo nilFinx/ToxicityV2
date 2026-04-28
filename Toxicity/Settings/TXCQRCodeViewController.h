@@ -1,10 +1,6 @@
-//
-//  TXCQRCodeViewController.h
-//  Toxicity
-//
-//  Created by Виктор Шаманов on 3/6/14.
-//  Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 Виктор Шаманов
+//		2014 James Linnell
+//      2026 nilFinx
 
 #import <UIKit/UIKit.h>
 

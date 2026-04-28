@@ -1,7 +1,5 @@
-//
-// Created by Виктор Шаманов on 3/19/14.
-// Copyright (c) 2014 James Linnell. All rights reserved.
-//
+//  Copyright (c) 2014 James Linnell
+//		2026 nilFinx
 
 #import <Foundation/Foundation.h>
 #import "JSMessagesViewController.h"
