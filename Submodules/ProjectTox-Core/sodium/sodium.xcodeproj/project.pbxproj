@@ -625,10 +625,7 @@
 		AEF53EC12F9FB57300899A72 /* randombytes_sysrandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randombytes_sysrandom.h; sourceTree = "<group>"; };
 		AEF53EC22F9FB57300899A72 /* runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = runtime.h; sourceTree = "<group>"; };
 		AEF53EC32F9FB57300899A72 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
-		AEF53EC42F9FB57300899A72 /* version.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.h.in; sourceTree = "<group>"; };
 		AEF53EC52F9FB57300899A72 /* sodium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sodium.h; sourceTree = "<group>"; };
-		AEF53EC62F9FB57300899A72 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
-		AEF53EC72F9FB57300899A72 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
 		AEF53ECC2F9FB57300899A72 /* randombytes_internal_random.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = randombytes_internal_random.c; sourceTree = "<group>"; };
 		AEF53ECD2F9FB57300899A72 /* randombytes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = randombytes.c; sourceTree = "<group>"; };
 		AEF53ED02F9FB57300899A72 /* randombytes_sysrandom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = randombytes_sysrandom.c; sourceTree = "<group>"; };
@@ -678,8 +675,6 @@
 				AEF53E542F9FB57300899A72 /* crypto_verify */,
 				AEF53E582F9FB57300899A72 /* crypto_xof */,
 				AEF53E6D2F9FB57300899A72 /* include */,
-				AEF53EC62F9FB57300899A72 /* Makefile.am */,
-				AEF53EC72F9FB57300899A72 /* Makefile.in */,
 				AEF53EC82F9FB57300899A72 /* randombytes */,
 				AEF53ED12F9FB57300899A72 /* sodium */,
 			);
@@ -2301,7 +2296,6 @@
 				AEF53EC12F9FB57300899A72 /* randombytes_sysrandom.h */,
 				AEF53EC22F9FB57300899A72 /* runtime.h */,
 				AEF53EC32F9FB57300899A72 /* utils.h */,
-				AEF53EC42F9FB57300899A72 /* version.h.in */,
 				AE7AEE902FA02D1800D4AF08 /* version.h */,
 			);
 			name = sodium;
@@ -2896,8 +2890,8 @@
 			buildSettings = {
 				DSTROOT = /tmp/sodium.dst;
 				GCC_C_LANGUAGE_STANDARD = c11;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sodium/sodium-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				LIBRARY_SEARCH_PATHS = (
@@ -2916,8 +2910,8 @@
 			buildSettings = {
 				DSTROOT = /tmp/sodium.dst;
 				GCC_C_LANGUAGE_STANDARD = c11;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sodium/sodium-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				GCC_WARN_UNUSED_FUNCTION = NO;
 				LIBRARY_SEARCH_PATHS = (

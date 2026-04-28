@@ -14,14 +14,14 @@
 #define c_sleep(x) usleep(1000*x)
 
 typedef NS_ENUM(NSUInteger, TXCThreadState) {
-    TXCThreadState_running,
-    TXCThreadState_waitingToKill,
-    TXCThreadState_killed
+	TXCThreadState_running,
+	TXCThreadState_waitingToKill,
+	TXCThreadState_killed
 };
 
 typedef NS_ENUM(NSUInteger, TXCLocalNotification) {
-    TXCLocalNotification_friendMessage,
-    TXCLocalNotification_groupMessage
+	TXCLocalNotification_friendMessage,
+	TXCLocalNotification_groupMessage
 };
 
 @interface TXCAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
