@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE7AEE912FA02D1800D4AF08 /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = AE7AEE902FA02D1800D4AF08 /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53ED82F9FB57300899A72 /* aead_aegis128l.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53CF32F9FB57300899A72 /* aead_aegis128l.c */; };
 		AEF53ED92F9FB57300899A72 /* aegis128l_aesni.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53CF42F9FB57300899A72 /* aegis128l_aesni.c */; };
-		AEF53EDA2F9FB57300899A72 /* aegis128l_aesni.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CF52F9FB57300899A72 /* aegis128l_aesni.h */; };
+		AEF53EDA2F9FB57300899A72 /* aegis128l_aesni.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CF52F9FB57300899A72 /* aegis128l_aesni.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53EDB2F9FB57300899A72 /* aegis128l_armcrypto.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53CF62F9FB57300899A72 /* aegis128l_armcrypto.c */; };
-		AEF53EDC2F9FB57300899A72 /* aegis128l_armcrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CF72F9FB57300899A72 /* aegis128l_armcrypto.h */; };
-		AEF53EDD2F9FB57300899A72 /* aegis128l_common.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CF82F9FB57300899A72 /* aegis128l_common.h */; };
+		AEF53EDC2F9FB57300899A72 /* aegis128l_armcrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CF72F9FB57300899A72 /* aegis128l_armcrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53EDD2F9FB57300899A72 /* aegis128l_common.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CF82F9FB57300899A72 /* aegis128l_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53EDE2F9FB57300899A72 /* aegis128l_soft.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53CF92F9FB57300899A72 /* aegis128l_soft.c */; };
-		AEF53EDF2F9FB57300899A72 /* aegis128l_soft.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CFA2F9FB57300899A72 /* aegis128l_soft.h */; };
-		AEF53EE02F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CFB2F9FB57300899A72 /* implementations.h */; };
+		AEF53EDF2F9FB57300899A72 /* aegis128l_soft.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CFA2F9FB57300899A72 /* aegis128l_soft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53EE02F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CFB2F9FB57300899A72 /* implementations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53EE12F9FB57300899A72 /* aead_aegis256.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53CFD2F9FB57300899A72 /* aead_aegis256.c */; };
 		AEF53EE22F9FB57300899A72 /* aegis256_aesni.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53CFE2F9FB57300899A72 /* aegis256_aesni.c */; };
-		AEF53EE32F9FB57300899A72 /* aegis256_aesni.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CFF2F9FB57300899A72 /* aegis256_aesni.h */; };
+		AEF53EE32F9FB57300899A72 /* aegis256_aesni.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53CFF2F9FB57300899A72 /* aegis256_aesni.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53EE42F9FB57300899A72 /* aegis256_armcrypto.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D002F9FB57300899A72 /* aegis256_armcrypto.c */; };
-		AEF53EE52F9FB57300899A72 /* aegis256_armcrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D012F9FB57300899A72 /* aegis256_armcrypto.h */; };
-		AEF53EE62F9FB57300899A72 /* aegis256_common.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D022F9FB57300899A72 /* aegis256_common.h */; };
+		AEF53EE52F9FB57300899A72 /* aegis256_armcrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D012F9FB57300899A72 /* aegis256_armcrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53EE62F9FB57300899A72 /* aegis256_common.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D022F9FB57300899A72 /* aegis256_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53EE72F9FB57300899A72 /* aegis256_soft.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D032F9FB57300899A72 /* aegis256_soft.c */; };
-		AEF53EE82F9FB57300899A72 /* aegis256_soft.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D042F9FB57300899A72 /* aegis256_soft.h */; };
-		AEF53EE92F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D052F9FB57300899A72 /* implementations.h */; };
+		AEF53EE82F9FB57300899A72 /* aegis256_soft.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D042F9FB57300899A72 /* aegis256_soft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53EE92F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D052F9FB57300899A72 /* implementations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53EEA2F9FB57300899A72 /* aead_aes256gcm.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D072F9FB57300899A72 /* aead_aes256gcm.c */; };
 		AEF53EEB2F9FB57300899A72 /* aead_aes256gcm_aesni.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D0A2F9FB57300899A72 /* aead_aes256gcm_aesni.c */; };
 		AEF53EEC2F9FB57300899A72 /* aead_aes256gcm_armcrypto.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D0C2F9FB57300899A72 /* aead_aes256gcm_armcrypto.c */; };
@@ -43,36 +44,36 @@
 		AEF53EF92F9FB57300899A72 /* core_ed25519.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D302F9FB57300899A72 /* core_ed25519.c */; };
 		AEF53EFA2F9FB57300899A72 /* core_ristretto255.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D312F9FB57300899A72 /* core_ristretto255.c */; };
 		AEF53EFB2F9FB57300899A72 /* ed25519_ref10.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D342F9FB57300899A72 /* ed25519_ref10.c */; };
-		AEF53EFC2F9FB57300899A72 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D362F9FB57300899A72 /* base.h */; };
-		AEF53EFD2F9FB57300899A72 /* base2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D372F9FB57300899A72 /* base2.h */; };
-		AEF53EFE2F9FB57300899A72 /* constants.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D382F9FB57300899A72 /* constants.h */; };
-		AEF53EFF2F9FB57300899A72 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D392F9FB57300899A72 /* fe.h */; };
-		AEF53F002F9FB57300899A72 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3B2F9FB57300899A72 /* base.h */; };
-		AEF53F012F9FB57300899A72 /* base2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3C2F9FB57300899A72 /* base2.h */; };
-		AEF53F022F9FB57300899A72 /* constants.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3D2F9FB57300899A72 /* constants.h */; };
-		AEF53F032F9FB57300899A72 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3E2F9FB57300899A72 /* fe.h */; };
+		AEF53EFC2F9FB57300899A72 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D362F9FB57300899A72 /* base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53EFD2F9FB57300899A72 /* base2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D372F9FB57300899A72 /* base2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53EFE2F9FB57300899A72 /* constants.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D382F9FB57300899A72 /* constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53EFF2F9FB57300899A72 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D392F9FB57300899A72 /* fe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F002F9FB57300899A72 /* base.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3B2F9FB57300899A72 /* base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F012F9FB57300899A72 /* base2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3C2F9FB57300899A72 /* base2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F022F9FB57300899A72 /* constants.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3D2F9FB57300899A72 /* constants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F032F9FB57300899A72 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D3E2F9FB57300899A72 /* fe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F042F9FB57300899A72 /* core_hchacha20.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D412F9FB57300899A72 /* core_hchacha20.c */; };
 		AEF53F052F9FB57300899A72 /* core_hsalsa20.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D442F9FB57300899A72 /* core_hsalsa20.c */; };
 		AEF53F062F9FB57300899A72 /* core_hsalsa20_ref2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D472F9FB57300899A72 /* core_hsalsa20_ref2.c */; };
 		AEF53F072F9FB57300899A72 /* keccak1600_armsha3.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D4A2F9FB57300899A72 /* keccak1600_armsha3.c */; };
-		AEF53F082F9FB57300899A72 /* keccak1600_armsha3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D4B2F9FB57300899A72 /* keccak1600_armsha3.h */; };
+		AEF53F082F9FB57300899A72 /* keccak1600_armsha3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D4B2F9FB57300899A72 /* keccak1600_armsha3.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F092F9FB57300899A72 /* keccak1600.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D4C2F9FB57300899A72 /* keccak1600.c */; };
 		AEF53F0A2F9FB57300899A72 /* keccak1600_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D4E2F9FB57300899A72 /* keccak1600_ref.c */; };
-		AEF53F0B2F9FB57300899A72 /* keccak1600_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D4F2F9FB57300899A72 /* keccak1600_ref.h */; };
+		AEF53F0B2F9FB57300899A72 /* keccak1600_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D4F2F9FB57300899A72 /* keccak1600_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F0C2F9FB57300899A72 /* core_salsa_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D532F9FB57300899A72 /* core_salsa_ref.c */; };
 		AEF53F0D2F9FB57300899A72 /* softaes.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D552F9FB57300899A72 /* softaes.c */; };
 		AEF53F0E2F9FB57300899A72 /* generichash_blake2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D5A2F9FB57300899A72 /* generichash_blake2.c */; };
-		AEF53F0F2F9FB57300899A72 /* blake2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D5D2F9FB57300899A72 /* blake2.h */; };
+		AEF53F0F2F9FB57300899A72 /* blake2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D5D2F9FB57300899A72 /* blake2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F102F9FB57300899A72 /* blake2b-compress-avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D5E2F9FB57300899A72 /* blake2b-compress-avx2.c */; };
-		AEF53F112F9FB57300899A72 /* blake2b-compress-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D5F2F9FB57300899A72 /* blake2b-compress-avx2.h */; };
+		AEF53F112F9FB57300899A72 /* blake2b-compress-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D5F2F9FB57300899A72 /* blake2b-compress-avx2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F122F9FB57300899A72 /* blake2b-compress-ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D602F9FB57300899A72 /* blake2b-compress-ref.c */; };
 		AEF53F132F9FB57300899A72 /* blake2b-compress-sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D612F9FB57300899A72 /* blake2b-compress-sse41.c */; };
-		AEF53F142F9FB57300899A72 /* blake2b-compress-sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D622F9FB57300899A72 /* blake2b-compress-sse41.h */; };
+		AEF53F142F9FB57300899A72 /* blake2b-compress-sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D622F9FB57300899A72 /* blake2b-compress-sse41.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F152F9FB57300899A72 /* blake2b-compress-ssse3.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D632F9FB57300899A72 /* blake2b-compress-ssse3.c */; };
-		AEF53F162F9FB57300899A72 /* blake2b-compress-ssse3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D642F9FB57300899A72 /* blake2b-compress-ssse3.h */; };
-		AEF53F172F9FB57300899A72 /* blake2b-load-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D652F9FB57300899A72 /* blake2b-load-avx2.h */; };
-		AEF53F182F9FB57300899A72 /* blake2b-load-sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D662F9FB57300899A72 /* blake2b-load-sse2.h */; };
-		AEF53F192F9FB57300899A72 /* blake2b-load-sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D672F9FB57300899A72 /* blake2b-load-sse41.h */; };
+		AEF53F162F9FB57300899A72 /* blake2b-compress-ssse3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D642F9FB57300899A72 /* blake2b-compress-ssse3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F172F9FB57300899A72 /* blake2b-load-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D652F9FB57300899A72 /* blake2b-load-avx2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F182F9FB57300899A72 /* blake2b-load-sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D662F9FB57300899A72 /* blake2b-load-sse2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F192F9FB57300899A72 /* blake2b-load-sse41.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D672F9FB57300899A72 /* blake2b-load-sse41.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F1A2F9FB57300899A72 /* blake2b-ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D682F9FB57300899A72 /* blake2b-ref.c */; };
 		AEF53F1B2F9FB57300899A72 /* generichash_blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D692F9FB57300899A72 /* generichash_blake2b.c */; };
 		AEF53F1C2F9FB57300899A72 /* crypto_generichash.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D6A2F9FB57300899A72 /* crypto_generichash.c */; };
@@ -82,13 +83,13 @@
 		AEF53F202F9FB57300899A72 /* hash_sha512_cp.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D782F9FB57300899A72 /* hash_sha512_cp.c */; };
 		AEF53F212F9FB57300899A72 /* hash_sha512.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D792F9FB57300899A72 /* hash_sha512.c */; };
 		AEF53F222F9FB57300899A72 /* crypto_ipcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D7B2F9FB57300899A72 /* crypto_ipcrypt.c */; };
-		AEF53F232F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D7C2F9FB57300899A72 /* implementations.h */; };
+		AEF53F232F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D7C2F9FB57300899A72 /* implementations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F242F9FB57300899A72 /* ipcrypt_aesni.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D7D2F9FB57300899A72 /* ipcrypt_aesni.c */; };
-		AEF53F252F9FB57300899A72 /* ipcrypt_aesni.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D7E2F9FB57300899A72 /* ipcrypt_aesni.h */; };
+		AEF53F252F9FB57300899A72 /* ipcrypt_aesni.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D7E2F9FB57300899A72 /* ipcrypt_aesni.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F262F9FB57300899A72 /* ipcrypt_armcrypto.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D7F2F9FB57300899A72 /* ipcrypt_armcrypto.c */; };
-		AEF53F272F9FB57300899A72 /* ipcrypt_armcrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D802F9FB57300899A72 /* ipcrypt_armcrypto.h */; };
+		AEF53F272F9FB57300899A72 /* ipcrypt_armcrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D802F9FB57300899A72 /* ipcrypt_armcrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F282F9FB57300899A72 /* ipcrypt_soft.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D812F9FB57300899A72 /* ipcrypt_soft.c */; };
-		AEF53F292F9FB57300899A72 /* ipcrypt_soft.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D822F9FB57300899A72 /* ipcrypt_soft.h */; };
+		AEF53F292F9FB57300899A72 /* ipcrypt_soft.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D822F9FB57300899A72 /* ipcrypt_soft.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F2A2F9FB57300899A72 /* kdf_blake2b.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D872F9FB57300899A72 /* kdf_blake2b.c */; };
 		AEF53F2B2F9FB57300899A72 /* crypto_kdf.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D882F9FB57300899A72 /* crypto_kdf.c */; };
 		AEF53F2C2F9FB57300899A72 /* kdf_hkdf_sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D8A2F9FB57300899A72 /* kdf_hkdf_sha256.c */; };
@@ -96,63 +97,63 @@
 		AEF53F2E2F9FB57300899A72 /* crypto_kx.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D912F9FB57300899A72 /* crypto_kx.c */; };
 		AEF53F2F2F9FB57300899A72 /* crypto_onetimeauth.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D942F9FB57300899A72 /* crypto_onetimeauth.c */; };
 		AEF53F302F9FB57300899A72 /* poly1305_donna.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D992F9FB57300899A72 /* poly1305_donna.c */; };
-		AEF53F312F9FB57300899A72 /* poly1305_donna.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9A2F9FB57300899A72 /* poly1305_donna.h */; };
-		AEF53F322F9FB57300899A72 /* poly1305_donna32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9B2F9FB57300899A72 /* poly1305_donna32.h */; };
-		AEF53F332F9FB57300899A72 /* poly1305_donna64.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9C2F9FB57300899A72 /* poly1305_donna64.h */; };
+		AEF53F312F9FB57300899A72 /* poly1305_donna.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9A2F9FB57300899A72 /* poly1305_donna.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F322F9FB57300899A72 /* poly1305_donna32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9B2F9FB57300899A72 /* poly1305_donna32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F332F9FB57300899A72 /* poly1305_donna64.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9C2F9FB57300899A72 /* poly1305_donna64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F342F9FB57300899A72 /* onetimeauth_poly1305.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53D9D2F9FB57300899A72 /* onetimeauth_poly1305.c */; };
-		AEF53F352F9FB57300899A72 /* onetimeauth_poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9E2F9FB57300899A72 /* onetimeauth_poly1305.h */; };
+		AEF53F352F9FB57300899A72 /* onetimeauth_poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53D9E2F9FB57300899A72 /* onetimeauth_poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F362F9FB57300899A72 /* poly1305_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DA12F9FB57300899A72 /* poly1305_sse2.c */; };
-		AEF53F372F9FB57300899A72 /* poly1305_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DA22F9FB57300899A72 /* poly1305_sse2.h */; };
+		AEF53F372F9FB57300899A72 /* poly1305_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DA22F9FB57300899A72 /* poly1305_sse2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F382F9FB57300899A72 /* argon2-core.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DA72F9FB57300899A72 /* argon2-core.c */; };
-		AEF53F392F9FB57300899A72 /* argon2-core.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DA82F9FB57300899A72 /* argon2-core.h */; };
+		AEF53F392F9FB57300899A72 /* argon2-core.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DA82F9FB57300899A72 /* argon2-core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F3A2F9FB57300899A72 /* argon2-encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DA92F9FB57300899A72 /* argon2-encoding.c */; };
-		AEF53F3B2F9FB57300899A72 /* argon2-encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DAA2F9FB57300899A72 /* argon2-encoding.h */; };
+		AEF53F3B2F9FB57300899A72 /* argon2-encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DAA2F9FB57300899A72 /* argon2-encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F3C2F9FB57300899A72 /* argon2-fill-block-avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DAB2F9FB57300899A72 /* argon2-fill-block-avx2.c */; };
 		AEF53F3D2F9FB57300899A72 /* argon2-fill-block-avx512f.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DAC2F9FB57300899A72 /* argon2-fill-block-avx512f.c */; };
 		AEF53F3E2F9FB57300899A72 /* argon2-fill-block-ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DAD2F9FB57300899A72 /* argon2-fill-block-ref.c */; };
 		AEF53F3F2F9FB57300899A72 /* argon2-fill-block-ssse3.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DAE2F9FB57300899A72 /* argon2-fill-block-ssse3.c */; };
 		AEF53F402F9FB57300899A72 /* argon2-fill-block-wasm32.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DAF2F9FB57300899A72 /* argon2-fill-block-wasm32.c */; };
 		AEF53F412F9FB57300899A72 /* argon2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DB02F9FB57300899A72 /* argon2.c */; };
-		AEF53F422F9FB57300899A72 /* argon2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB12F9FB57300899A72 /* argon2.h */; };
+		AEF53F422F9FB57300899A72 /* argon2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB12F9FB57300899A72 /* argon2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F432F9FB57300899A72 /* blake2b-long.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DB22F9FB57300899A72 /* blake2b-long.c */; };
-		AEF53F442F9FB57300899A72 /* blake2b-long.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB32F9FB57300899A72 /* blake2b-long.h */; };
-		AEF53F452F9FB57300899A72 /* blamka-round-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB42F9FB57300899A72 /* blamka-round-avx2.h */; };
-		AEF53F462F9FB57300899A72 /* blamka-round-avx512f.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB52F9FB57300899A72 /* blamka-round-avx512f.h */; };
-		AEF53F472F9FB57300899A72 /* blamka-round-ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB62F9FB57300899A72 /* blamka-round-ref.h */; };
-		AEF53F482F9FB57300899A72 /* blamka-round-ssse3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB72F9FB57300899A72 /* blamka-round-ssse3.h */; };
-		AEF53F492F9FB57300899A72 /* blamka-round-wasm32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB82F9FB57300899A72 /* blamka-round-wasm32.h */; };
+		AEF53F442F9FB57300899A72 /* blake2b-long.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB32F9FB57300899A72 /* blake2b-long.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F452F9FB57300899A72 /* blamka-round-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB42F9FB57300899A72 /* blamka-round-avx2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F462F9FB57300899A72 /* blamka-round-avx512f.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB52F9FB57300899A72 /* blamka-round-avx512f.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F472F9FB57300899A72 /* blamka-round-ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB62F9FB57300899A72 /* blamka-round-ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F482F9FB57300899A72 /* blamka-round-ssse3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB72F9FB57300899A72 /* blamka-round-ssse3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F492F9FB57300899A72 /* blamka-round-wasm32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DB82F9FB57300899A72 /* blamka-round-wasm32.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F4A2F9FB57300899A72 /* pwhash_argon2i.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DB92F9FB57300899A72 /* pwhash_argon2i.c */; };
 		AEF53F4B2F9FB57300899A72 /* pwhash_argon2id.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DBA2F9FB57300899A72 /* pwhash_argon2id.c */; };
 		AEF53F4C2F9FB57300899A72 /* crypto_pwhash.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DBB2F9FB57300899A72 /* crypto_pwhash.c */; };
 		AEF53F4D2F9FB57300899A72 /* crypto_scrypt-common.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DBE2F9FB57300899A72 /* crypto_scrypt-common.c */; };
-		AEF53F4E2F9FB57300899A72 /* crypto_scrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DBF2F9FB57300899A72 /* crypto_scrypt.h */; };
+		AEF53F4E2F9FB57300899A72 /* crypto_scrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DBF2F9FB57300899A72 /* crypto_scrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F4F2F9FB57300899A72 /* pwhash_scryptsalsa208sha256_nosse.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DC22F9FB57300899A72 /* pwhash_scryptsalsa208sha256_nosse.c */; };
 		AEF53F502F9FB57300899A72 /* pbkdf2-sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DC32F9FB57300899A72 /* pbkdf2-sha256.c */; };
-		AEF53F512F9FB57300899A72 /* pbkdf2-sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DC42F9FB57300899A72 /* pbkdf2-sha256.h */; };
+		AEF53F512F9FB57300899A72 /* pbkdf2-sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DC42F9FB57300899A72 /* pbkdf2-sha256.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F522F9FB57300899A72 /* pwhash_scryptsalsa208sha256.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DC52F9FB57300899A72 /* pwhash_scryptsalsa208sha256.c */; };
 		AEF53F532F9FB57300899A72 /* scrypt_platform.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DC62F9FB57300899A72 /* scrypt_platform.c */; };
 		AEF53F542F9FB57300899A72 /* pwhash_scryptsalsa208sha256_sse.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DC92F9FB57300899A72 /* pwhash_scryptsalsa208sha256_sse.c */; };
 		AEF53F552F9FB57300899A72 /* crypto_scalarmult.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DCC2F9FB57300899A72 /* crypto_scalarmult.c */; };
 		AEF53F562F9FB57300899A72 /* x25519_ref10.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DD12F9FB57300899A72 /* x25519_ref10.c */; };
-		AEF53F572F9FB57300899A72 /* x25519_ref10.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD22F9FB57300899A72 /* x25519_ref10.h */; };
+		AEF53F572F9FB57300899A72 /* x25519_ref10.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD22F9FB57300899A72 /* x25519_ref10.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F582F9FB57300899A72 /* consts.S in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DD52F9FB57300899A72 /* consts.S */; };
-		AEF53F592F9FB57300899A72 /* consts_namespace.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD62F9FB57300899A72 /* consts_namespace.h */; };
+		AEF53F592F9FB57300899A72 /* consts_namespace.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD62F9FB57300899A72 /* consts_namespace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F5A2F9FB57300899A72 /* curve25519_sandy2x.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DD72F9FB57300899A72 /* curve25519_sandy2x.c */; };
-		AEF53F5B2F9FB57300899A72 /* curve25519_sandy2x.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD82F9FB57300899A72 /* curve25519_sandy2x.h */; };
-		AEF53F5C2F9FB57300899A72 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD92F9FB57300899A72 /* fe.h */; };
-		AEF53F5D2F9FB57300899A72 /* fe51.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DDA2F9FB57300899A72 /* fe51.h */; };
+		AEF53F5B2F9FB57300899A72 /* curve25519_sandy2x.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD82F9FB57300899A72 /* curve25519_sandy2x.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F5C2F9FB57300899A72 /* fe.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DD92F9FB57300899A72 /* fe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F5D2F9FB57300899A72 /* fe51.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DDA2F9FB57300899A72 /* fe51.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F5E2F9FB57300899A72 /* fe51_invert.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DDB2F9FB57300899A72 /* fe51_invert.c */; };
 		AEF53F5F2F9FB57300899A72 /* fe51_mul.S in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DDC2F9FB57300899A72 /* fe51_mul.S */; };
-		AEF53F602F9FB57300899A72 /* fe51_namespace.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DDD2F9FB57300899A72 /* fe51_namespace.h */; };
+		AEF53F602F9FB57300899A72 /* fe51_namespace.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DDD2F9FB57300899A72 /* fe51_namespace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F612F9FB57300899A72 /* fe51_nsquare.S in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DDE2F9FB57300899A72 /* fe51_nsquare.S */; };
 		AEF53F622F9FB57300899A72 /* fe51_pack.S in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DDF2F9FB57300899A72 /* fe51_pack.S */; };
 		AEF53F632F9FB57300899A72 /* fe_frombytes_sandy2x.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DE02F9FB57300899A72 /* fe_frombytes_sandy2x.c */; };
-		AEF53F642F9FB57300899A72 /* ladder.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DE12F9FB57300899A72 /* ladder.h */; };
+		AEF53F642F9FB57300899A72 /* ladder.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DE12F9FB57300899A72 /* ladder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F652F9FB57300899A72 /* ladder.S in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DE22F9FB57300899A72 /* ladder.S */; };
-		AEF53F662F9FB57300899A72 /* ladder_namespace.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DE32F9FB57300899A72 /* ladder_namespace.h */; };
+		AEF53F662F9FB57300899A72 /* ladder_namespace.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DE32F9FB57300899A72 /* ladder_namespace.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F672F9FB57300899A72 /* sandy2x.S in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DE42F9FB57300899A72 /* sandy2x.S */; };
 		AEF53F682F9FB57300899A72 /* scalarmult_curve25519.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DE52F9FB57300899A72 /* scalarmult_curve25519.c */; };
-		AEF53F692F9FB57300899A72 /* scalarmult_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DE62F9FB57300899A72 /* scalarmult_curve25519.h */; };
+		AEF53F692F9FB57300899A72 /* scalarmult_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53DE62F9FB57300899A72 /* scalarmult_curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F6A2F9FB57300899A72 /* scalarmult_ed25519_ref10.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DEA2F9FB57300899A72 /* scalarmult_ed25519_ref10.c */; };
 		AEF53F6B2F9FB57300899A72 /* scalarmult_ristretto255_ref10.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DEE2F9FB57300899A72 /* scalarmult_ristretto255_ref10.c */; };
 		AEF53F6C2F9FB57300899A72 /* crypto_secretbox.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DF12F9FB57300899A72 /* crypto_secretbox.c */; };
@@ -162,7 +163,7 @@
 		AEF53F702F9FB57300899A72 /* secretstream_xchacha20poly1305.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DFC2F9FB57300899A72 /* secretstream_xchacha20poly1305.c */; };
 		AEF53F712F9FB57300899A72 /* crypto_shorthash.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53DFF2F9FB57300899A72 /* crypto_shorthash.c */; };
 		AEF53F722F9FB57300899A72 /* shorthash_siphash24_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E042F9FB57300899A72 /* shorthash_siphash24_ref.c */; };
-		AEF53F732F9FB57300899A72 /* shorthash_siphash_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E052F9FB57300899A72 /* shorthash_siphash_ref.h */; };
+		AEF53F732F9FB57300899A72 /* shorthash_siphash_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E052F9FB57300899A72 /* shorthash_siphash_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F742F9FB57300899A72 /* shorthash_siphashx24_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E062F9FB57300899A72 /* shorthash_siphashx24_ref.c */; };
 		AEF53F752F9FB57300899A72 /* shorthash_siphash24.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E072F9FB57300899A72 /* shorthash_siphash24.c */; };
 		AEF53F762F9FB57300899A72 /* shorthash_siphashx24.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E082F9FB57300899A72 /* shorthash_siphashx24.c */; };
@@ -171,36 +172,36 @@
 		AEF53F792F9FB57300899A72 /* obsolete.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E112F9FB57300899A72 /* obsolete.c */; };
 		AEF53F7A2F9FB57300899A72 /* open.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E122F9FB57300899A72 /* open.c */; };
 		AEF53F7B2F9FB57300899A72 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E132F9FB57300899A72 /* sign.c */; };
-		AEF53F7C2F9FB57300899A72 /* sign_ed25519_ref10.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E142F9FB57300899A72 /* sign_ed25519_ref10.h */; };
+		AEF53F7C2F9FB57300899A72 /* sign_ed25519_ref10.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E142F9FB57300899A72 /* sign_ed25519_ref10.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F7D2F9FB57300899A72 /* sign_ed25519.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E152F9FB57300899A72 /* sign_ed25519.c */; };
 		AEF53F7E2F9FB57300899A72 /* chacha20_dolbeau-avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E1C2F9FB57300899A72 /* chacha20_dolbeau-avx2.c */; };
-		AEF53F7F2F9FB57300899A72 /* chacha20_dolbeau-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E1D2F9FB57300899A72 /* chacha20_dolbeau-avx2.h */; };
+		AEF53F7F2F9FB57300899A72 /* chacha20_dolbeau-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E1D2F9FB57300899A72 /* chacha20_dolbeau-avx2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F802F9FB57300899A72 /* chacha20_dolbeau-ssse3.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E1E2F9FB57300899A72 /* chacha20_dolbeau-ssse3.c */; };
-		AEF53F812F9FB57300899A72 /* chacha20_dolbeau-ssse3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E1F2F9FB57300899A72 /* chacha20_dolbeau-ssse3.h */; };
-		AEF53F822F9FB57300899A72 /* u0.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E202F9FB57300899A72 /* u0.h */; };
-		AEF53F832F9FB57300899A72 /* u1.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E212F9FB57300899A72 /* u1.h */; };
-		AEF53F842F9FB57300899A72 /* u4.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E222F9FB57300899A72 /* u4.h */; };
-		AEF53F852F9FB57300899A72 /* u8.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E232F9FB57300899A72 /* u8.h */; };
+		AEF53F812F9FB57300899A72 /* chacha20_dolbeau-ssse3.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E1F2F9FB57300899A72 /* chacha20_dolbeau-ssse3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F822F9FB57300899A72 /* u0.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E202F9FB57300899A72 /* u0.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F832F9FB57300899A72 /* u1.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E212F9FB57300899A72 /* u1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F842F9FB57300899A72 /* u4.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E222F9FB57300899A72 /* u4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F852F9FB57300899A72 /* u8.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E232F9FB57300899A72 /* u8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F862F9FB57300899A72 /* chacha20_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E262F9FB57300899A72 /* chacha20_ref.c */; };
-		AEF53F872F9FB57300899A72 /* chacha20_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E272F9FB57300899A72 /* chacha20_ref.h */; };
+		AEF53F872F9FB57300899A72 /* chacha20_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E272F9FB57300899A72 /* chacha20_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F882F9FB57300899A72 /* stream_chacha20.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E282F9FB57300899A72 /* stream_chacha20.c */; };
-		AEF53F892F9FB57300899A72 /* stream_chacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E292F9FB57300899A72 /* stream_chacha20.h */; };
+		AEF53F892F9FB57300899A72 /* stream_chacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E292F9FB57300899A72 /* stream_chacha20.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F8A2F9FB57300899A72 /* crypto_stream.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E2A2F9FB57300899A72 /* crypto_stream.c */; };
 		AEF53F8B2F9FB57300899A72 /* salsa20_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E2F2F9FB57300899A72 /* salsa20_ref.c */; };
-		AEF53F8C2F9FB57300899A72 /* salsa20_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E302F9FB57300899A72 /* salsa20_ref.h */; };
+		AEF53F8C2F9FB57300899A72 /* salsa20_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E302F9FB57300899A72 /* salsa20_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F8D2F9FB57300899A72 /* stream_salsa20.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E312F9FB57300899A72 /* stream_salsa20.c */; };
-		AEF53F8E2F9FB57300899A72 /* stream_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E322F9FB57300899A72 /* stream_salsa20.h */; };
+		AEF53F8E2F9FB57300899A72 /* stream_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E322F9FB57300899A72 /* stream_salsa20.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F8F2F9FB57300899A72 /* salsa20_xmm6-asm.S in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E352F9FB57300899A72 /* salsa20_xmm6-asm.S */; };
 		AEF53F902F9FB57300899A72 /* salsa20_xmm6.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E362F9FB57300899A72 /* salsa20_xmm6.c */; };
-		AEF53F912F9FB57300899A72 /* salsa20_xmm6.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E372F9FB57300899A72 /* salsa20_xmm6.h */; };
+		AEF53F912F9FB57300899A72 /* salsa20_xmm6.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E372F9FB57300899A72 /* salsa20_xmm6.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F922F9FB57300899A72 /* salsa20_xmm6int-avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E3A2F9FB57300899A72 /* salsa20_xmm6int-avx2.c */; };
-		AEF53F932F9FB57300899A72 /* salsa20_xmm6int-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3B2F9FB57300899A72 /* salsa20_xmm6int-avx2.h */; };
+		AEF53F932F9FB57300899A72 /* salsa20_xmm6int-avx2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3B2F9FB57300899A72 /* salsa20_xmm6int-avx2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F942F9FB57300899A72 /* salsa20_xmm6int-sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E3C2F9FB57300899A72 /* salsa20_xmm6int-sse2.c */; };
-		AEF53F952F9FB57300899A72 /* salsa20_xmm6int-sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3D2F9FB57300899A72 /* salsa20_xmm6int-sse2.h */; };
-		AEF53F962F9FB57300899A72 /* u0.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3E2F9FB57300899A72 /* u0.h */; };
-		AEF53F972F9FB57300899A72 /* u1.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3F2F9FB57300899A72 /* u1.h */; };
-		AEF53F982F9FB57300899A72 /* u4.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E402F9FB57300899A72 /* u4.h */; };
-		AEF53F992F9FB57300899A72 /* u8.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E412F9FB57300899A72 /* u8.h */; };
+		AEF53F952F9FB57300899A72 /* salsa20_xmm6int-sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3D2F9FB57300899A72 /* salsa20_xmm6int-sse2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F962F9FB57300899A72 /* u0.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3E2F9FB57300899A72 /* u0.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F972F9FB57300899A72 /* u1.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E3F2F9FB57300899A72 /* u1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F982F9FB57300899A72 /* u4.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E402F9FB57300899A72 /* u4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53F992F9FB57300899A72 /* u8.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E412F9FB57300899A72 /* u8.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53F9A2F9FB57300899A72 /* stream_salsa2012_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E462F9FB57300899A72 /* stream_salsa2012_ref.c */; };
 		AEF53F9B2F9FB57300899A72 /* stream_salsa2012.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E472F9FB57300899A72 /* stream_salsa2012.c */; };
 		AEF53F9C2F9FB57300899A72 /* stream_salsa208_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E4C2F9FB57300899A72 /* stream_salsa208_ref.c */; };
@@ -209,100 +210,100 @@
 		AEF53F9F2F9FB57300899A72 /* stream_xsalsa20.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E532F9FB57300899A72 /* stream_xsalsa20.c */; };
 		AEF53FA02F9FB57300899A72 /* verify.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E572F9FB57300899A72 /* verify.c */; };
 		AEF53FA12F9FB57300899A72 /* shake128_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E5B2F9FB57300899A72 /* shake128_ref.c */; };
-		AEF53FA22F9FB57300899A72 /* shake128_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E5C2F9FB57300899A72 /* shake128_ref.h */; };
+		AEF53FA22F9FB57300899A72 /* shake128_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E5C2F9FB57300899A72 /* shake128_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53FA32F9FB57300899A72 /* xof_shake128.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E5D2F9FB57300899A72 /* xof_shake128.c */; };
 		AEF53FA42F9FB57300899A72 /* shake256_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E602F9FB57300899A72 /* shake256_ref.c */; };
-		AEF53FA52F9FB57300899A72 /* shake256_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E612F9FB57300899A72 /* shake256_ref.h */; };
+		AEF53FA52F9FB57300899A72 /* shake256_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E612F9FB57300899A72 /* shake256_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53FA62F9FB57300899A72 /* xof_shake256.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E622F9FB57300899A72 /* xof_shake256.c */; };
 		AEF53FA72F9FB57300899A72 /* turboshake128_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E652F9FB57300899A72 /* turboshake128_ref.c */; };
-		AEF53FA82F9FB57300899A72 /* turboshake128_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E662F9FB57300899A72 /* turboshake128_ref.h */; };
+		AEF53FA82F9FB57300899A72 /* turboshake128_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E662F9FB57300899A72 /* turboshake128_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53FA92F9FB57300899A72 /* xof_turboshake128.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E672F9FB57300899A72 /* xof_turboshake128.c */; };
 		AEF53FAA2F9FB57300899A72 /* turboshake256_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E6A2F9FB57300899A72 /* turboshake256_ref.c */; };
-		AEF53FAB2F9FB57300899A72 /* turboshake256_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E6B2F9FB57300899A72 /* turboshake256_ref.h */; };
+		AEF53FAB2F9FB57300899A72 /* turboshake256_ref.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E6B2F9FB57300899A72 /* turboshake256_ref.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF53FAC2F9FB57300899A72 /* xof_turboshake256.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53E6C2F9FB57300899A72 /* xof_turboshake256.c */; };
-		AEF53FAD2F9FB57300899A72 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E712F9FB57300899A72 /* core.h */; };
-		AEF53FAE2F9FB57300899A72 /* crypto_aead_aegis128l.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E722F9FB57300899A72 /* crypto_aead_aegis128l.h */; };
-		AEF53FAF2F9FB57300899A72 /* crypto_aead_aegis256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E732F9FB57300899A72 /* crypto_aead_aegis256.h */; };
-		AEF53FB02F9FB57300899A72 /* crypto_aead_aes256gcm.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E742F9FB57300899A72 /* crypto_aead_aes256gcm.h */; };
-		AEF53FB12F9FB57300899A72 /* crypto_aead_chacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E752F9FB57300899A72 /* crypto_aead_chacha20poly1305.h */; };
-		AEF53FB22F9FB57300899A72 /* crypto_aead_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E762F9FB57300899A72 /* crypto_aead_xchacha20poly1305.h */; };
-		AEF53FB32F9FB57300899A72 /* crypto_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E772F9FB57300899A72 /* crypto_auth.h */; };
-		AEF53FB42F9FB57300899A72 /* crypto_auth_hmacsha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E782F9FB57300899A72 /* crypto_auth_hmacsha256.h */; };
-		AEF53FB52F9FB57300899A72 /* crypto_auth_hmacsha512.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E792F9FB57300899A72 /* crypto_auth_hmacsha512.h */; };
-		AEF53FB62F9FB57300899A72 /* crypto_auth_hmacsha512256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7A2F9FB57300899A72 /* crypto_auth_hmacsha512256.h */; };
-		AEF53FB72F9FB57300899A72 /* crypto_box.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7B2F9FB57300899A72 /* crypto_box.h */; };
-		AEF53FB82F9FB57300899A72 /* crypto_box_curve25519xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7C2F9FB57300899A72 /* crypto_box_curve25519xchacha20poly1305.h */; };
-		AEF53FB92F9FB57300899A72 /* crypto_box_curve25519xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7D2F9FB57300899A72 /* crypto_box_curve25519xsalsa20poly1305.h */; };
-		AEF53FBA2F9FB57300899A72 /* crypto_core_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7E2F9FB57300899A72 /* crypto_core_ed25519.h */; };
-		AEF53FBB2F9FB57300899A72 /* crypto_core_hchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7F2F9FB57300899A72 /* crypto_core_hchacha20.h */; };
-		AEF53FBC2F9FB57300899A72 /* crypto_core_hsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E802F9FB57300899A72 /* crypto_core_hsalsa20.h */; };
-		AEF53FBD2F9FB57300899A72 /* crypto_core_keccak1600.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E812F9FB57300899A72 /* crypto_core_keccak1600.h */; };
-		AEF53FBE2F9FB57300899A72 /* crypto_core_ristretto255.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E822F9FB57300899A72 /* crypto_core_ristretto255.h */; };
-		AEF53FBF2F9FB57300899A72 /* crypto_core_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E832F9FB57300899A72 /* crypto_core_salsa20.h */; };
-		AEF53FC02F9FB57300899A72 /* crypto_core_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E842F9FB57300899A72 /* crypto_core_salsa2012.h */; };
-		AEF53FC12F9FB57300899A72 /* crypto_core_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E852F9FB57300899A72 /* crypto_core_salsa208.h */; };
-		AEF53FC22F9FB57300899A72 /* crypto_generichash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E862F9FB57300899A72 /* crypto_generichash.h */; };
-		AEF53FC32F9FB57300899A72 /* crypto_generichash_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E872F9FB57300899A72 /* crypto_generichash_blake2b.h */; };
-		AEF53FC42F9FB57300899A72 /* crypto_hash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E882F9FB57300899A72 /* crypto_hash.h */; };
-		AEF53FC52F9FB57300899A72 /* crypto_hash_sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E892F9FB57300899A72 /* crypto_hash_sha256.h */; };
-		AEF53FC62F9FB57300899A72 /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8A2F9FB57300899A72 /* crypto_hash_sha512.h */; };
-		AEF53FC72F9FB57300899A72 /* crypto_ipcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8B2F9FB57300899A72 /* crypto_ipcrypt.h */; };
-		AEF53FC82F9FB57300899A72 /* crypto_kdf.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8C2F9FB57300899A72 /* crypto_kdf.h */; };
-		AEF53FC92F9FB57300899A72 /* crypto_kdf_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8D2F9FB57300899A72 /* crypto_kdf_blake2b.h */; };
-		AEF53FCA2F9FB57300899A72 /* crypto_kdf_hkdf_sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8E2F9FB57300899A72 /* crypto_kdf_hkdf_sha256.h */; };
-		AEF53FCB2F9FB57300899A72 /* crypto_kdf_hkdf_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8F2F9FB57300899A72 /* crypto_kdf_hkdf_sha512.h */; };
-		AEF53FCC2F9FB57300899A72 /* crypto_kx.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E902F9FB57300899A72 /* crypto_kx.h */; };
-		AEF53FCD2F9FB57300899A72 /* crypto_onetimeauth.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E912F9FB57300899A72 /* crypto_onetimeauth.h */; };
-		AEF53FCE2F9FB57300899A72 /* crypto_onetimeauth_poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E922F9FB57300899A72 /* crypto_onetimeauth_poly1305.h */; };
-		AEF53FCF2F9FB57300899A72 /* crypto_pwhash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E932F9FB57300899A72 /* crypto_pwhash.h */; };
-		AEF53FD02F9FB57300899A72 /* crypto_pwhash_argon2i.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E942F9FB57300899A72 /* crypto_pwhash_argon2i.h */; };
-		AEF53FD12F9FB57300899A72 /* crypto_pwhash_argon2id.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E952F9FB57300899A72 /* crypto_pwhash_argon2id.h */; };
-		AEF53FD22F9FB57300899A72 /* crypto_pwhash_scryptsalsa208sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E962F9FB57300899A72 /* crypto_pwhash_scryptsalsa208sha256.h */; };
-		AEF53FD32F9FB57300899A72 /* crypto_scalarmult.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E972F9FB57300899A72 /* crypto_scalarmult.h */; };
-		AEF53FD42F9FB57300899A72 /* crypto_scalarmult_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E982F9FB57300899A72 /* crypto_scalarmult_curve25519.h */; };
-		AEF53FD52F9FB57300899A72 /* crypto_scalarmult_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E992F9FB57300899A72 /* crypto_scalarmult_ed25519.h */; };
-		AEF53FD62F9FB57300899A72 /* crypto_scalarmult_ristretto255.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9A2F9FB57300899A72 /* crypto_scalarmult_ristretto255.h */; };
-		AEF53FD72F9FB57300899A72 /* crypto_secretbox.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9B2F9FB57300899A72 /* crypto_secretbox.h */; };
-		AEF53FD82F9FB57300899A72 /* crypto_secretbox_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9C2F9FB57300899A72 /* crypto_secretbox_xchacha20poly1305.h */; };
-		AEF53FD92F9FB57300899A72 /* crypto_secretbox_xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9D2F9FB57300899A72 /* crypto_secretbox_xsalsa20poly1305.h */; };
-		AEF53FDA2F9FB57300899A72 /* crypto_secretstream_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9E2F9FB57300899A72 /* crypto_secretstream_xchacha20poly1305.h */; };
-		AEF53FDB2F9FB57300899A72 /* crypto_shorthash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9F2F9FB57300899A72 /* crypto_shorthash.h */; };
-		AEF53FDC2F9FB57300899A72 /* crypto_shorthash_siphash24.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA02F9FB57300899A72 /* crypto_shorthash_siphash24.h */; };
-		AEF53FDD2F9FB57300899A72 /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA12F9FB57300899A72 /* crypto_sign.h */; };
-		AEF53FDE2F9FB57300899A72 /* crypto_sign_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA22F9FB57300899A72 /* crypto_sign_ed25519.h */; };
-		AEF53FDF2F9FB57300899A72 /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA32F9FB57300899A72 /* crypto_sign_edwards25519sha512batch.h */; };
-		AEF53FE02F9FB57300899A72 /* crypto_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA42F9FB57300899A72 /* crypto_stream.h */; };
-		AEF53FE12F9FB57300899A72 /* crypto_stream_chacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA52F9FB57300899A72 /* crypto_stream_chacha20.h */; };
-		AEF53FE22F9FB57300899A72 /* crypto_stream_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA62F9FB57300899A72 /* crypto_stream_salsa20.h */; };
-		AEF53FE32F9FB57300899A72 /* crypto_stream_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA72F9FB57300899A72 /* crypto_stream_salsa2012.h */; };
-		AEF53FE42F9FB57300899A72 /* crypto_stream_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA82F9FB57300899A72 /* crypto_stream_salsa208.h */; };
-		AEF53FE52F9FB57300899A72 /* crypto_stream_xchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA92F9FB57300899A72 /* crypto_stream_xchacha20.h */; };
-		AEF53FE62F9FB57300899A72 /* crypto_stream_xsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAA2F9FB57300899A72 /* crypto_stream_xsalsa20.h */; };
-		AEF53FE72F9FB57300899A72 /* crypto_verify_16.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAB2F9FB57300899A72 /* crypto_verify_16.h */; };
-		AEF53FE82F9FB57300899A72 /* crypto_verify_32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAC2F9FB57300899A72 /* crypto_verify_32.h */; };
-		AEF53FE92F9FB57300899A72 /* crypto_verify_64.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAD2F9FB57300899A72 /* crypto_verify_64.h */; };
-		AEF53FEA2F9FB57300899A72 /* crypto_xof_shake128.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAE2F9FB57300899A72 /* crypto_xof_shake128.h */; };
-		AEF53FEB2F9FB57300899A72 /* crypto_xof_shake256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAF2F9FB57300899A72 /* crypto_xof_shake256.h */; };
-		AEF53FEC2F9FB57300899A72 /* crypto_xof_turboshake128.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB02F9FB57300899A72 /* crypto_xof_turboshake128.h */; };
-		AEF53FED2F9FB57300899A72 /* crypto_xof_turboshake256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB12F9FB57300899A72 /* crypto_xof_turboshake256.h */; };
-		AEF53FEE2F9FB57300899A72 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB22F9FB57300899A72 /* export.h */; };
-		AEF53FEF2F9FB57300899A72 /* asm_cet.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB42F9FB57300899A72 /* asm_cet.h */; };
-		AEF53FF02F9FB57300899A72 /* chacha20_ietf_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB52F9FB57300899A72 /* chacha20_ietf_ext.h */; };
-		AEF53FF12F9FB57300899A72 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB62F9FB57300899A72 /* common.h */; };
-		AEF53FF22F9FB57300899A72 /* ed25519_ref10.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB72F9FB57300899A72 /* ed25519_ref10.h */; };
-		AEF53FF32F9FB57300899A72 /* ed25519_ref10_fe_25_5.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB82F9FB57300899A72 /* ed25519_ref10_fe_25_5.h */; };
-		AEF53FF42F9FB57300899A72 /* ed25519_ref10_fe_51.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB92F9FB57300899A72 /* ed25519_ref10_fe_51.h */; };
-		AEF53FF52F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBA2F9FB57300899A72 /* implementations.h */; };
-		AEF53FF62F9FB57300899A72 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBB2F9FB57300899A72 /* mutex.h */; };
-		AEF53FF72F9FB57300899A72 /* quirks.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBC2F9FB57300899A72 /* quirks.h */; };
-		AEF53FF82F9FB57300899A72 /* softaes.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBD2F9FB57300899A72 /* softaes.h */; };
-		AEF53FF92F9FB57300899A72 /* sse2_64_32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBE2F9FB57300899A72 /* sse2_64_32.h */; };
-		AEF53FFA2F9FB57300899A72 /* randombytes.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBF2F9FB57300899A72 /* randombytes.h */; };
-		AEF53FFB2F9FB57300899A72 /* randombytes_internal_random.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC02F9FB57300899A72 /* randombytes_internal_random.h */; };
-		AEF53FFC2F9FB57300899A72 /* randombytes_sysrandom.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC12F9FB57300899A72 /* randombytes_sysrandom.h */; };
-		AEF53FFD2F9FB57300899A72 /* runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC22F9FB57300899A72 /* runtime.h */; };
-		AEF53FFE2F9FB57300899A72 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC32F9FB57300899A72 /* utils.h */; };
-		AEF53FFF2F9FB57300899A72 /* sodium.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC52F9FB57300899A72 /* sodium.h */; };
+		AEF53FAD2F9FB57300899A72 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E712F9FB57300899A72 /* core.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FAE2F9FB57300899A72 /* crypto_aead_aegis128l.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E722F9FB57300899A72 /* crypto_aead_aegis128l.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FAF2F9FB57300899A72 /* crypto_aead_aegis256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E732F9FB57300899A72 /* crypto_aead_aegis256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB02F9FB57300899A72 /* crypto_aead_aes256gcm.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E742F9FB57300899A72 /* crypto_aead_aes256gcm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB12F9FB57300899A72 /* crypto_aead_chacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E752F9FB57300899A72 /* crypto_aead_chacha20poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB22F9FB57300899A72 /* crypto_aead_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E762F9FB57300899A72 /* crypto_aead_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB32F9FB57300899A72 /* crypto_auth.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E772F9FB57300899A72 /* crypto_auth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB42F9FB57300899A72 /* crypto_auth_hmacsha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E782F9FB57300899A72 /* crypto_auth_hmacsha256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB52F9FB57300899A72 /* crypto_auth_hmacsha512.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E792F9FB57300899A72 /* crypto_auth_hmacsha512.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB62F9FB57300899A72 /* crypto_auth_hmacsha512256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7A2F9FB57300899A72 /* crypto_auth_hmacsha512256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB72F9FB57300899A72 /* crypto_box.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7B2F9FB57300899A72 /* crypto_box.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB82F9FB57300899A72 /* crypto_box_curve25519xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7C2F9FB57300899A72 /* crypto_box_curve25519xchacha20poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FB92F9FB57300899A72 /* crypto_box_curve25519xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7D2F9FB57300899A72 /* crypto_box_curve25519xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FBA2F9FB57300899A72 /* crypto_core_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7E2F9FB57300899A72 /* crypto_core_ed25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FBB2F9FB57300899A72 /* crypto_core_hchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E7F2F9FB57300899A72 /* crypto_core_hchacha20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FBC2F9FB57300899A72 /* crypto_core_hsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E802F9FB57300899A72 /* crypto_core_hsalsa20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FBD2F9FB57300899A72 /* crypto_core_keccak1600.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E812F9FB57300899A72 /* crypto_core_keccak1600.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FBE2F9FB57300899A72 /* crypto_core_ristretto255.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E822F9FB57300899A72 /* crypto_core_ristretto255.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FBF2F9FB57300899A72 /* crypto_core_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E832F9FB57300899A72 /* crypto_core_salsa20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC02F9FB57300899A72 /* crypto_core_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E842F9FB57300899A72 /* crypto_core_salsa2012.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC12F9FB57300899A72 /* crypto_core_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E852F9FB57300899A72 /* crypto_core_salsa208.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC22F9FB57300899A72 /* crypto_generichash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E862F9FB57300899A72 /* crypto_generichash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC32F9FB57300899A72 /* crypto_generichash_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E872F9FB57300899A72 /* crypto_generichash_blake2b.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC42F9FB57300899A72 /* crypto_hash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E882F9FB57300899A72 /* crypto_hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC52F9FB57300899A72 /* crypto_hash_sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E892F9FB57300899A72 /* crypto_hash_sha256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC62F9FB57300899A72 /* crypto_hash_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8A2F9FB57300899A72 /* crypto_hash_sha512.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC72F9FB57300899A72 /* crypto_ipcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8B2F9FB57300899A72 /* crypto_ipcrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC82F9FB57300899A72 /* crypto_kdf.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8C2F9FB57300899A72 /* crypto_kdf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FC92F9FB57300899A72 /* crypto_kdf_blake2b.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8D2F9FB57300899A72 /* crypto_kdf_blake2b.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FCA2F9FB57300899A72 /* crypto_kdf_hkdf_sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8E2F9FB57300899A72 /* crypto_kdf_hkdf_sha256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FCB2F9FB57300899A72 /* crypto_kdf_hkdf_sha512.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E8F2F9FB57300899A72 /* crypto_kdf_hkdf_sha512.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FCC2F9FB57300899A72 /* crypto_kx.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E902F9FB57300899A72 /* crypto_kx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FCD2F9FB57300899A72 /* crypto_onetimeauth.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E912F9FB57300899A72 /* crypto_onetimeauth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FCE2F9FB57300899A72 /* crypto_onetimeauth_poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E922F9FB57300899A72 /* crypto_onetimeauth_poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FCF2F9FB57300899A72 /* crypto_pwhash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E932F9FB57300899A72 /* crypto_pwhash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD02F9FB57300899A72 /* crypto_pwhash_argon2i.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E942F9FB57300899A72 /* crypto_pwhash_argon2i.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD12F9FB57300899A72 /* crypto_pwhash_argon2id.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E952F9FB57300899A72 /* crypto_pwhash_argon2id.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD22F9FB57300899A72 /* crypto_pwhash_scryptsalsa208sha256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E962F9FB57300899A72 /* crypto_pwhash_scryptsalsa208sha256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD32F9FB57300899A72 /* crypto_scalarmult.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E972F9FB57300899A72 /* crypto_scalarmult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD42F9FB57300899A72 /* crypto_scalarmult_curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E982F9FB57300899A72 /* crypto_scalarmult_curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD52F9FB57300899A72 /* crypto_scalarmult_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E992F9FB57300899A72 /* crypto_scalarmult_ed25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD62F9FB57300899A72 /* crypto_scalarmult_ristretto255.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9A2F9FB57300899A72 /* crypto_scalarmult_ristretto255.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD72F9FB57300899A72 /* crypto_secretbox.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9B2F9FB57300899A72 /* crypto_secretbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD82F9FB57300899A72 /* crypto_secretbox_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9C2F9FB57300899A72 /* crypto_secretbox_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FD92F9FB57300899A72 /* crypto_secretbox_xsalsa20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9D2F9FB57300899A72 /* crypto_secretbox_xsalsa20poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FDA2F9FB57300899A72 /* crypto_secretstream_xchacha20poly1305.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9E2F9FB57300899A72 /* crypto_secretstream_xchacha20poly1305.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FDB2F9FB57300899A72 /* crypto_shorthash.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53E9F2F9FB57300899A72 /* crypto_shorthash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FDC2F9FB57300899A72 /* crypto_shorthash_siphash24.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA02F9FB57300899A72 /* crypto_shorthash_siphash24.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FDD2F9FB57300899A72 /* crypto_sign.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA12F9FB57300899A72 /* crypto_sign.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FDE2F9FB57300899A72 /* crypto_sign_ed25519.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA22F9FB57300899A72 /* crypto_sign_ed25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FDF2F9FB57300899A72 /* crypto_sign_edwards25519sha512batch.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA32F9FB57300899A72 /* crypto_sign_edwards25519sha512batch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE02F9FB57300899A72 /* crypto_stream.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA42F9FB57300899A72 /* crypto_stream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE12F9FB57300899A72 /* crypto_stream_chacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA52F9FB57300899A72 /* crypto_stream_chacha20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE22F9FB57300899A72 /* crypto_stream_salsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA62F9FB57300899A72 /* crypto_stream_salsa20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE32F9FB57300899A72 /* crypto_stream_salsa2012.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA72F9FB57300899A72 /* crypto_stream_salsa2012.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE42F9FB57300899A72 /* crypto_stream_salsa208.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA82F9FB57300899A72 /* crypto_stream_salsa208.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE52F9FB57300899A72 /* crypto_stream_xchacha20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EA92F9FB57300899A72 /* crypto_stream_xchacha20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE62F9FB57300899A72 /* crypto_stream_xsalsa20.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAA2F9FB57300899A72 /* crypto_stream_xsalsa20.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE72F9FB57300899A72 /* crypto_verify_16.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAB2F9FB57300899A72 /* crypto_verify_16.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE82F9FB57300899A72 /* crypto_verify_32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAC2F9FB57300899A72 /* crypto_verify_32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FE92F9FB57300899A72 /* crypto_verify_64.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAD2F9FB57300899A72 /* crypto_verify_64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FEA2F9FB57300899A72 /* crypto_xof_shake128.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAE2F9FB57300899A72 /* crypto_xof_shake128.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FEB2F9FB57300899A72 /* crypto_xof_shake256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EAF2F9FB57300899A72 /* crypto_xof_shake256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FEC2F9FB57300899A72 /* crypto_xof_turboshake128.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB02F9FB57300899A72 /* crypto_xof_turboshake128.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FED2F9FB57300899A72 /* crypto_xof_turboshake256.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB12F9FB57300899A72 /* crypto_xof_turboshake256.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FEE2F9FB57300899A72 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB22F9FB57300899A72 /* export.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FEF2F9FB57300899A72 /* asm_cet.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB42F9FB57300899A72 /* asm_cet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF02F9FB57300899A72 /* chacha20_ietf_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB52F9FB57300899A72 /* chacha20_ietf_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF12F9FB57300899A72 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB62F9FB57300899A72 /* common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF22F9FB57300899A72 /* ed25519_ref10.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB72F9FB57300899A72 /* ed25519_ref10.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF32F9FB57300899A72 /* ed25519_ref10_fe_25_5.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB82F9FB57300899A72 /* ed25519_ref10_fe_25_5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF42F9FB57300899A72 /* ed25519_ref10_fe_51.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EB92F9FB57300899A72 /* ed25519_ref10_fe_51.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF52F9FB57300899A72 /* implementations.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBA2F9FB57300899A72 /* implementations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF62F9FB57300899A72 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBB2F9FB57300899A72 /* mutex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF72F9FB57300899A72 /* quirks.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBC2F9FB57300899A72 /* quirks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF82F9FB57300899A72 /* softaes.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBD2F9FB57300899A72 /* softaes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FF92F9FB57300899A72 /* sse2_64_32.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBE2F9FB57300899A72 /* sse2_64_32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FFA2F9FB57300899A72 /* randombytes.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EBF2F9FB57300899A72 /* randombytes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FFB2F9FB57300899A72 /* randombytes_internal_random.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC02F9FB57300899A72 /* randombytes_internal_random.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FFC2F9FB57300899A72 /* randombytes_sysrandom.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC12F9FB57300899A72 /* randombytes_sysrandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FFD2F9FB57300899A72 /* runtime.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC22F9FB57300899A72 /* runtime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FFE2F9FB57300899A72 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC32F9FB57300899A72 /* utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF53FFF2F9FB57300899A72 /* sodium.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF53EC52F9FB57300899A72 /* sodium.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF540002F9FB57300899A72 /* randombytes_internal_random.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53ECC2F9FB57300899A72 /* randombytes_internal_random.c */; };
 		AEF540012F9FB57300899A72 /* randombytes.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53ECD2F9FB57300899A72 /* randombytes.c */; };
 		AEF540022F9FB57300899A72 /* randombytes_sysrandom.c in Sources */ = {isa = PBXBuildFile; fileRef = AEF53ED02F9FB57300899A72 /* randombytes_sysrandom.c */; };
@@ -326,6 +327,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AE7AEE902FA02D1800D4AF08 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = "build/Release-iphoneos/include/sodium/version.h"; sourceTree = SOURCE_ROOT; };
 		AEF53CF32F9FB57300899A72 /* aead_aegis128l.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aead_aegis128l.c; sourceTree = "<group>"; };
 		AEF53CF42F9FB57300899A72 /* aegis128l_aesni.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aegis128l_aesni.c; sourceTree = "<group>"; };
 		AEF53CF52F9FB57300899A72 /* aegis128l_aesni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aegis128l_aesni.h; sourceTree = "<group>"; };
@@ -637,7 +639,6 @@
 		AEF53ED72F9FB57300899A72 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = version.c; sourceTree = "<group>"; };
 		B9DABC1B18E53B7300B2A6B2 /* libsodium.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsodium.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DABC1E18E53B7300B2A6B2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B9DABC2218E53B7300B2A6B2 /* sodium-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sodium-Prefix.pch"; sourceTree = "<group>"; };
 		B9DABC2C18E53B7300B2A6B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B9DABC2F18E53B7300B2A6B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -2220,7 +2221,6 @@
 			children = (
 				AEF53E6E2F9FB57300899A72 /* Makefile.am */,
 				AEF53E6F2F9FB57300899A72 /* Makefile.in */,
-				AEF53E702F9FB57300899A72 /* sodium */,
 				AEF53EC52F9FB57300899A72 /* sodium.h */,
 			);
 			path = include;
@@ -2302,8 +2302,10 @@
 				AEF53EC22F9FB57300899A72 /* runtime.h */,
 				AEF53EC32F9FB57300899A72 /* utils.h */,
 				AEF53EC42F9FB57300899A72 /* version.h.in */,
+				AE7AEE902FA02D1800D4AF08 /* version.h */,
 			);
-			path = sodium;
+			name = sodium;
+			path = libsodium/src/libsodium/include/sodium;
 			sourceTree = "<group>";
 		};
 		AEF53EB32F9FB57300899A72 /* private */ = {
@@ -2397,8 +2399,8 @@
 		B9DABC1218E53B7300B2A6B2 = {
 			isa = PBXGroup;
 			children = (
+				AEF53E702F9FB57300899A72 /* sodium */,
 				AEF53CF02F9FB57300899A72 /* libsodium */,
-				B9DABC2018E53B7300B2A6B2 /* sodium */,
 				B9DABC1D18E53B7300B2A6B2 /* Frameworks */,
 				B9DABC1C18E53B7300B2A6B2 /* Products */,
 			);
@@ -2422,22 +2424,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B9DABC2018E53B7300B2A6B2 /* sodium */ = {
-			isa = PBXGroup;
-			children = (
-				B9DABC2118E53B7300B2A6B2 /* Supporting Files */,
-			);
-			path = sodium;
-			sourceTree = "<group>";
-		};
-		B9DABC2118E53B7300B2A6B2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B9DABC2218E53B7300B2A6B2 /* sodium-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2445,6 +2431,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7AEE912FA02D1800D4AF08 /* version.h in Headers */,
+				AEF53FFF2F9FB57300899A72 /* sodium.h in Headers */,
 				AEF53FF82F9FB57300899A72 /* softaes.h in Headers */,
 				AEF53F5C2F9FB57300899A72 /* fe.h in Headers */,
 				AEF53FE22F9FB57300899A72 /* crypto_stream_salsa20.h in Headers */,
@@ -2498,7 +2486,6 @@
 				AEF53EFC2F9FB57300899A72 /* base.h in Headers */,
 				AEF53FB52F9FB57300899A72 /* crypto_auth_hmacsha512.h in Headers */,
 				AEF53F962F9FB57300899A72 /* u0.h in Headers */,
-				AEF53FFF2F9FB57300899A72 /* sodium.h in Headers */,
 				AEF53FC22F9FB57300899A72 /* crypto_generichash.h in Headers */,
 				AEF53F022F9FB57300899A72 /* constants.h in Headers */,
 				AEF53FD62F9FB57300899A72 /* crypto_scalarmult_ristretto255.h in Headers */,
@@ -2617,7 +2604,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9DABC3E18E53B7300B2A6B2 /* Build configuration list for PBXNativeTarget "sodium" */;
 			buildPhases = (
-				AEF540082F9FC17500899A72 /* ShellScript */,
+				AEF540082F9FC17500899A72 /* Run Script */,
 				B9DABC1718E53B7300B2A6B2 /* Sources */,
 				B9DABC1818E53B7300B2A6B2 /* Frameworks */,
 				B9DABC1918E53B7300B2A6B2 /* CopyFiles */,
@@ -2659,18 +2646,19 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AEF540082F9FC17500899A72 /* ShellScript */ = {
+		AEF540082F9FC17500899A72 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/libsodium\"\nif [ ! -f src/libsodium/include/sodium/version.h ]; then\n./autogen.sh\n./configure\nfi";
+			shellScript = "cd \"$SRCROOT/libsodium\"\nif [ ! -f src/libsodium/include/sodium/version.h ]; then\n./autogen.sh\n./configure\nfi\nif [ ! -f \"$BUILT_PRODUCTS_DIR/usr/local/include/sodium/version.h\" ]; then\nmkdir -p \"$BUILT_PRODUCTS_DIR/usr/local/include/sodium\"\ncp -r \"src/libsodium/include/sodium/\" \"$BUILT_PRODUCTS_DIR/usr/local/include/sodium/\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2679,6 +2667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEF540072F9FB57300899A72 /* version.c in Sources */,
 				AEF53EFB2F9FB57300899A72 /* ed25519_ref10.c in Sources */,
 				AEF53EF12F9FB57300899A72 /* auth_hmacsha512.c in Sources */,
 				AEF53FA72F9FB57300899A72 /* turboshake128_ref.c in Sources */,
@@ -2767,7 +2756,6 @@
 				AEF53F782F9FB57300899A72 /* keypair.c in Sources */,
 				AEF53F1C2F9FB57300899A72 /* crypto_generichash.c in Sources */,
 				AEF53F522F9FB57300899A72 /* pwhash_scryptsalsa208sha256.c in Sources */,
-				AEF540072F9FB57300899A72 /* version.c in Sources */,
 				AEF53EF42F9FB57300899A72 /* crypto_box_easy.c in Sources */,
 				AEF53F7D2F9FB57300899A72 /* sign_ed25519.c in Sources */,
 				AEF53F412F9FB57300899A72 /* argon2.c in Sources */,
@@ -2919,6 +2907,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/libsodium/src/libsodium/include $(SRCROOT)/libsodium/src/libsodium/include/sodium $BUILT_PRODUCTS_DIR/usr/local/include/ $(SRCROOT)/libsodium/src/libsodium $BUILT_PRODUCTS_DIR/usr/local/include/sodium/";
 			};
 			name = Debug;
 		};
@@ -2938,6 +2927,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/libsodium/src/libsodium/include $(SRCROOT)/libsodium/src/libsodium/include/sodium $BUILT_PRODUCTS_DIR/usr/local/include/ $(SRCROOT)/libsodium/src/libsodium $BUILT_PRODUCTS_DIR/usr/local/include/sodium/";
 			};
 			name = Release;
 		};
