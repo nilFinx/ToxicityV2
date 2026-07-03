@@ -3,7 +3,7 @@ Toxicity
 
 An iOS Tox client for the iPhone, running iOS 6.1 or higher.
 
-Tox is a FOSS (free and open source) instant messenger protocol aimed to increase privacy of communication and to replace Skype. (fun fact: [Skymu](https://skymu.app) exists now)
+Tox is a FOSS (free and open source) instant messenger protocol aimed to increase privacy of communication and to replace Skype. (Fun fact: [Skymu](https://skymu.app) is a multiprotocol IM with Tox support, attempting to recreate the interface of Skype.)
 
 **Project Tox**: [Github Link](https://github.com/TokTok/c-toxcore), [Website](http://tox.chat), [Wiki](http://wiki.tox.chat)
 
