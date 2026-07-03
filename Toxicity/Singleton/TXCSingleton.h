@@ -2,7 +2,6 @@
 //      2026 nilFinx
 
 #import <Foundation/Foundation.h>
-#import "TXCDHTNodeObject.h"
 #import "TXCFriendObject.h"
 #include "tox.h"
 #import "TXCMessageObject.h"
